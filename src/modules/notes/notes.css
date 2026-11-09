@@ -1,0 +1,212 @@
+/*
+ * Notes' own styles: what the preview adds to the suite's Markdown style
+ * (src/styles/markdown.css), namely formulas, highlighted code and printing,
+ * plus the folder colours and the drop target. All of it under
+ * [data-app='notes'], so nothing reaches another app. The preview rules sit
+ * outside Tailwind's layers, as the shared ones do, so they win over its reset.
+ */
+
+/* Folder colours: the swatch, and a shade of it that reads as text on the list. */
+[data-app='notes'] {
+  --folder-red: #ef4444;
+  --folder-red-ink: #b91c1c;
+  --folder-orange: #f97316;
+  --folder-orange-ink: #c2410c;
+  --folder-amber: #f59e0b;
+  --folder-amber-ink: #8f5e00;
+  --folder-yellow: #eab308;
+  --folder-yellow-ink: #7a6900;
+  --folder-lime: #84cc16;
+  --folder-lime-ink: #477510;
+  --folder-green: #22c55e;
+  --folder-green-ink: #13762f;
+  --folder-teal: #14b8a6;
+  --folder-teal-ink: #0f766e;
+  --folder-cyan: #06b6d4;
+  --folder-cyan-ink: #0e7490;
+  --folder-blue: #3b82f6;
+  --folder-blue-ink: #1d4ed8;
+  --folder-indigo: #6366f1;
+  --folder-indigo-ink: #4338ca;
+  --folder-violet: #8b5cf6;
+  --folder-violet-ink: #6d28d9;
+  --folder-fuchsia: #d946ef;
+  --folder-fuchsia-ink: #a21caf;
+  --folder-pink: #ec4899;
+  --folder-pink-ink: #be185d;
+}
+
+.dark [data-app='notes'] {
+  --folder-red-ink: #fca5a5;
+  --folder-orange-ink: #fdba74;
+  --folder-amber-ink: #fcd34d;
+  --folder-yellow-ink: #fde047;
+  --folder-lime-ink: #bef264;
+  --folder-green-ink: #86efac;
+  --folder-teal-ink: #5eead4;
+  --folder-cyan-ink: #67e8f9;
+  --folder-blue-ink: #93c5fd;
+  --folder-indigo-ink: #a5b4fc;
+  --folder-violet-ink: #c4b5fd;
+  --folder-fuchsia-ink: #f0abfc;
+  --folder-pink-ink: #f9a8d4;
+}
+
+/* A folder's chip, tinted with its colour. In a layer, so a drop's highlight still shows over it. */
+@layer components {
+  [data-app='notes'] .folder-chip {
+    background-color: var(--chip-bg);
+    border-color: var(--chip-border);
+  }
+
+  [data-app='notes'] .folder-chip:hover {
+    background-color: var(--chip-bg-hover);
+  }
+
+  [data-app='notes'] .folder-chip-action:hover {
+    background-color: var(--chip-action-hover);
+  }
+}
+
+/* Pictures dragged over the editor. */
+[data-app='notes'] .notes-drop {
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+  animation: notes-drop-in 120ms ease-out;
+}
+
+[data-app='notes'] .notes-drop::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 2px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: 12px;
+}
+
+@keyframes notes-drop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * The preview
+ * ------------------------------------------------------------------------- */
+
+/* The fonts and the text size picked in Settings, as variables the app sets (lib/fonts.ts). Printing keeps 16px. */
+[data-app='notes'] .markdown-body {
+  font-family: var(--notes-text-font);
+  font-size: var(--notes-text-size, 16px);
+}
+
+[data-app='notes'] .markdown-body :is(code, kbd, pre, samp) {
+  font-family: var(--notes-code-font);
+}
+
+[data-app='notes'] .markdown-body .highlighted-block {
+  margin-bottom: 16px;
+}
+
+[data-app='notes'] .markdown-body pre:has(.highlighted-block) {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+[data-app='notes'] .markdown-body .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}
+[data-app='notes'] .markdown-body .katex {
+  font-size: 1.05em;
+}
+
+/* ---------------------------------------------------------------------------
+ * Printing, and PDF through it: only the note, in black on white
+ * ------------------------------------------------------------------------- */
+
+@media screen {
+  .notes-print {
+    display: none;
+  }
+}
+
+@media print {
+  html:has(> body > .notes-print),
+  body:has(> .notes-print) {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body:has(> .notes-print) > *:not(.notes-print) {
+    display: none !important;
+  }
+
+  .notes-print {
+    display: block;
+    page: note;
+    padding: 10mm 8mm;
+    font-size: 11.5pt;
+    line-height: 1.6;
+    background: #ffffff;
+  }
+
+  .notes-print .markdown-body {
+    color: #111827 !important;
+    background: #ffffff !important;
+  }
+
+  .notes-print .markdown-body h1,
+  .notes-print .markdown-body h2,
+  .notes-print .markdown-body h3,
+  .notes-print .markdown-body h4,
+  .notes-print .markdown-body h5,
+  .notes-print .markdown-body h6 {
+    color: #000000 !important;
+    border-bottom-color: #d1d5db !important;
+    break-after: avoid;
+  }
+
+  .notes-print .markdown-body a {
+    color: #1d4ed8 !important;
+  }
+
+  .notes-print .markdown-body table tr,
+  .notes-print .markdown-body table th {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .notes-print .markdown-body pre,
+  .notes-print .markdown-body pre *,
+  .notes-print .markdown-body code {
+    background: #f4f4f5 !important;
+    color: #111827 !important;
+  }
+
+  .notes-print p,
+  .notes-print li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .notes-print pre,
+  .notes-print blockquote,
+  .notes-print table,
+  .notes-print img {
+    break-inside: avoid;
+  }
+
+  .notes-print img {
+    max-width: 100% !important;
+  }
+
+  @page note {
+    margin: 24mm 22mm;
+  }
+}

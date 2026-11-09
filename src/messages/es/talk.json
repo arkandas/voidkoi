@@ -1,0 +1,452 @@
+{
+  "app": {
+    "name": "Talk"
+  },
+  "nav": {
+    "label": "Talk",
+    "chats": "Chats",
+    "calls": "Llamadas",
+    "people": "Personas",
+    "files": "Archivos",
+    "reconnecting": "Reconectando…"
+  },
+  "chat": {
+    "title": "Chats",
+    "startChat": "Nuevo chat",
+    "noConversationOpen": "Ningún chat abierto",
+    "search": {
+      "placeholder": "Buscar…",
+      "label": "Buscar conversaciones",
+      "clear": "Borrar búsqueda"
+    },
+    "errors": {
+      "open": "No se ha podido abrir la conversación.",
+      "load": "No se ha podido cargar la conversación.",
+      "loadEarlier": "No se han podido cargar los mensajes anteriores.",
+      "notSent": "Sin conexión. Tu mensaje no se ha enviado.",
+      "deleteMessage": "No se ha podido eliminar el mensaje.",
+      "deleteCall": "No se ha podido eliminar la llamada.",
+      "clear": "No se ha podido vaciar la conversación.",
+      "fileNotSent": "No se ha podido enviar ese archivo. Vuelve a adjuntarlo.",
+      "refused": "No se ha podido enviar ese mensaje."
+    },
+    "status": {
+      "online": "En línea",
+      "inCall": "En una llamada",
+      "offline": "Desconectado"
+    },
+    "list": {
+      "label": "Conversaciones",
+      "noMatch": "Nadie se llama “{query}”",
+      "emptyTitle": "Aún no hay conversaciones",
+      "noMessages": "Aún no hay mensajes",
+      "photo": "Foto"
+    },
+    "header": {
+      "back": "Volver a las conversaciones",
+      "videoCall": "Videollamada a {name}",
+      "call": "Llamar a {name}",
+      "actions": "Acciones de la conversación",
+      "clear": "Vaciar este chat",
+      "delete": "Eliminar chat"
+    },
+    "composer": {
+      "placeholder": "Escribe un mensaje",
+      "placeholderTo": "Escribe a {name}",
+      "label": "Mensaje",
+      "send": "Enviar mensaje",
+      "attach": "Adjuntar archivos",
+      "chooseFiles": "Elegir archivos para enviar"
+    },
+    "timeline": {
+      "label": "Conversación",
+      "loading": "Cargando mensajes",
+      "loadingEarlier": "Cargando mensajes anteriores",
+      "emptyTitle": "Aún no hay mensajes"
+    },
+    "message": {
+      "deleted": "Mensaje eliminado",
+      "actions": "Acciones del mensaje",
+      "deleteForEveryone": "Eliminar para todos",
+      "deleteForMe": "Eliminar para mí",
+      "openImage": "Abrir {name}",
+      "download": "Descargar {name}"
+    },
+    "viewer": {
+      "label": "{name}",
+      "you": "Tú",
+      "download": "Descargar {name}",
+      "showInChat": "Ver en el chat",
+      "failed": "No se ha podido cargar la imagen."
+    },
+    "attach": {
+      "progress": "Subiendo {name}",
+      "uploading": "{percent} % de {size}",
+      "cancel": "Dejar de enviar {name}",
+      "remove": "Quitar {name}",
+      "retry": "Volver a enviar {name}",
+      "failed": "No se ha podido enviar el archivo.",
+      "notSent": "Sin conexión. El archivo no se ha enviado.",
+      "tooLarge": "«{name}» ocupa más de {max}.",
+      "tooLargeMany": "{count, plural, one {# archivo ocupa} other {# archivos ocupan}} más de {max}.",
+      "dropHere": "Suelta aquí para enviárselo a {name}"
+    },
+    "call": {
+      "outcome": {
+        "answered": "Llamada",
+        "video": "Videollamada",
+        "noAnswer": "Llamada perdida",
+        "declined": "Llamada rechazada",
+        "cancelled": "Llamada cancelada",
+        "busy": "Ocupado",
+        "failed": "Llamada fallida"
+      },
+      "delete": "Eliminar {outcome, select, no_answer {esta llamada perdida} declined {esta llamada rechazada} cancelled {esta llamada cancelada} busy {esta llamada} failed {esta llamada fallida} other {esta llamada}} de tu historial",
+      "deleteTitle": "Eliminar de tu historial"
+    },
+    "newChat": {
+      "label": "Empezar un chat nuevo",
+      "title": "Nuevo chat",
+      "searchLabel": "Buscar personas",
+      "searchPlaceholder": "Busca por nombre o usuario",
+      "loadFailed": "No se ha podido cargar la lista de personas.",
+      "loading": "Cargando personas",
+      "listLabel": "Personas",
+      "emptyTitle": "Aún no hay nadie más",
+      "noMatchTitle": "Nadie con ese nombre",
+      "cancel": "Cancelar"
+    },
+    "deleteChat": {
+      "title": "¿Eliminar el chat con {name}?",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar chat",
+      "deleting": "Eliminando…",
+      "deleted": "Chat eliminado.",
+      "failed": "No se ha podido eliminar el chat.",
+      "groupTitle": "¿Eliminar el chat «{name}»?"
+    },
+    "notice": {
+      "created": "{actorIsYou, select, yes {Has creado el grupo «{name}»} other {{actor} ha creado el grupo «{name}»}}",
+      "added": "{actorIsYou, select, yes {Has añadido a {target}} other {{targetIsYou, select, yes {{actor} te ha añadido} other {{actor} ha añadido a {target}}}}}",
+      "removed": "{actorIsYou, select, yes {Has quitado a {target} del grupo} other {{targetIsYou, select, yes {{actor} te ha quitado del grupo} other {{actor} ha quitado a {target} del grupo}}}}",
+      "left": "{actorIsYou, select, yes {Has salido del grupo} other {{actor} ha salido del grupo}}",
+      "renamed": "{actorIsYou, select, yes {Has cambiado el nombre del grupo a «{name}»} other {{actor} ha cambiado el nombre del grupo a «{name}»}}",
+      "owner": "{targetIsYou, select, yes {Ahora administras el grupo} other {{target} ahora administra el grupo}}",
+      "photoChanged": "{actorIsYou, select, yes {Has cambiado la foto del grupo} other {{actor} ha cambiado la foto del grupo}}",
+      "photoRemoved": "{actorIsYou, select, yes {Has quitado la foto del grupo} other {{actor} ha quitado la foto del grupo}}",
+      "someone": "Alguien",
+      "you": "Tú",
+      "youInList": "tú",
+      "onlyYou": "Solo tú",
+      "memberCount": "{count, plural, one {# miembro} other {# miembros}}",
+      "sender": "{name}: {text}"
+    },
+    "group": {
+      "newGroup": "Nuevo grupo",
+      "readOnly": "Ya no estás en este grupo",
+      "notMember": "Ya no estás en este grupo.",
+      "create": {
+        "label": "Crear un grupo",
+        "title": "Nuevo grupo",
+        "back": "Atrás",
+        "nameLabel": "Nombre del grupo",
+        "namePlaceholder": "Familia, Club de lectura…",
+        "peopleLabel": "Personas del grupo",
+        "chosen": "{count, plural, =0 {Elige al menos una persona} one {# persona elegida} other {# personas elegidas}}",
+        "limit": "Máximo {max} personas.",
+        "submit": "Crear grupo",
+        "creating": "Creando…",
+        "failed": "No se ha podido crear el grupo."
+      },
+      "header": {
+        "openInfo": "Info. del grupo {name}",
+        "info": "Info. del grupo",
+        "leave": "Salir del grupo",
+        "deleteGroup": "Eliminar grupo",
+        "deleteChat": "Eliminar chat"
+      },
+      "info": {
+        "label": "Info. del grupo {name}",
+        "title": "Info. del grupo",
+        "rename": "Cambiar el nombre del grupo",
+        "nameLabel": "Nombre del grupo",
+        "save": "Guardar",
+        "saving": "Guardando…",
+        "cancel": "Cancelar",
+        "renameFailed": "No se ha podido cambiar el nombre del grupo.",
+        "members": "{count, plural, one {# miembro} other {# miembros}}",
+        "membersLabel": "Miembros",
+        "owner": "Admin del grupo",
+        "you": "(tú)",
+        "addPeople": "Añadir personas",
+        "addTitle": "Añadir personas",
+        "add": "{count, plural, =0 {Añadir} one {Añadir # persona} other {Añadir # personas}}",
+        "adding": "Añadiendo…",
+        "addFailed": "No se ha podido añadir a esas personas.",
+        "noOneToAdd": "No hay nadie más a quien añadir.",
+        "remove": "Quitar a {name} del grupo",
+        "removeConfirm": "¿Quitar a {name} del grupo?",
+        "removeAction": "Quitar",
+        "removeFailed": "No se ha podido quitar a {name}.",
+        "inactive": "Ya no estás en este grupo.",
+        "leave": "Salir del grupo",
+        "deleteGroup": "Eliminar grupo",
+        "deleteChat": "Eliminar chat",
+        "photoChange": "Cambiar foto",
+        "photoSet": "Poner una foto",
+        "photoRemove": "Quitar foto",
+        "photoWorking": "Un momento…",
+        "photoFailed": "No se ha podido cambiar la foto del grupo.",
+        "photoChoose": "Elige una foto para el grupo"
+      },
+      "leave": {
+        "title": "¿Salir de «{name}»?",
+        "cancel": "Cancelar",
+        "confirm": "Salir del grupo",
+        "leaving": "Saliendo…",
+        "left": "Has salido de «{name}».",
+        "failed": "No se ha podido salir del grupo."
+      },
+      "delete": {
+        "title": "¿Eliminar «{name}» para todos?",
+        "cancel": "Cancelar",
+        "confirm": "Eliminar grupo",
+        "deleting": "Eliminando…",
+        "deleted": "Grupo eliminado.",
+        "failed": "No se ha podido eliminar el grupo."
+      }
+    }
+  },
+  "calls": {
+    "status": {
+      "calling": "Llamando…",
+      "incomingCall": "Llamada entrante",
+      "incomingVideoCall": "Videollamada entrante",
+      "connecting": "Conectando…",
+      "connected": "Conectado",
+      "connectionFailed": "Fallo de conexión",
+      "busy": "Ocupado",
+      "unavailable": "No disponible",
+      "noAnswer": "Sin respuesta",
+      "declined": "Llamada rechazada",
+      "cancelled": "Llamada cancelada",
+      "failed": "Llamada fallida",
+      "ended": "Llamada finalizada"
+    },
+    "history": {
+      "title": "Llamadas",
+      "clear": "Borrar historial",
+      "filterLabel": "Filtrar llamadas",
+      "filterAll": "Todas",
+      "filterMissed": "Perdidas",
+      "loading": "Cargando llamadas",
+      "empty": "Aún no hay llamadas",
+      "emptyMissed": "No hay llamadas perdidas",
+      "listLabel": "Historial de llamadas",
+      "summary": "— {direction, select, incoming {llamada entrante} other {llamada saliente}}, {outcome}",
+      "deleteLabel": "Borrar de tu historial la llamada {direction, select, incoming {entrante} other {saliente}} con {name}",
+      "deleteTitle": "Borrar de tu historial",
+      "callBack": "Devolver la llamada a {name}",
+      "videoCallBack": "Devolver la videollamada a {name}",
+      "loadMore": "Cargar llamadas anteriores",
+      "loadingMore": "Cargando…",
+      "loadFailed": "No se ha podido cargar tu historial de llamadas.",
+      "loadMoreFailed": "No se han podido cargar las llamadas anteriores.",
+      "deleteFailed": "No se ha podido borrar esa llamada.",
+      "clearFailed": "No se ha podido borrar tu historial de llamadas.",
+      "outcome": {
+        "answered": "Contestada",
+        "missed": "Perdida",
+        "noAnswer": "Sin respuesta",
+        "declined": "Rechazada",
+        "declinedByThem": "Rechazada por el otro",
+        "cancelled": "Cancelada",
+        "busy": "Ocupado",
+        "failed": "Fallida"
+      }
+    },
+    "modal": {
+      "tabTitle": "{media, select, video {📹} other {📞}} {name} te está llamando",
+      "tabTitleNoName": "📞 Llamada entrante",
+      "videoCall": "Videollamada",
+      "decline": "Rechazar",
+      "declineCall": "Rechazar llamada",
+      "accept": "Contestar",
+      "acceptCall": "Contestar llamada",
+      "cancel": "Cancelar",
+      "cancelCall": "Cancelar llamada"
+    },
+    "controls": {
+      "mute": "Silenciar",
+      "muted": "Silenciado",
+      "muteMicrophone": "Silenciar micrófono",
+      "unmuteMicrophone": "Activar micrófono",
+      "cameraOn": "Activar cámara",
+      "cameraOff": "Desactivar cámara",
+      "minimise": "Minimizar",
+      "minimiseCall": "Minimizar llamada",
+      "hangUp": "Colgar",
+      "showCall": "Volver a la llamada"
+    },
+    "stage": {
+      "peerCamera": "Cámara de {name}",
+      "yourCamera": "Tu cámara",
+      "peerCameraOff": "{name} tiene la cámara apagada",
+      "noCamera": "No hay cámara disponible: solo tienes audio"
+    },
+    "waveform": {
+      "label": "Niveles de sonido de {name} y tuyos",
+      "legendLabel": "Qué mitad de la onda es de quién",
+      "you": "Tú"
+    },
+    "devices": {
+      "system": "Igual que el sistema",
+      "unnamed": "{kind, select, audioinput {Micrófono} videoinput {Cámara} other {Altavoz}} {number}",
+      "chosenDevice": "Dispositivo elegido",
+      "menu": {
+        "audioinput": "Cambiar micrófono",
+        "videoinput": "Cambiar cámara",
+        "audiooutput": "Cambiar altavoz",
+        "notConnected": "No conectado"
+      },
+      "settings": {
+        "title": "Cámara y micrófono",
+        "lost": "No conectado: {devices}",
+        "microphone": "Micrófono",
+        "camera": "Cámara",
+        "speaker": "Altavoz",
+        "notConnected": "{name} (no conectado)",
+        "preview": "Vista previa de la cámara",
+        "opening": "Abriendo…",
+        "noCamera": "Sin cámara",
+        "previewOff": "Vista previa apagada",
+        "level": "Nivel del micrófono",
+        "using": "Usando {device}",
+        "silentTitle": "No llega sonido del micrófono.",
+        "test": "Probar dispositivos",
+        "stopTest": "Parar prueba",
+        "blocked": "El navegador ha bloqueado el micrófono y la cámara.",
+        "openFailed": "No se ha podido abrir el micrófono o la cámara."
+      }
+    }
+  },
+  "people": {
+    "title": "Personas",
+    "status": {
+      "online": "En línea",
+      "inCall": "En una llamada",
+      "offline": "Desconectado"
+    },
+    "loading": "Cargando personas",
+    "loadFailed": "No se ha podido cargar el directorio.",
+    "empty": {
+      "title": "Todavía no hay nadie más",
+      "action": "Ir a Administración"
+    },
+    "listLabel": "Todos",
+    "message": "Mensaje",
+    "video": "Vídeo",
+    "call": "Llamar"
+  },
+  "files": {
+    "title": "Archivos",
+    "filterLabel": "Filtrar archivos",
+    "filterAll": "Todos",
+    "filterSent": "Enviados",
+    "filterReceived": "Recibidos",
+    "loading": "Cargando archivos",
+    "photos": "Fotos",
+    "documents": "Documentos",
+    "to": "Para {name}",
+    "from": "De {name}",
+    "openPhoto": "{direction, select, sent {Foto para {name}} other {Foto de {name}}}, {date}",
+    "download": "Descargar {name}",
+    "showInChat": "Ver en el chat con {name}",
+    "empty": "Aún no hay archivos",
+    "emptySent": "No has enviado ningún archivo",
+    "emptyReceived": "Nadie te ha enviado ningún archivo",
+    "loadMore": "Cargar archivos anteriores",
+    "loadingMore": "Cargando…",
+    "loadFailed": "No se han podido cargar tus archivos.",
+    "loadMoreFailed": "No se han podido cargar los archivos anteriores.",
+    "fromInGroup": "De {name} en {group}",
+    "openPhotoGroup": "{direction, select, sent {Foto para {group}} other {Foto de {name} en {group}}}, {date}"
+  },
+  "settings": {
+    "notifications": {
+      "title": "Notificaciones",
+      "checking": "Comprobando las notificaciones",
+      "insecure": "Las notificaciones necesitan HTTPS.",
+      "needsInstallTitle": "Primero añádelo a tu pantalla de inicio",
+      "needsInstall": "En Safari: Compartir → Añadir a pantalla de inicio, y ábrelo desde ahí.",
+      "unsupported": "Este navegador no puede mostrar notificaciones.",
+      "denied": "Las notificaciones están bloqueadas en este navegador.",
+      "on": "Activadas en este dispositivo",
+      "off": "Desactivadas en este dispositivo",
+      "sendTest": "Enviar una prueba",
+      "testSent": "Enviada.",
+      "turnOff": "Desactivar",
+      "turnOn": "Activar",
+      "turningOn": "Activando…",
+      "errors": {
+        "timedOut": "El navegador no ha respondido. Inténtalo de nuevo.",
+        "enableFailed": "No se han podido activar las notificaciones.",
+        "disableFailed": "No se han podido desactivar las notificaciones.",
+        "testFailed": "No se ha podido enviar la notificación de prueba."
+      }
+    },
+    "sounds": {
+      "title": "Sonidos",
+      "ringtone": "Tono de llamada",
+      "messages": "Mensajes",
+      "play": "Escuchar",
+      "styles": {
+        "chime": "Campanilla",
+        "marimba": "Marimba",
+        "classic": "Clásico",
+        "pop": "Pop",
+        "off": "Sin sonido"
+      }
+    }
+  },
+  "time": {
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "todayAt": "Hoy, {time}",
+    "yesterdayAt": "Ayer, {time}",
+    "seconds": "{seconds} s",
+    "minutes": "{minutes} min",
+    "minutesSeconds": "{minutes} min {seconds} s"
+  },
+  "validation": {
+    "groupNameRequired": "Ponle un nombre al grupo.",
+    "groupNameTooLong": "El nombre del grupo puede tener como máximo {max} caracteres."
+  },
+  "errors": {
+    "conversationNotFound": "Esa conversación ya no existe",
+    "notInConversation": "No estás en esa conversación",
+    "cannotTalkToYourself": "No puedes empezar un chat contigo mismo",
+    "messageNotFound": "Ese mensaje ya no existe",
+    "notYourMessage": "Solo quien envió un mensaje puede eliminarlo para todos",
+    "callNotFound": "Esa llamada ya no está en tu historial",
+    "groupNotFound": "Ese grupo ya no existe",
+    "notGroupOwner": "Solo quien administra el grupo puede hacer eso",
+    "groupNameRequired": "Ponle un nombre al grupo",
+    "groupNameTooLong": "Ese nombre es demasiado largo para un grupo",
+    "groupNeedsPeople": "Añade al menos a una persona",
+    "groupFull": "Un grupo puede tener como máximo 100 personas",
+    "useLeaveGroup": "Para salir del grupo, usa «Salir del grupo»",
+    "notInGroup": "Esa persona no está en el grupo",
+    "alreadyLeftGroup": "Ya has salido de este grupo",
+    "leaveGroupFirst": "Sal del grupo antes de eliminarlo de tu lista",
+    "emptyAttachment": "Ese archivo está vacío",
+    "attachmentNotFound": "Ese archivo ya no está",
+    "previewSizeMissing": "La imagen no indicaba su tamaño",
+    "previewNotPicture": "Esa vista previa no es una imagen",
+    "pushServiceNotAllowed": "Este servidor no envía notificaciones a ese servicio",
+    "pushKeysInvalid": "El navegador ha enviado claves que no sirven",
+    "pushNotOn": "Las notificaciones no están activadas en este dispositivo",
+    "pushDeviceGone": "El servicio de notificaciones de este dispositivo lo ha olvidado. Desactiva las notificaciones y vuelve a activarlas.",
+    "pushRefused": "El servicio de notificaciones no ha aceptado la notificación. Vuelve a probar en un momento."
+  }
+}

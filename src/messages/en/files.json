@@ -1,0 +1,382 @@
+{
+  "app": {
+    "name": "Files"
+  },
+  "browser": {
+    "title": "My files",
+    "sharedWithMe": "Shared with me",
+    "upload": "Upload",
+    "uploadMore": "More ways to add files",
+    "uploadFolder": "Upload a folder",
+    "newFolder": "New folder",
+    "create": "Create",
+    "name": "Name",
+    "renameTitle": "Rename",
+    "search": "Search my files",
+    "cancelSearch": "Cancel",
+    "view": "View",
+    "viewList": "List",
+    "viewGrid": "Grid",
+    "path": "Folder path",
+    "selected": "{count, plural, one {# selected} other {# selected}}",
+    "select": "Select {name}",
+    "selectAll": "Select everything",
+    "clearSelection": "Clear",
+    "sortBy": "Sort by {column}",
+    "columns": {
+      "name": "Name",
+      "size": "Size",
+      "modified": "Modified",
+      "sharing": "Sharing",
+      "actions": "Actions"
+    },
+    "itemCount": "{count, plural, =0 {Empty} one {# item} other {# items}}",
+    "sharedBy": "Shared by {name}",
+    "downloadAll": "Download all",
+    "empty": {
+      "title": "Drop files here"
+    },
+    "emptyShared": "This folder is empty",
+    "noResults": "Nothing matches “{query}”",
+    "retry": "Try again",
+    "trashedOne": "Moved {name} to the trash",
+    "trashedMany": "{count, plural, one {Moved # item to the trash} other {Moved # items to the trash}}",
+    "undo": "Undo",
+    "moved": "{count, plural, one {Moved # item to {folder}} other {Moved # items to {folder}}}",
+    "actions": {
+      "label": "Actions for {name}",
+      "open": "Open",
+      "preview": "Preview",
+      "download": "Download",
+      "share": "Share",
+      "rename": "Rename",
+      "move": "Move",
+      "trash": "Move to trash",
+      "favorite": "Add to favorites",
+      "unfavorite": "Remove from favorites"
+    },
+    "sharing": {
+      "public": "Anyone with the link",
+      "users": "Signed-in people with the link",
+      "people": "{count, plural, one {Shared with # person} other {Shared with # people}}",
+      "upload": "Upload link"
+    },
+    "favorite": "Favorite"
+  },
+  "move": {
+    "titleOne": "Move {name}",
+    "titleMany": "{count, plural, one {Move # item} other {Move # items}}",
+    "path": "Folder",
+    "noFolders": "No folders in here",
+    "here": "Move here"
+  },
+  "share": {
+    "title": "Share {name}",
+    "linkTitle": "Link",
+    "anyone": "Anyone with the link",
+    "signedIn": "Signed-in only",
+    "access": "Who can open the link",
+    "address": "Link address",
+    "create": "Create link",
+    "linkCreated": "Link created",
+    "linkSaved": "Link updated",
+    "linkDeleted": "Link deleted. It no longer opens.",
+    "password": "Password",
+    "passwordNew": "New password",
+    "passwordMissing": "Type a password, or turn it off.",
+    "expiry": "Expiry date",
+    "limit": "Download limit",
+    "limitUnit": "downloads",
+    "limitInvalid": "The limit has to be a whole number, 1 or more.",
+    "downloads": "{count, plural, =0 {Not downloaded yet} one {Downloaded once} other {Downloaded # times}}",
+    "deleteLink": "Delete link",
+    "save": "Save changes",
+    "peopleTitle": "People",
+    "nobody": "There’s nobody else here yet.",
+    "addPeople": "Add people by name",
+    "removePerson": "Stop sharing with {name}",
+    "uploadTitle": "Upload link",
+    "uploadCreate": "Create upload link",
+    "uploadCreated": "Upload link created",
+    "uploadSaved": "Upload link updated",
+    "uploadDeleted": "Upload link deleted. It no longer opens.",
+    "uploadDelete": "Delete upload link",
+    "uploadAddress": "Upload link address",
+    "received": "{count, plural, =0 {No files received} one {# file received} other {# files received}}",
+    "qr": "QR code",
+    "qrDownload": "Download",
+    "qrFile": "{name} QR",
+    "qrUploadFile": "{name} upload QR",
+    "folderSize": "Folder size",
+    "folderUsedOf": "<b>{used}</b> of {limit}",
+    "folderLeft": "{left} left",
+    "folderFull": "Full"
+  },
+  "viewer": {
+    "label": "{name}",
+    "position": "{index} of {count}",
+    "share": "Share",
+    "download": "Download",
+    "downloadSize": "Download · {size}",
+    "noPreview": "There’s no preview for this kind of file.",
+    "failed": "Couldn’t show this file.",
+    "textCut": "Showing the first 512 KB. Download the file to see the rest.",
+    "previous": "Previous",
+    "next": "Next",
+    "edit": "Edit",
+    "done": "Done",
+    "saved": "Saved",
+    "saving": "Saving…",
+    "notSaved": "Not saved",
+    "retry": "Retry",
+    "conflict": "Changed somewhere else",
+    "reload": "Reload",
+    "keepMine": "Keep mine",
+    "editLabel": "Edit {name}",
+    "mode": {
+      "label": "View",
+      "editor": "Editor",
+      "split": "Split",
+      "preview": "Preview"
+    }
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "seek": "Position",
+    "back": "Back {seconds} seconds",
+    "forward": "Forward {seconds} seconds",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "volume": "Volume",
+    "speed": "Speed",
+    "pictureInPicture": "Picture in picture",
+    "fullScreen": "Full screen",
+    "exitFullScreen": "Exit full screen",
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Stop",
+    "nowPlaying": "Now playing",
+    "cantPlay": "Couldn’t play this file.",
+    "download": "Download"
+  },
+  "reader": {
+    "contents": "Contents",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "smallerText": "Smaller text",
+    "largerText": "Larger text",
+    "cantOpen": "Couldn’t open this book.",
+    "download": "Download",
+    "progress": "{percent}%"
+  },
+  "uploads": {
+    "label": "Uploads",
+    "uploading": "{count, plural, one {Uploading # file} other {Uploading # files}}",
+    "paused": "Uploads paused",
+    "offline": "Waiting for a connection",
+    "offlineDetail": "{sent} of {size} · carries on when you’re back online",
+    "finished": "{count, plural, one {# file uploaded} other {# files uploaded}}",
+    "someFailed": "{done} uploaded, {failed} failed",
+    "allFailed": "{count, plural, one {The upload failed} other {# uploads failed}}",
+    "finishedDetail": "{size} in {minutes, plural, =0 {} one {# min } other {# min }}{seconds} s",
+    "calculating": "estimating…",
+    "pauseAll": "Pause all",
+    "resumeAll": "Resume all",
+    "show": "Show the files",
+    "hide": "Hide the files",
+    "close": "Close",
+    "cancelAll": "Cancel all",
+    "cancelAllTitle": "Cancel the uploads?",
+    "cancelAllConfirm": "Cancel uploads",
+    "cancelAllBody": "{count, plural, one {The file still going up stops, and what has arrived of it is thrown away.} other {The # files still going up stop, and what has arrived of them is thrown away.}} Files that finished stay.",
+    "more": "{count, plural, one {and # more} other {and # more}}",
+    "retry": "Try {name} again",
+    "pause": "Pause {name}",
+    "resume": "Resume {name}",
+    "cancel": "Cancel {name}",
+    "remove": "Remove {name}",
+    "row": {
+      "done": "{size} · in {place}",
+      "paused": "Paused · {sent} of {size}",
+      "waiting": "Waiting · {size}",
+      "progress": "{sent} of {size}",
+      "tooLarge": "Too big: the limit is {max}"
+    },
+    "left": {
+      "few": "almost done",
+      "seconds": "{count} s left",
+      "minutes": "{count} min left",
+      "hours": "{hours} h {minutes} min left"
+    },
+    "conflict": {
+      "title": "{count, plural, one {{name} is already in {folder}} other {# files are already in {folder}}}",
+      "more": "and {count} more",
+      "keepBoth": "Keep both",
+      "replace": "Replace"
+    },
+    "sharedFailed": "The shared files didn’t arrive. Share them again.",
+    "sharedTitle": "{count, plural, one {Upload # file to My files?} other {Upload # files to My files?}}",
+    "sharedConfirm": "Upload"
+  },
+  "drop": {
+    "title": "Drop to upload to {folder}",
+    "notHere": "You can’t upload here"
+  },
+  "shared": {
+    "title": "Shared",
+    "empty": "You haven’t shared anything yet",
+    "public": "Public link",
+    "users": "Signed-in link",
+    "password": "Password",
+    "expired": "Expired",
+    "expires": "Until {date}",
+    "downloads": "{count, plural, one {# download} other {# downloads}}",
+    "downloadsOf": "{count} of {max} downloads",
+    "people": "{count, plural, one {# person} other {# people}}",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "copyFailed": "Couldn’t copy the link",
+    "manage": "Sharing settings for {name}",
+    "stop": "Stop sharing {name}",
+    "stopped": "{name} isn’t shared any more",
+    "stopTitle": "Stop sharing?",
+    "stopConfirm": "Stop sharing",
+    "upload": "Upload link",
+    "received": "{count, plural, =0 {No files received} one {# file received} other {# files received}}",
+    "copyUpload": "Copy upload link",
+    "stopLink": "The link to {name} stops working.",
+    "stopLinks": "Both links to {name} stop working.",
+    "stopPeople": "{count, plural, one {The person it was shared with loses access.} other {The # people it was shared with lose access.}}",
+    "folderLeft": "{size} · {left} left",
+    "folderFull": "{size} · full"
+  },
+  "sharedWithMe": {
+    "title": "Shared with me",
+    "empty": "Nothing here yet",
+    "from": "{name} · {date}",
+    "remove": "Remove from my list",
+    "removed": "Removed {name} from your list"
+  },
+  "trash": {
+    "title": "Trash",
+    "empty": "Empty trash",
+    "nothing": "The trash is empty",
+    "from": "From {folder} · deleted {date}",
+    "daysLeft": "{count, plural, =0 {Deleted today} one {# day left} other {# days left}}",
+    "restore": "Restore",
+    "restored": "Restored {name}",
+    "restoredAs": "Restored as {name}",
+    "deleteForever": "Delete {name} for good",
+    "deleteTitle": "Delete for good?",
+    "deleteConfirm": "Delete",
+    "deleteBody": "{name} is deleted for good. This can’t be undone.",
+    "emptyTitle": "Empty the trash?",
+    "emptyConfirm": "Empty trash",
+    "emptyBody": "{count, plural, one {# item is deleted for good.} other {# items are deleted for good.}} This can’t be undone.",
+    "emptied": "The trash is empty"
+  },
+  "link": {
+    "pageTitle": "Shared with you",
+    "sharedBy": "Shared by {name}",
+    "until": "Available until {date}",
+    "download": "Download",
+    "downloadAll": "Download all",
+    "downloadNamed": "Download {name}",
+    "openPreview": "Open preview",
+    "emptyFolder": "This folder is empty",
+    "offline": "Couldn’t reach Files",
+    "retry": "Try again",
+    "notFound": {
+      "title": "This link doesn’t work",
+      "body": "It may have been deleted, or it never existed."
+    },
+    "expired": {
+      "title": "This link has expired",
+      "body": "Ask whoever sent it for a new one."
+    },
+    "usedUp": {
+      "title": "This link has been used up",
+      "body": "It reached its download limit. Ask whoever sent it for a new one."
+    },
+    "signIn": {
+      "title": "Sign in to open this",
+      "body": "{name} shared it with people who have an account here.",
+      "button": "Sign in"
+    },
+    "password": {
+      "title": "This link has a password",
+      "body": "{name} protected it. Type the password to see what’s inside.",
+      "label": "Password",
+      "submit": "Open"
+    }
+  },
+  "uploadLink": {
+    "pageTitle": "Send files",
+    "title": "Send files to {name}",
+    "drop": "Drop files here",
+    "choose": "Choose files",
+    "passwordBody": "{name} protected it. Type the password to send files."
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorites yet",
+    "remove": "Remove {name} from favorites",
+    "removed": "Removed {name} from favorites"
+  },
+  "storage": {
+    "label": "Storage",
+    "usedOf": "<b>{used}</b> of {quota}",
+    "used": "<b>{used}</b> used"
+  },
+  "admin": {
+    "limits": {
+      "title": "Limits",
+      "upload": "Limit the size of a file",
+      "quota": "Limit storage per person",
+      "save": "Save limits",
+      "saved": "Limits saved",
+      "uploadLink": "Limit the size of a folder with an upload link"
+    },
+    "quota": {
+      "title": "Storage for {name}",
+      "mode": "Storage limit",
+      "default": "Default",
+      "custom": "Own limit",
+      "unlimited": "No limit",
+      "noLimit": "no limit",
+      "defaultWith": "Default ({size})"
+    },
+    "storage": {
+      "title": "Storage",
+      "usedOf": "{used} of {limit}",
+      "used": "{used} used",
+      "mode": {
+        "default": "Default limit",
+        "custom": "Own limit",
+        "unlimited": "No limit"
+      },
+      "edit": "Storage",
+      "editFor": "Storage for {name}"
+    }
+  },
+  "nav": {
+    "files": "My files",
+    "filesShort": "My files",
+    "favorites": "Favorites",
+    "shared": "Shared",
+    "sharedShort": "Shared",
+    "sharedWithMe": "Shared with me",
+    "sharedWithMeShort": "With me",
+    "trash": "Trash"
+  },
+  "settings": {
+    "storage": {
+      "title": "Storage",
+      "limit": "Limit",
+      "free": "Free",
+      "none": "None",
+      "largestFile": "Largest file"
+    }
+  }
+}

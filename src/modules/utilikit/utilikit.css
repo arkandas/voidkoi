@@ -1,0 +1,384 @@
+/*
+ * Utilikit's own styles, for its pages only: each tool's colour, the range
+ * sliders, the transparency checkerboard, the diff rows and the Markdown
+ * preview. Everything sits under [data-app='utilikit'] so nothing reaches
+ * the other apps.
+ */
+
+[data-app='utilikit'] {
+  --diff-added: rgb(4 120 87 / 0.12);
+  --diff-removed: rgb(220 38 38 / 0.1);
+}
+
+.dark [data-app='utilikit'] {
+  --diff-added: rgb(52 211 153 / 0.16);
+  --diff-removed: rgb(248 113 113 / 0.16);
+}
+
+/* Each tool's colour: its tile on the home page and in its header, and its icon in the list. */
+[data-app='utilikit'] .tool-tile {
+  color: rgb(var(--tool-rgb));
+  background-color: rgb(var(--tool-rgb) / 0.12);
+}
+
+.dark [data-app='utilikit'] .tool-tile {
+  background-color: rgb(var(--tool-rgb) / 0.18);
+}
+
+[data-app='utilikit'] .tool-icon {
+  color: rgb(var(--tool-rgb));
+}
+
+[data-app='utilikit'] .tool-violet { --tool-rgb: 124 58 237; }
+[data-app='utilikit'] .tool-pink { --tool-rgb: 219 39 119; }
+[data-app='utilikit'] .tool-red { --tool-rgb: 220 38 38; }
+[data-app='utilikit'] .tool-emerald { --tool-rgb: 5 150 105; }
+[data-app='utilikit'] .tool-sky { --tool-rgb: 2 132 199; }
+[data-app='utilikit'] .tool-blue { --tool-rgb: 37 99 235; }
+[data-app='utilikit'] .tool-amber { --tool-rgb: 180 83 9; }
+[data-app='utilikit'] .tool-cyan { --tool-rgb: 8 145 178; }
+[data-app='utilikit'] .tool-green { --tool-rgb: 21 128 61; }
+[data-app='utilikit'] .tool-orange { --tool-rgb: 234 88 12; }
+[data-app='utilikit'] .tool-indigo { --tool-rgb: 79 70 229; }
+[data-app='utilikit'] .tool-teal { --tool-rgb: 13 148 136; }
+[data-app='utilikit'] .tool-yellow { --tool-rgb: 161 98 7; }
+[data-app='utilikit'] .tool-fuchsia { --tool-rgb: 192 38 211; }
+[data-app='utilikit'] .tool-purple { --tool-rgb: 147 51 234; }
+[data-app='utilikit'] .tool-slate { --tool-rgb: 71 85 105; }
+[data-app='utilikit'] .tool-rose { --tool-rgb: 225 29 72; }
+[data-app='utilikit'] .tool-lime { --tool-rgb: 77 124 15; }
+[data-app='utilikit'] .tool-stone { --tool-rgb: 87 83 78; }
+[data-app='utilikit'] .tool-neutral { --tool-rgb: 82 82 82; }
+
+.dark [data-app='utilikit'] .tool-violet { --tool-rgb: 167 139 250; }
+.dark [data-app='utilikit'] .tool-pink { --tool-rgb: 244 114 182; }
+.dark [data-app='utilikit'] .tool-red { --tool-rgb: 248 113 113; }
+.dark [data-app='utilikit'] .tool-emerald { --tool-rgb: 52 211 153; }
+.dark [data-app='utilikit'] .tool-sky { --tool-rgb: 56 189 248; }
+.dark [data-app='utilikit'] .tool-blue { --tool-rgb: 96 165 250; }
+.dark [data-app='utilikit'] .tool-amber { --tool-rgb: 251 191 36; }
+.dark [data-app='utilikit'] .tool-cyan { --tool-rgb: 34 211 238; }
+.dark [data-app='utilikit'] .tool-green { --tool-rgb: 74 222 128; }
+.dark [data-app='utilikit'] .tool-orange { --tool-rgb: 251 146 60; }
+.dark [data-app='utilikit'] .tool-indigo { --tool-rgb: 129 140 248; }
+.dark [data-app='utilikit'] .tool-teal { --tool-rgb: 45 212 191; }
+.dark [data-app='utilikit'] .tool-yellow { --tool-rgb: 250 204 21; }
+.dark [data-app='utilikit'] .tool-fuchsia { --tool-rgb: 232 121 249; }
+.dark [data-app='utilikit'] .tool-purple { --tool-rgb: 192 132 252; }
+.dark [data-app='utilikit'] .tool-slate { --tool-rgb: 148 163 184; }
+.dark [data-app='utilikit'] .tool-rose { --tool-rgb: 251 113 133; }
+.dark [data-app='utilikit'] .tool-lime { --tool-rgb: 163 230 53; }
+.dark [data-app='utilikit'] .tool-stone { --tool-rgb: 168 162 158; }
+.dark [data-app='utilikit'] .tool-neutral { --tool-rgb: 163 163 163; }
+
+/* Code and results scroll with the suite's thin bars. */
+[data-app='utilikit'] pre::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+[data-app='utilikit'] pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-app='utilikit'] pre::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+[data-app='utilikit'] pre {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+/* Number fields without the browser's arrows. */
+[data-app='utilikit'] input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+[data-app='utilikit'] input[type='number']::-webkit-inner-spin-button,
+[data-app='utilikit'] input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+[data-app='utilikit'] .range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+}
+
+[data-app='utilikit'] .range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--muted);
+  border: 1px solid var(--line);
+}
+
+[data-app='utilikit'] .range::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--muted);
+  border: 1px solid var(--line);
+}
+
+[data-app='utilikit'] .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--raised);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+[data-app='utilikit'] .range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--raised);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+[data-app='utilikit'] .range:focus-visible {
+  outline: none;
+}
+
+[data-app='utilikit'] .range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgb(var(--accent-rgb) / 0.25);
+}
+
+[data-app='utilikit'] .range:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgb(var(--accent-rgb) / 0.25);
+}
+
+[data-app='utilikit'] .range:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+[data-app='utilikit'] .opacity-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+}
+
+[data-app='utilikit'] .opacity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--raised);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+[data-app='utilikit'] .opacity-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--raised);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+}
+
+[data-app='utilikit'] .checkerboard {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, #d9d9d9 25%, transparent 25%),
+    linear-gradient(-45deg, #d9d9d9 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #d9d9d9 75%),
+    linear-gradient(-45deg, transparent 75%, #d9d9d9 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+[data-app='utilikit'] .diff-added {
+  background-color: var(--diff-added);
+}
+
+[data-app='utilikit'] .diff-removed {
+  background-color: var(--diff-removed);
+}
+
+[data-app='utilikit'] .react-colorful {
+  width: 100% !important;
+}
+
+[data-app='utilikit'] .react-colorful__saturation {
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+[data-app='utilikit'] .react-colorful__last-control {
+  border-radius: 0 0 0.5rem 0.5rem !important;
+}
+
+@layer components {
+  [data-app='utilikit'] .markdown-content {
+    overflow-wrap: anywhere;
+    line-height: 1.7;
+  }
+
+  [data-app='utilikit'] .markdown-content > :first-child {
+    margin-top: 0;
+  }
+
+  [data-app='utilikit'] .markdown-content h1,
+  [data-app='utilikit'] .markdown-content h2,
+  [data-app='utilikit'] .markdown-content h3,
+  [data-app='utilikit'] .markdown-content h4,
+  [data-app='utilikit'] .markdown-content h5,
+  [data-app='utilikit'] .markdown-content h6 {
+    margin: 1.5em 0 0.5em;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  [data-app='utilikit'] .markdown-content h1 {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.3em;
+    font-size: 1.75rem;
+  }
+
+  [data-app='utilikit'] .markdown-content h2 {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.3em;
+    font-size: 1.375rem;
+  }
+
+  [data-app='utilikit'] .markdown-content h3 {
+    font-size: 1.125rem;
+  }
+
+  [data-app='utilikit'] .markdown-content h4,
+  [data-app='utilikit'] .markdown-content h5,
+  [data-app='utilikit'] .markdown-content h6 {
+    font-size: 1rem;
+  }
+
+  [data-app='utilikit'] .markdown-content p {
+    margin: 0.75em 0;
+  }
+
+  [data-app='utilikit'] .markdown-content a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  [data-app='utilikit'] .markdown-content a:hover {
+    color: var(--accent-hover);
+  }
+
+  [data-app='utilikit'] .markdown-content strong {
+    font-weight: 600;
+  }
+
+  [data-app='utilikit'] .markdown-content del {
+    color: var(--ink-muted);
+  }
+
+  [data-app='utilikit'] .markdown-content code {
+    border-radius: 0.25rem;
+    background-color: color-mix(in srgb, var(--ink) 9%, transparent);
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  [data-app='utilikit'] .markdown-content pre {
+    margin: 1em 0;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    background-color: var(--canvas);
+    padding: 0.875rem 1rem;
+  }
+
+  [data-app='utilikit'] .markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  [data-app='utilikit'] .markdown-content blockquote {
+    margin: 1em 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    color: var(--ink-muted);
+  }
+
+  [data-app='utilikit'] .markdown-content ul,
+  [data-app='utilikit'] .markdown-content ol {
+    margin: 0.75em 0;
+    padding-left: 1.75rem;
+    list-style-position: outside;
+  }
+
+  [data-app='utilikit'] .markdown-content ul {
+    list-style-type: disc;
+  }
+
+  [data-app='utilikit'] .markdown-content ol {
+    list-style-type: decimal;
+  }
+
+  [data-app='utilikit'] .markdown-content li {
+    margin: 0.25em 0;
+  }
+
+  [data-app='utilikit'] .markdown-content ul.contains-task-list {
+    padding-left: 0.25rem;
+    list-style-type: none;
+  }
+
+  [data-app='utilikit'] .markdown-content input[type='checkbox'] {
+    margin-right: 0.5rem;
+  }
+
+  [data-app='utilikit'] .markdown-content table {
+    margin: 1em 0;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  [data-app='utilikit'] .markdown-content th,
+  [data-app='utilikit'] .markdown-content td {
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.75rem;
+    text-align: left;
+  }
+
+  [data-app='utilikit'] .markdown-content th {
+    background-color: var(--muted);
+    font-weight: 600;
+  }
+
+  [data-app='utilikit'] .markdown-content hr {
+    margin: 1.5em 0;
+    border: 0;
+    border-top: 1px solid var(--line-strong);
+  }
+
+  [data-app='utilikit'] .markdown-content img {
+    margin: 1em 0;
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+}

@@ -1,0 +1,175 @@
+/*
+ * Habits' own colours, beside the suite's tokens: one per thing it tracks.
+ * Weight is blue, food orange, training green, and the goal and streaks gold;
+ * the accent (amber) is for actions and the current place. Each comes as a
+ * fill for marks, a soft ground for chips and an ink for text on card, soft
+ * and surface grounds, all at 4.5:1 or more. The three tracked colours stay
+ * apart under protanopia and deuteranopia (OKLab ΔE ≥ 8).
+ */
+
+[data-app='habits'] {
+  --weight-rgb: 37 99 235;
+  --weight-soft-rgb: 233 239 253;
+  --weight-ink-rgb: 29 78 216;
+  --weight-on-rgb: 255 255 255;
+
+  --food-rgb: 229 111 23;
+  --food-soft-rgb: 252 241 232;
+  --food-ink-rgb: 176 66 6;
+  --food-on-rgb: 255 255 255;
+
+  --exercise-rgb: 10 117 32;
+  --exercise-soft-rgb: 231 241 233;
+  --exercise-ink-rgb: 10 107 30;
+  --exercise-on-rgb: 255 255 255;
+
+  --streak-rgb: 191 135 0;
+  --streak-soft-rgb: 249 243 230;
+  --streak-ink-rgb: 133 88 0;
+  --streak-on-rgb: 255 255 255;
+
+  --weekend: rgb(16 24 28 / 0.025);
+
+  /* What surrounds the calendar's grid on a wide screen: its rows share the rest of the height. */
+  --calendar-chrome: 13.5rem;
+}
+
+@media (min-width: 64rem) {
+  [data-app='habits'] {
+    --calendar-chrome: 15rem;
+  }
+}
+
+.dark [data-app='habits'] {
+  --weight-rgb: 80 143 249;
+  --weight-soft-rgb: 36 52 73;
+  --weight-ink-rgb: 138 180 255;
+  --weight-on-rgb: 8 14 30;
+
+  --food-rgb: 253 133 55;
+  --food-soft-rgb: 64 51 42;
+  --food-ink-rgb: 255 171 112;
+  --food-on-rgb: 30 14 4;
+
+  --exercise-rgb: 75 198 128;
+  --exercise-soft-rgb: 36 61 53;
+  --exercise-ink-rgb: 118 222 156;
+  --exercise-on-rgb: 4 26 14;
+
+  --streak-rgb: 255 194 51;
+  --streak-soft-rgb: 64 60 41;
+  --streak-ink-rgb: 255 209 102;
+  --streak-on-rgb: 39 23 2;
+
+  --weekend: rgb(255 255 255 / 0.02);
+}
+
+[data-app='habits'],
+.dark [data-app='habits'] {
+  --weight: rgb(var(--weight-rgb));
+  --weight-soft: rgb(var(--weight-soft-rgb));
+  --weight-ink: rgb(var(--weight-ink-rgb));
+  --food: rgb(var(--food-rgb));
+  --food-soft: rgb(var(--food-soft-rgb));
+  --food-ink: rgb(var(--food-ink-rgb));
+  --exercise: rgb(var(--exercise-rgb));
+  --exercise-soft: rgb(var(--exercise-soft-rgb));
+  --exercise-ink: rgb(var(--exercise-ink-rgb));
+  --streak: rgb(var(--streak-rgb));
+  --streak-soft: rgb(var(--streak-soft-rgb));
+  --streak-ink: rgb(var(--streak-ink-rgb));
+}
+
+/*
+ * A tone picks one of them for everything inside: `bg-(--tone)`,
+ * `text-(--tone-ink)`, a card's tinted head.
+ */
+[data-app='habits'] .tone-weight {
+  --tone: var(--weight);
+  --tone-soft: var(--weight-soft);
+  --tone-ink: var(--weight-ink);
+  --tone-on: rgb(var(--weight-on-rgb));
+}
+[data-app='habits'] .tone-food {
+  --tone: var(--food);
+  --tone-soft: var(--food-soft);
+  --tone-ink: var(--food-ink);
+  --tone-on: rgb(var(--food-on-rgb));
+}
+[data-app='habits'] .tone-exercise {
+  --tone: var(--exercise);
+  --tone-soft: var(--exercise-soft);
+  --tone-ink: var(--exercise-ink);
+  --tone-on: rgb(var(--exercise-on-rgb));
+}
+[data-app='habits'] .tone-streak {
+  --tone: var(--streak);
+  --tone-soft: var(--streak-soft);
+  --tone-ink: var(--streak-ink);
+  --tone-on: rgb(var(--streak-on-rgb));
+}
+[data-app='habits'] :is(.tone-weight, .tone-food, .tone-exercise, .tone-streak) {
+  --tone-head: color-mix(in srgb, var(--tone) 9%, var(--card));
+  --tone-line: color-mix(in srgb, var(--tone) 22%, var(--line));
+}
+
+/* Sheets: up from the bottom on a phone, from the side or under the header on a wider screen. */
+@keyframes habits-sheet-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes habits-sheet-down {
+  from {
+    transform: translate3d(0, var(--drag-y, 0px), 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes habits-drawer-in {
+  from {
+    transform: translate3d(28px, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes habits-drawer-out {
+  to {
+    transform: translate3d(28px, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes habits-pop-in {
+  from {
+    transform: translate3d(0, -6px, 0) scale(0.97);
+    opacity: 0;
+  }
+}
+@keyframes habits-pop-out {
+  to {
+    transform: translate3d(0, -6px, 0) scale(0.97);
+    opacity: 0;
+  }
+}
+@keyframes habits-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes habits-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes habits-slide-from-right {
+  from {
+    transform: translate3d(28px, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes habits-slide-from-left {
+  from {
+    transform: translate3d(-28px, 0, 0);
+    opacity: 0;
+  }
+}

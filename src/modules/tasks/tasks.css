@@ -1,0 +1,510 @@
+/*
+ * Tasks' own look, on top of the suite's tokens: cards, priority and deadline
+ * chips, sticky notes and their cork board, the Markdown in cards and notes,
+ * and the board's columns on a phone. Everything sits under data-app="tasks".
+ */
+
+[data-app='tasks'] {
+  --card-edge-rgb: 214 223 228;
+  --card-ink-muted-rgb: 70 84 92;
+  --check-edge-rgb: 128 142 150;
+  --card-shadow: 0 1px 2px rgb(16 24 28 / 0.07), 0 3px 8px -3px rgb(16 24 28 / 0.12);
+  --card-shadow-hover: 0 2px 4px rgb(16 24 28 / 0.08), 0 8px 16px -6px rgb(16 24 28 / 0.18);
+  --check-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.6 8.4l2.9 2.9 5.9-6.4'/%3E%3C/svg%3E");
+}
+
+.dark [data-app='tasks'] {
+  --card-edge-rgb: 61 74 81;
+  --card-ink-muted-rgb: 178 190 196;
+  --check-edge-rgb: 120 134 141;
+  --card-shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 4px 10px -4px rgb(0 0 0 / 0.55);
+  --card-shadow-hover: 0 2px 4px rgb(0 0 0 / 0.55), 0 8px 18px -6px rgb(0 0 0 / 0.6);
+  --check-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23022c22' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.6 8.4l2.9 2.9 5.9-6.4'/%3E%3C/svg%3E");
+}
+
+/* Cards: tasks and to-dos. In a layer, so a utility on the same element still wins. */
+@layer components {
+  [data-app='tasks'] .card-surface {
+    border-color: rgb(var(--card-edge-rgb));
+    background-color: rgb(var(--card-rgb));
+    box-shadow: var(--card-shadow);
+  }
+
+  [data-app='tasks'] .card-surface:hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  [data-app='tasks'] .card-muted {
+    color: rgb(var(--card-ink-muted-rgb));
+  }
+
+  [data-app='tasks'] .card-chip {
+    border-color: rgb(var(--card-edge-rgb));
+    color: rgb(var(--card-ink-muted-rgb));
+  }
+
+  [data-app='tasks'] .check-edge {
+    border-color: rgb(var(--check-edge-rgb));
+  }
+}
+
+/* Priority and overdue chips: light, then dark. */
+[data-app='tasks'] .priority-low {
+  --pill: #f1fef8;
+  --pill-border: #009e72;
+  --pill-ink: #005c41;
+}
+
+[data-app='tasks'] .priority-medium {
+  --pill: #f6fbff;
+  --pill-border: #008fd2;
+  --pill-ink: #00537c;
+}
+
+[data-app='tasks'] .priority-high {
+  --pill: #faf9ff;
+  --pill-border: #8e71d6;
+  --pill-ink: #563199;
+}
+
+[data-app='tasks'] .priority-urgent {
+  --pill: #fff8f9;
+  --pill-border: #d05a6e;
+  --pill-ink: #8f0d35;
+}
+
+[data-app='tasks'] .pill-overdue {
+  --pill: #fff8f8;
+  --pill-border: #d74748;
+  --pill-ink: #a2041c;
+}
+
+.dark [data-app='tasks'] .priority-low {
+  --pill: transparent;
+  --pill-border: #37b78a;
+  --pill-ink: #9eebc9;
+}
+
+.dark [data-app='tasks'] .priority-medium {
+  --pill: transparent;
+  --pill-border: #44a8e7;
+  --pill-ink: #b1deff;
+}
+
+.dark [data-app='tasks'] .priority-high {
+  --pill: transparent;
+  --pill-border: #a58de6;
+  --pill-ink: #dad0ff;
+}
+
+.dark [data-app='tasks'] .priority-urgent {
+  --pill: transparent;
+  --pill-border: #e37a89;
+  --pill-ink: #ffc7cc;
+}
+
+.dark [data-app='tasks'] .pill-overdue {
+  --pill: transparent;
+  --pill-border: #ea6a66;
+  --pill-ink: #ffb4af;
+}
+
+[data-app='tasks'] .priority-chip,
+[data-app='tasks'] .pill-overdue {
+  border: 1.5px solid var(--pill-border);
+  background-color: var(--pill);
+  color: var(--pill-ink);
+}
+
+/* The dot beside a task in search results. */
+[data-app='tasks'] .priority-dot {
+  background-color: var(--pill-border);
+}
+
+/* A search result, just opened: outlined for a moment where it is. */
+[data-app='tasks'] .search-hit {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  animation: tasks-search-hit 3.2s ease-out forwards;
+}
+
+@keyframes tasks-search-hit {
+  0%,
+  70% {
+    outline-color: var(--accent);
+  }
+
+  100% {
+    outline-color: transparent;
+  }
+}
+
+/* Press and hold to drag on a touch screen, without the text selection or the callout. */
+@media (hover: none) and (pointer: coarse) {
+  [data-app='tasks'] .touch-draggable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* On a phone the board's columns snap into place, one at a time. */
+@media (max-width: 639px) {
+  [data-app='tasks'] .sections-scroll {
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0.75rem;
+    scrollbar-width: none;
+  }
+
+  [data-app='tasks'] .sections-scroll.is-dragging {
+    scroll-snap-type: none;
+  }
+
+  [data-app='tasks'] .sections-scroll .section-col {
+    scroll-snap-align: start;
+  }
+
+  [data-app='tasks'] .sections-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Sticky notes
+ * ------------------------------------------------------------------------- */
+
+[data-app='tasks'] .sticky-yellow {
+  --sticky: #fef08a;
+  --sticky-edge: #fde047;
+}
+
+[data-app='tasks'] .sticky-blue {
+  --sticky: #bfdbfe;
+  --sticky-edge: #93c5fd;
+}
+
+[data-app='tasks'] .sticky-green {
+  --sticky: #bbf7d0;
+  --sticky-edge: #86efac;
+}
+
+[data-app='tasks'] .sticky-pink {
+  --sticky: #fbcfe8;
+  --sticky-edge: #f9a8d4;
+}
+
+[data-app='tasks'] .sticky-orange {
+  --sticky: #fed7aa;
+  --sticky-edge: #fdba74;
+}
+
+[data-app='tasks'] .sticky-purple {
+  --sticky: #e9d5ff;
+  --sticky-edge: #d8b4fe;
+}
+
+[data-app='tasks'] .sticky-cyan {
+  --sticky: #a5f3fc;
+  --sticky-edge: #67e8f9;
+}
+
+[data-app='tasks'] .sticky-red {
+  --sticky: #fecaca;
+  --sticky-edge: #fca5a5;
+}
+
+[data-app='tasks'] .sticky-lime {
+  --sticky: #d9f99d;
+  --sticky-edge: #bef264;
+}
+
+/* A swatch of a note's colour, as in the colour picker and the search results. */
+[data-app='tasks'] .sticky-swatch {
+  background-color: var(--sticky);
+  border-color: var(--sticky-edge);
+}
+
+/* Dark ink on the paper in either theme. */
+[data-app='tasks'] .sticky-note {
+  color-scheme: light;
+  --ink-rgb: 31 41 55;
+  --ink-muted-rgb: 75 85 99;
+  --ink-faint-rgb: 107 114 128;
+  --accent-rgb: 4 120 87;
+  --accent-hover-rgb: 6 95 70;
+  --accent-ink-rgb: 255 255 255;
+  --line-strong-rgb: 157 162 170;
+  --ink: rgb(var(--ink-rgb));
+  --ink-muted: rgb(var(--ink-muted-rgb));
+  --ink-faint: rgb(var(--ink-faint-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --accent-hover: rgb(var(--accent-hover-rgb));
+  --accent-ink: rgb(var(--accent-ink-rgb));
+  --line-strong: rgb(var(--line-strong-rgb));
+  --check-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.6 8.4l2.9 2.9 5.9-6.4'/%3E%3C/svg%3E");
+  color: var(--ink);
+  background-color: var(--sticky);
+  border-color: var(--sticky-edge);
+}
+
+[data-app='tasks'] .sticky-note ::placeholder {
+  color: var(--ink-muted);
+}
+
+[data-app='tasks'] .sticky-muted {
+  color: var(--ink-muted);
+}
+
+[data-app='tasks'] .sticky-rule {
+  border-color: rgb(31 41 55 / 0.18);
+}
+
+[data-app='tasks'] .sticky-save,
+[data-app='tasks'] .sticky-cancel {
+  height: 1.75rem;
+  border-radius: 0.375rem;
+  padding: 0 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+[data-app='tasks'] .sticky-save {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+[data-app='tasks'] .sticky-save:hover {
+  background-color: #111827;
+}
+
+[data-app='tasks'] .sticky-cancel {
+  border: 1px solid rgb(31 41 55 / 0.25);
+  background-color: rgb(255 255 255 / 0.6);
+  color: #1f2937;
+}
+
+[data-app='tasks'] .sticky-cancel:hover {
+  background-color: rgb(255 255 255 / 0.9);
+}
+
+[data-app='tasks'] .sticky-menu {
+  color-scheme: light;
+  border-color: #e5e7eb;
+  background-color: rgb(255 255 255 / 0.96);
+  color: #4b5563;
+}
+
+[data-app='tasks'] .sticky-menu button:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+[data-app='tasks'] .sticky-menu button.is-danger:hover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/*
+ * The cork board stays light in the dark theme too, so its own buttons and
+ * text take the light tokens. These mirror :root in globals.css.
+ */
+[data-app='tasks'] .corkboard {
+  color-scheme: light;
+  --canvas-rgb: 238 243 245;
+  --surface-rgb: 249 251 252;
+  --raised-rgb: 255 255 255;
+  --card-rgb: 255 255 255;
+  --muted-rgb: 228 236 239;
+  --line-rgb: 216 225 229;
+  --line-strong-rgb: 187 199 205;
+  --ink-rgb: 16 24 28;
+  --ink-muted-rgb: 70 84 92;
+  --ink-faint-rgb: 91 106 114;
+  --accent-rgb: 4 120 87;
+  --accent-hover-rgb: 6 95 70;
+  --accent-soft-rgb: 220 240 229;
+  --accent-ink-rgb: 255 255 255;
+  --danger-rgb: 185 28 28;
+  --danger-soft-rgb: 254 226 226;
+  --canvas: rgb(var(--canvas-rgb));
+  --surface: rgb(var(--surface-rgb));
+  --raised: rgb(var(--raised-rgb));
+  --card: rgb(var(--card-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --line: rgb(var(--line-rgb));
+  --line-strong: rgb(var(--line-strong-rgb));
+  --ink: rgb(var(--ink-rgb));
+  --ink-muted: rgb(var(--ink-muted-rgb));
+  --ink-faint: rgb(var(--ink-faint-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --accent-hover: rgb(var(--accent-hover-rgb));
+  --accent-soft: rgb(var(--accent-soft-rgb));
+  --accent-ink: rgb(var(--accent-ink-rgb));
+  --danger: rgb(var(--danger-rgb));
+  --danger-soft: rgb(var(--danger-soft-rgb));
+  color: var(--ink);
+  background-color: #fff7ed;
+  background-image:
+    linear-gradient(45deg, rgb(139 69 19 / 0.03) 50%, transparent 50%),
+    linear-gradient(-45deg, rgb(139 69 19 / 0.03) 50%, transparent 50%),
+    linear-gradient(rgb(139 69 19 / 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(139 69 19 / 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom right, #fffbeb, #fff7ed, #fefce8);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px, 100% 100%;
+  background-position: 0 0, 25px 25px, 0 0, 0 0, 0 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Markdown in cards, to-dos and notes: small, and close together.
+ * ------------------------------------------------------------------------- */
+
+@layer components {
+  [data-app='tasks'] .markdown-content {
+    overflow-wrap: anywhere;
+  }
+
+  [data-app='tasks'] .markdown-content h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  [data-app='tasks'] .markdown-content h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  [data-app='tasks'] .markdown-content h3 {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  [data-app='tasks'] .markdown-content p {
+    margin: 0.25rem 0;
+    white-space: pre-wrap;
+  }
+
+  [data-app='tasks'] .markdown-content a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  [data-app='tasks'] .markdown-content a:hover {
+    color: var(--accent-hover);
+  }
+
+  [data-app='tasks'] .markdown-content strong {
+    font-weight: 600;
+  }
+
+  [data-app='tasks'] .markdown-content em {
+    font-style: italic;
+  }
+
+  [data-app='tasks'] .markdown-content del {
+    color: var(--ink-muted);
+  }
+
+  [data-app='tasks'] .markdown-content code {
+    border-radius: 0.25rem;
+    background-color: color-mix(in srgb, var(--ink) 9%, transparent);
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  [data-app='tasks'] .markdown-content pre {
+    overflow-x: auto;
+    border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+    border-radius: 0.375rem;
+    background-color: color-mix(in srgb, var(--ink) 6%, transparent);
+    padding: 0.5rem;
+  }
+
+  [data-app='tasks'] .markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  [data-app='tasks'] .markdown-content blockquote {
+    margin: 0.25rem 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 0.625rem;
+    color: var(--ink-muted);
+  }
+
+  [data-app='tasks'] .markdown-content ul,
+  [data-app='tasks'] .markdown-content ol {
+    margin: 0.25rem 0;
+    padding-left: 1.5rem;
+    list-style-position: outside;
+  }
+
+  [data-app='tasks'] .markdown-content ul {
+    list-style-type: disc;
+  }
+
+  [data-app='tasks'] .markdown-content ol {
+    list-style-type: decimal;
+  }
+
+  [data-app='tasks'] .markdown-content li {
+    display: list-item;
+    margin: 0.125rem 0;
+  }
+
+  [data-app='tasks'] .markdown-content ul.contains-task-list {
+    padding-left: 0.25rem;
+    list-style-type: none;
+  }
+
+  [data-app='tasks'] .markdown-content input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin: 0 0.375rem 0 0;
+    border: 1.5px solid color-mix(in srgb, var(--ink) 55%, transparent);
+    border-radius: 0.2rem;
+    vertical-align: -0.125rem;
+    background: center / 100% no-repeat;
+  }
+
+  [data-app='tasks'] .markdown-content input[type='checkbox']:checked {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    background-image: var(--check-image);
+  }
+
+  [data-app='tasks'] .markdown-content table {
+    margin: 0.375rem 0;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+  }
+
+  [data-app='tasks'] .markdown-content th,
+  [data-app='tasks'] .markdown-content td {
+    border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+    padding: 0.125rem 0.5rem;
+  }
+
+  [data-app='tasks'] .markdown-content th {
+    background-color: color-mix(in srgb, var(--ink) 6%, transparent);
+    font-weight: 600;
+  }
+
+  [data-app='tasks'] .markdown-content hr {
+    margin: 0.5rem 0;
+    border-color: color-mix(in srgb, var(--ink) 16%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-app='tasks'] .search-hit {
+    animation: none;
+  }
+}

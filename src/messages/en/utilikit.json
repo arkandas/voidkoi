@@ -1,0 +1,1751 @@
+{
+  "app": {
+    "name": "Utilikit",
+    "media": "Media",
+    "developer": "Developer",
+    "design": "Design",
+    "text": "Text & data",
+    "network": "DevOps & network",
+    "web": "Web"
+  },
+  "tools": {
+    "qr-generator": {
+      "name": "QR Code Generator",
+      "description": "Generate QR codes for links, text, Wi-Fi networks and more"
+    },
+    "image-converter": {
+      "name": "Image Converter & Editor",
+      "description": "Convert, crop and resize images to WebP, PNG or JPEG"
+    },
+    "video-converter": {
+      "name": "Video Converter",
+      "description": "Convert, compress and trim videos, or turn clips into GIFs"
+    },
+    "audio-converter": {
+      "name": "Audio Converter",
+      "description": "Convert, trim and level audio, or extract it from a video"
+    },
+    "document-converter": {
+      "name": "Document Converter",
+      "description": "Convert documents between Markdown, DOCX, HTML, PDF and plain text"
+    },
+    "json-formatter": {
+      "name": "JSON Formatter",
+      "description": "Format, validate and minify JSON with syntax highlighting"
+    },
+    "base64-converter": {
+      "name": "Base64 Converter",
+      "description": "Encode text and files to Base64, and decode Base64 back to text"
+    },
+    "hash-generator": {
+      "name": "Hash Generator",
+      "description": "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes from text or files"
+    },
+    "password-generator": {
+      "name": "Password Generator",
+      "description": "Generate secure passwords and passphrases with a strength estimate"
+    },
+    "uuid-generator": {
+      "name": "UUID Generator",
+      "description": "Generate version 4 and version 7 UUIDs, one at a time or in batches"
+    },
+    "timestamp-converter": {
+      "name": "Timestamp Converter",
+      "description": "Convert between Unix timestamps, ISO 8601 dates and readable formats"
+    },
+    "url-encoder": {
+      "name": "URL Encoder/Decoder",
+      "description": "Encode and decode URLs and inspect their query parameters"
+    },
+    "jwt-decoder": {
+      "name": "JWT Decoder",
+      "description": "Decode and inspect JSON Web Tokens"
+    },
+    "color-picker": {
+      "name": "Color Picker",
+      "description": "Pick colors and convert them between HEX, RGB, HSL and other formats"
+    },
+    "contrast-checker": {
+      "name": "Color Contrast Checker",
+      "description": "Check color contrast ratios against the WCAG accessibility guidelines"
+    },
+    "markdown-preview": {
+      "name": "Markdown Preview",
+      "description": "Write Markdown and preview it live, with GitHub Flavored Markdown support"
+    },
+    "text-diff": {
+      "name": "Text Diff",
+      "description": "Compare two texts side by side with the differences highlighted"
+    },
+    "number-converter": {
+      "name": "Number Converter",
+      "description": "Convert numbers between binary, octal, decimal and hexadecimal"
+    },
+    "unit-converter": {
+      "name": "Unit Converter",
+      "description": "Convert temperature, length, weight and volume units"
+    },
+    "cron-builder": {
+      "name": "Cron Expression Builder",
+      "description": "Build and explain cron expressions and see their next run times"
+    },
+    "ip-calculator": {
+      "name": "IP Subnet Calculator",
+      "description": "Calculate IPv4 subnet masks, network addresses and host ranges"
+    },
+    "user-agent-parser": {
+      "name": "User Agent Parser",
+      "description": "Identify the browser, operating system and device behind a user agent string"
+    },
+    "og-parser": {
+      "name": "Open Graph Parser",
+      "description": "Read the Open Graph and Twitter Card metadata of any page, with an image preview"
+    },
+    "case-converter": {
+      "name": "Case Converter",
+      "description": "Change text case, make URL slugs and count words and characters"
+    },
+    "regex-tester": {
+      "name": "Regex Tester",
+      "description": "Test JavaScript regular expressions with highlighted matches, groups and replacements"
+    },
+    "data-converter": {
+      "name": "Data Format Converter",
+      "description": "Convert between JSON, YAML, TOML and CSV"
+    },
+    "sql-formatter": {
+      "name": "SQL Formatter",
+      "description": "Format SQL queries for PostgreSQL, MySQL, SQLite, SQL Server and more"
+    },
+    "qr-reader": {
+      "name": "QR Code Reader",
+      "description": "Read the content of a QR code from an image or a screenshot"
+    },
+    "favicon-generator": {
+      "name": "Favicon Generator",
+      "description": "Create favicon.ico, app icons and a web manifest from one image"
+    },
+    "dns-lookup": {
+      "name": "DNS Lookup",
+      "description": "Look up the A, AAAA, MX, TXT, NS and other DNS records of a domain"
+    },
+    "certificate-decoder": {
+      "name": "Certificate Decoder",
+      "description": "Check the certificate a server presents, or decode an X.509 certificate"
+    },
+    "pdf-tools": {
+      "name": "PDF Tools",
+      "description": "Merge PDFs, extract or split pages, and turn pages into images"
+    },
+    "video-downloader": {
+      "name": "Video Downloader",
+      "description": "Download videos or their audio from YouTube, X, Instagram, Reddit and many other sites"
+    }
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "clear": "Clear",
+    "generate": "Generate",
+    "convert": "Convert",
+    "dropFileHere": "Drop a file here or click to browse",
+    "processing": "Processing…",
+    "tryAgain": "Try again",
+    "cancel": "Cancel",
+    "loading": "Loading…",
+    "preview": "Preview",
+    "input": "Input",
+    "output": "Output",
+    "settings": "Settings",
+    "options": "Options",
+    "format": "Format",
+    "type": "Type",
+    "size": "Size",
+    "quality": "Quality",
+    "duration": "Duration",
+    "examples": "Examples",
+    "binary": "Binary",
+    "ipType": "IP type",
+    "vendor": "Vendor",
+    "model": "Model",
+    "engine": "Engine",
+    "name": "Name",
+    "locale": "Locale",
+    "twitterCard": "Twitter Card",
+    "cardType": "Card type",
+    "site": "Site",
+    "creator": "Creator",
+    "close": "Close",
+    "progress": "{value, number, percent} complete",
+    "uploading": "Uploading…",
+    "availableFor": "Available for {time}",
+    "start": "Start",
+    "end": "End"
+  },
+  "qrGenerator": {
+    "content": "QR code content",
+    "qrType": "QR code type",
+    "types": {
+      "url": "URL or website",
+      "text": "Plain text",
+      "wifi": "Wi-Fi network",
+      "email": "Email",
+      "sms": "SMS",
+      "phone": "Phone number"
+    },
+    "websiteUrl": "Website URL",
+    "textContent": "Text content",
+    "textPlaceholder": "Enter the text to encode",
+    "networkName": "Network name (SSID)",
+    "ssidPlaceholder": "MyWiFiNetwork",
+    "securityType": "Security type",
+    "security": {
+      "WPA": "WPA/WPA2",
+      "WEP": "WEP",
+      "nopass": "No password"
+    },
+    "password": "Password",
+    "wifiPassword": "Wi-Fi password",
+    "emailAddress": "Email address",
+    "subject": "Subject (optional)",
+    "body": "Body (optional)",
+    "emailSubject": "Email subject",
+    "emailMessage": "Email message",
+    "phoneNumber": "Phone number",
+    "message": "Message (optional)",
+    "smsMessage": "SMS message",
+    "qrStyle": "QR code style",
+    "styles": {
+      "standard": "Standard (rounded)",
+      "pcb": "PCB silkscreen (KiCad)"
+    },
+    "logoOptional": "Logo (optional)",
+    "uploadLogo": "Upload a logo for the center of the code",
+    "logoHint": "Error correction switches to high so the code still scans.",
+    "logoHintPcb": "SVG logos are also embedded in the SVG download.",
+    "logoUploaded": "Logo uploaded",
+    "logoAlt": "Logo preview",
+    "removeLogo": "Remove logo",
+    "errorCorrection": "Error correction",
+    "errorCorrectionLevels": {
+      "L": "Low (7%)",
+      "M": "Medium (15%)",
+      "Q": "Quartile (25%)",
+      "H": "High (30%)"
+    },
+    "generateQrCode": "Generate QR code",
+    "generating": "Generating…",
+    "errors": {
+      "required": "Fill in all the required fields.",
+      "invalidUrl": "Enter a valid URL.",
+      "invalidEmail": "Enter a valid email address.",
+      "invalidPhone": "Enter a valid phone number.",
+      "invalidLogo": "The logo must be an image file.",
+      "generateFailed": "The QR code could not be generated."
+    },
+    "qrAlt": "Generated QR code",
+    "qrWillAppear": "The QR code will appear here",
+    "downloadPng": "Download PNG",
+    "downloadSvg": "Download SVG",
+    "pcbNote": "PCB silkscreen format",
+    "pcbNoteDescription": "High-resolution PNG for PCB silkscreen. Import it with KiCad’s Image Converter to create a footprint. High error correction is recommended to allow for manufacturing tolerances.",
+    "qrCodeTypes": "QR code types",
+    "about": {
+      "url": "Link to any website",
+      "wifi": "Share Wi-Fi credentials",
+      "email": "Compose an email with pre-filled fields",
+      "sms": "Send a text message"
+    }
+  },
+  "imageConverter": {
+    "uploadImage": "Upload image",
+    "dropImage": "Drop an image here or click to browse",
+    "supportedFormats": "Supports PNG, JPEG, WebP, GIF, BMP and HEIC",
+    "metadataRemoved": "EXIF metadata such as GPS location, camera details and timestamps is always removed.",
+    "keepOriginalFormat": "Keep original format and quality",
+    "outputFormat": "Output format",
+    "formats": {
+      "webp": "WebP (best compression)",
+      "png": "PNG (lossless)",
+      "jpeg": "JPEG (smaller size)"
+    },
+    "quality": "Quality: {quality, number, percent}",
+    "smallerSize": "Smaller size",
+    "betterQuality": "Better quality",
+    "resizeOptional": "Resize (optional)",
+    "sizeLabels": {
+      "width": "Width (px)",
+      "height": "Height (px)"
+    },
+    "maintainAspectRatio": "Maintain aspect ratio",
+    "cropImage": "Crop image",
+    "openCropTool": "Open crop tool",
+    "clearCrop": "Clear crop",
+    "convertImage": "Convert image",
+    "uploadNew": "Upload a new image",
+    "original": "Original",
+    "cropped": "Cropped",
+    "converted": "Converted",
+    "dimensions": "Dimensions",
+    "reducedBy": "Size reduced by {percent}%",
+    "formatFallback": "Your browser can’t encode {requested} images, so this one was converted to {actual} instead.",
+    "downloadAs": "Download {format}",
+    "cropSize": "Crop size: {width} × {height} px",
+    "applyCrop": "Apply crop",
+    "cropping": "Cropping…",
+    "errors": {
+      "unsupportedFile": "This file is not an image. Choose a PNG, JPEG, WebP, GIF, BMP or HEIC file.",
+      "loadFailed": "The image could not be opened. It may be damaged or in a format your browser doesn’t support.",
+      "convertFailed": "The image could not be converted. Try a smaller size or another format.",
+      "cropFailed": "The image could not be cropped. Please try again."
+    },
+    "features": "Features",
+    "about": {
+      "formatConversion": {
+        "title": "Format conversion",
+        "description": "Convert to WebP (best compression), PNG (lossless) or JPEG (smaller size). Adjust the quality for lossy formats."
+      },
+      "resizeAndCrop": {
+        "title": "Resize and crop",
+        "description": "Resize by width, height or both, and crop to any area. Keep the aspect ratio automatically or set custom dimensions."
+      },
+      "colorSpace": {
+        "title": "Color space",
+        "description": "Preserves the Display P3 wide color gamut of iPhone photos in browsers that support it. Others fall back to sRGB."
+      }
+    }
+  },
+  "videoConverter": {
+    "upload": {
+      "title": "Drop a video here or click to browse",
+      "hint": "Supports MP4, WebM, MOV, MKV and AVI, up to {max}"
+    },
+    "errors": {
+      "invalidFile": "Select a video file: MP4, WebM, MOV, MKV or AVI.",
+      "fileTooLarge": "The file is too large ({size}). The limit is {max}."
+    },
+    "originalFormat": "Original format: {format}",
+    "resolution": "Resolution",
+    "settings": "Conversion settings",
+    "removeVideo": "Remove video",
+    "format": "Output format and codec",
+    "formats": {
+      "mp4-h264": "Most compatible",
+      "mp4-h265": "Better compression",
+      "webm-vp9": "Good compression",
+      "webm-av1": "Best compression",
+      "mov": "Apple and professional use",
+      "mkv": "Universal container",
+      "gif": "Animated image, no sound"
+    },
+    "outputResolution": "Output resolution",
+    "resolutions": {
+      "original": "Keep original",
+      "custom": "Custom size"
+    },
+    "resolutionHints": {
+      "original": "No scaling",
+      "preset": "Short side {size} px",
+      "custom": "Enter dimensions"
+    },
+    "custom": {
+      "info": "Enter a width or a height. The other side adjusts to keep the aspect ratio.",
+      "width": "Width (max. {max} px)",
+      "height": "Height (max. {max} px)",
+      "output": "Output: {size} (aspect ratio {ratio})"
+    },
+    "quality": "Quality: {value, number, percent}",
+    "qualityLossless": "Quality: {value, number, percent} (stream copy or source bitrate)",
+    "qualityLevels": {
+      "lossless": "Visually lossless",
+      "high": "High quality",
+      "medium": "Medium quality",
+      "low": "Low quality",
+      "veryLow": "Very low quality"
+    },
+    "qualityPresetsLabel": "Quality presets",
+    "qualityPresets": {
+      "tiny": "Tiny",
+      "small": "Small",
+      "medium": "Medium",
+      "lossless": "Lossless"
+    },
+    "preset": "Encoding preset",
+    "presets": {
+      "faster": {
+        "label": "Faster",
+        "hint": "Fastest encoding"
+      },
+      "fast": {
+        "label": "Fast",
+        "hint": "Fast encoding"
+      },
+      "medium": {
+        "label": "Medium",
+        "hint": "Balanced"
+      },
+      "slow": {
+        "label": "Slow",
+        "hint": "Better quality"
+      },
+      "slower": {
+        "label": "Slower",
+        "hint": "Best quality"
+      }
+    },
+    "includeAudio": "Include audio",
+    "audioOn": "The original audio track is kept.",
+    "audioOff": "The audio is removed, so the video will have no sound.",
+    "convert": "Convert video",
+    "phases": {
+      "uploading": "Uploading…",
+      "starting": "Starting conversion…",
+      "converting": "Converting video…",
+      "finalizing": "Finalizing…"
+    },
+    "progress": "{value, number, percent} complete",
+    "completed": {
+      "title": "Conversion complete",
+      "message": "Your video has been converted.",
+      "availableFor": "Available for {time}",
+      "expired": "The file has expired. Convert it again.",
+      "originalSize": "Original size",
+      "convertedSize": "Converted size",
+      "reducedBy": "Reduced by {amount} ({percent, number, percent})",
+      "another": "Convert another video"
+    },
+    "conversionFailed": "Conversion failed",
+    "guide": "Settings guide",
+    "tips": {
+      "trim": {
+        "title": "Trim",
+        "text": "Set a start and an end to keep only part of the video. Play it and use the target button to take the current position."
+      },
+      "resolution": {
+        "title": "Resolution",
+        "text": "“Keep original” uses the source size. Presets scale the short side down to the chosen size (portrait videos included) and never upscale. “Custom size” lets you set exact dimensions."
+      },
+      "quality": {
+        "title": "Quality",
+        "text": "Controls how much the video is compressed. Higher values give better image quality and larger files."
+      },
+      "lossless": {
+        "title": "100% quality",
+        "text": "Copies the video stream without re-encoding when the codec and size already match. Otherwise it re-encodes at the source bitrate."
+      },
+      "bitrate": {
+        "title": "Below 100%",
+        "text": "Scales the bitrate down: the lower the percentage, the smaller the file and the more quality you lose."
+      },
+      "preset": {
+        "title": "Encoding preset",
+        "text": "Slower presets compress better and give higher quality, but take much longer to encode."
+      },
+      "audio": {
+        "title": "Audio",
+        "text": "Turn off “Include audio” to get a silent video and a smaller file."
+      },
+      "h264": {
+        "title": "H.264",
+        "text": "The most compatible codec: it plays on every device and browser."
+      },
+      "h265": {
+        "title": "H.265/HEVC",
+        "text": "Around 50% better compression than H.264, but it needs a modern device and is slower to encode."
+      },
+      "vp9": {
+        "title": "VP9",
+        "text": "Google’s codec, with good compression and wide browser support."
+      },
+      "av1": {
+        "title": "AV1",
+        "text": "The best compression available and great for the web, but very slow to encode."
+      },
+      "gif": {
+        "title": "GIF",
+        "text": "For short loops without sound. A lower resolution and frame rate keep the file small."
+      },
+      "general": {
+        "title": "Tip",
+        "text": "Use 100% quality to change the format without losing quality, or 720p at 75% for smaller files."
+      }
+    },
+    "frameRate": "Frame rate",
+    "fps": "{value} fps",
+    "gifTooLong": "GIFs can be up to {max} seconds long. Trim the video to a shorter part.",
+    "gifNote": "GIFs have no sound and grow quickly, so keep them short and small. They can be up to {max} seconds long."
+  },
+  "audioConverter": {
+    "dropAudio": "Drop an audio or video file here or click to browse",
+    "supportedFormats": "Supports MP3, WAV, FLAC, AAC, OGG, M4A, MP4, MKV and WebM, up to {limit}",
+    "removeFile": "Remove file",
+    "conversionSettings": "Conversion settings",
+    "outputFormat": "Output format",
+    "useSourceBitrate": "Use the source bitrate when available",
+    "outputBitrate": "Output bitrate",
+    "uploading": "Uploading…",
+    "converting": "Converting audio…",
+    "pleaseWait": "Please wait while we process your file",
+    "progress": "{value, number, percent} complete",
+    "conversionComplete": "Conversion complete",
+    "fileAvailable": "Available for {time}",
+    "fileExpired": "The file has expired. Convert it again.",
+    "originalSize": "Original size",
+    "convertedSize": "Converted size",
+    "smaller": "{value, number, percent} smaller",
+    "downloadAudio": "Download audio",
+    "convertAnother": "Convert another file",
+    "conversionFailed": "Conversion failed",
+    "cannotProcess": "This file cannot be processed",
+    "changeSettings": "Change settings",
+    "tryAnotherFile": "Try another file",
+    "audioFormatsGuide": "Audio formats guide",
+    "about": {
+      "mp3": "Universal compatibility and good compression, plays almost anywhere",
+      "aac": "Better quality than MP3 at the same bitrate, the standard in the Apple ecosystem",
+      "opus": "Best quality for its size, a modern codec that is ideal for the web",
+      "vorbis": "Open-source alternative to MP3 with good quality",
+      "flac": "Lossless compression that keeps the original quality, with larger files",
+      "wav": "Uncompressed audio with the highest quality and very large files"
+    },
+    "errors": {
+      "fileTooLarge": "The file is too large ({size}). The limit is {limit}."
+    },
+    "normalize": "Level the volume",
+    "normalizeDescription": "Evens out the loudness to {target} LUFS, the level most podcast and streaming apps use. Takes twice as long."
+  },
+  "documentConverter": {
+    "dropDocument": "Drop a document here or click to browse",
+    "supportedFormats": "Supports Markdown, DOCX, HTML, PDF and TXT, up to {limit}",
+    "removeFile": "Remove file",
+    "pdfNote": "Converting from PDF extracts only the text. Formatting, images and tables are lost.",
+    "conversionSettings": "Conversion settings",
+    "outputFormat": "Output format",
+    "standalone": "Standalone document (with header and footer)",
+    "generateToc": "Generate a table of contents",
+    "pdfEngine": "PDF engine",
+    "automatic": "Automatic",
+    "pdfEngineHint": "Automatic uses the first engine installed on the server.",
+    "convertDocument": "Convert document",
+    "uploading": "Uploading…",
+    "converting": "Converting document…",
+    "pleaseWait": "Please wait while we process your document",
+    "progress": "{value, number, percent} complete",
+    "conversionComplete": "Conversion complete",
+    "successMessage": "Your document has been converted.",
+    "engineUsed": "Generated with {engine}",
+    "fileAvailable": "Available for {time}",
+    "fileExpired": "The file has expired. Convert it again.",
+    "originalSize": "Original size",
+    "convertedSize": "Converted size",
+    "downloadDocument": "Download document",
+    "convertAnother": "Convert another document",
+    "conversionFailed": "Conversion failed",
+    "changeSettings": "Change settings",
+    "tryAnotherFile": "Try another file",
+    "errors": {
+      "fileTooLarge": "The file is too large ({size}). The limit is {limit}.",
+      "unsupportedFormat": "This file type is not supported. Use Markdown, DOCX, HTML, PDF or TXT."
+    }
+  },
+  "jsonFormatter": {
+    "inputJson": "Input JSON",
+    "pasteJson": "Paste your JSON here…",
+    "loadSample": "Load sample",
+    "outputPlaceholder": "The formatted JSON will appear here",
+    "indentation": "Indentation",
+    "spaces": "{count, plural, one {# space} other {# spaces}}",
+    "tab": "Tab",
+    "format": "Format",
+    "minify": "Minify",
+    "sortKeys": "Sort keys",
+    "validate": "Validate",
+    "validJson": "Valid JSON",
+    "invalidJson": "Invalid JSON",
+    "invalidJsonAt": "Invalid JSON at line {line}, column {column}",
+    "tooLarge": "This JSON is too large or too deeply nested to format.",
+    "features": "Features",
+    "about": {
+      "format": "Beautify JSON with consistent indentation",
+      "minify": "Remove all whitespace and line breaks",
+      "sortKeys": "Sort object keys alphabetically at every level",
+      "validate": "Check whether the JSON syntax is correct"
+    }
+  },
+  "base64Converter": {
+    "encodeTitle": "Text → Base64",
+    "decodeTitle": "Base64 → text",
+    "inputText": "Input text",
+    "enterText": "Enter the text to encode",
+    "encode": "Encode",
+    "encodedOutput": "Encoded output",
+    "enterBase64": "Paste the Base64 to decode",
+    "decode": "Decode",
+    "outputText": "Decoded text",
+    "errors": {
+      "invalidBase64": "The input is not valid Base64.",
+      "notText": "The decoded data is binary, not UTF-8 text."
+    },
+    "encodeFile": "Encode a file",
+    "fileHint": "Any file type. It is encoded in your browser and never uploaded.",
+    "readFailed": "The file could not be read.",
+    "about": {
+      "title": "About Base64",
+      "description": "Base64 is a binary-to-text encoding that represents binary data with 64 ASCII characters. It is commonly used to embed data in emails and data URLs, and to store binary data in text formats such as JSON or XML."
+    }
+  },
+  "hashGenerator": {
+    "mode": "Input type",
+    "hashText": "Hash text",
+    "hashFile": "Hash file",
+    "input": "Input",
+    "enterText": "Enter the text to hash",
+    "generating": "Generating…",
+    "generateHashes": "Generate hashes",
+    "clickToUpload": "Drop a file here or click to browse",
+    "maxFileSize": "Maximum file size: {limit}",
+    "fileTooLarge": "The file is too large ({size}). The limit is {limit}.",
+    "readFailed": "The file could not be read.",
+    "hashResults": "Hash results",
+    "copyAll": "Copy all",
+    "resultsAppearHere": "The results will appear here",
+    "algorithms": "Algorithms",
+    "about": {
+      "md5": "128-bit hash, fast but not cryptographically secure",
+      "sha1": "160-bit hash, no longer safe for security use",
+      "sha256": "256-bit hash, widely used and secure",
+      "sha512": "512-bit hash, the strongest option"
+    }
+  },
+  "passwordGenerator": {
+    "mode": "Generation mode",
+    "modes": {
+      "single": "Single",
+      "batch": "Batch",
+      "passphrase": "Passphrase"
+    },
+    "lengthValue": "Length: {length}",
+    "options": {
+      "uppercase": "Uppercase (A–Z)",
+      "lowercase": "Lowercase (a–z)",
+      "numbers": "Numbers (0–9)",
+      "symbols": "Symbols (!@#$…)",
+      "excludeAmbiguous": "Exclude ambiguous characters"
+    },
+    "noCharacterTypes": "Select at least one character type.",
+    "generatedPassword": "Generated password",
+    "passwordStrength": "Strength",
+    "strength": {
+      "weak": "Weak",
+      "fair": "Fair",
+      "good": "Good",
+      "strong": "Strong",
+      "veryStrong": "Very strong"
+    },
+    "entropy": "Entropy",
+    "entropyBits": "{bits, number, integer} bits",
+    "length": "Length",
+    "multiplePasswords": "Multiple passwords",
+    "passwordCount": "Number of passwords",
+    "generateCount": "{count, plural, one {Generate password} other {Generate # passwords}}",
+    "passphrase": "Passphrase",
+    "wordCountValue": "Words: {count}",
+    "passphraseDescription": "Passphrases are easier to remember and type than random passwords. Each word adds about 12.9 bits of entropy, so six words are about as strong as a random 12-character password with uppercase, lowercase, numbers and symbols.",
+    "attribution": "Words from the <link>EFF long word list</link> (CC BY 3.0)",
+    "securityTips": "Password security tips",
+    "tips": {
+      "length": "Use at least 12 characters for good security",
+      "variety": "Enable all character types for maximum entropy",
+      "reuse": "Never reuse passwords across different services",
+      "manager": "Use a password manager to store your passwords securely",
+      "ambiguous": "Exclude ambiguous characters to avoid confusion (0/O, 1/l/I)"
+    }
+  },
+  "uuidGenerator": {
+    "uuidVersion": "UUID version",
+    "versions": {
+      "v7": {
+        "title": "Version 7 (recommended)",
+        "description": "Time-ordered, sortable"
+      },
+      "v4": {
+        "title": "Version 4",
+        "description": "Random, widely supported"
+      }
+    },
+    "singleUuid": "Single UUID",
+    "resultAppearsHere": "The UUID will appear here",
+    "generateNew": "Generate UUID",
+    "batchGenerate": "Batch generation",
+    "numberOfUuids": "Number of UUIDs",
+    "generateCount": "{count, plural, one {Generate # UUID} other {Generate # UUIDs}}",
+    "copyAll": "Copy all",
+    "generatedUuids": "Generated UUIDs ({count})",
+    "aboutUuidVersions": "About UUID versions",
+    "about": {
+      "v7": {
+        "title": "UUID v7 (time-ordered)",
+        "description": "UUID v7 starts with a 48-bit Unix timestamp in milliseconds followed by random data, so UUIDs sort by creation time. That makes them ideal as database primary keys: they keep chronological order and improve index performance."
+      },
+      "v4": {
+        "title": "UUID v4 (random)",
+        "description": "UUID v4 fills 122 of its 128 bits with random data (the other 6 mark the version and variant), so duplicates are practically impossible. The format is xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx, where each x is a hexadecimal digit and y is 8, 9, a or b. Use it when you need maximum randomness and sort order doesn’t matter."
+      }
+    }
+  },
+  "timestampConverter": {
+    "currentTime": "Current time",
+    "useThis": "Use this time",
+    "unixTimestamp": "Unix timestamp",
+    "timestampPlaceholder": "e.g. 1609459200 or 1609459200000",
+    "detectedUnit": "Interpreted as {unit, select, milliseconds {milliseconds} other {seconds}}",
+    "or": "or",
+    "dateString": "Date string",
+    "dateStringPlaceholder": "e.g. 2024-01-01T12:00:00Z",
+    "convertedTime": "Converted time",
+    "fields": {
+      "seconds": "Unix (seconds)",
+      "milliseconds": "Unix (milliseconds)",
+      "iso": "ISO 8601",
+      "utc": "UTC",
+      "local": "Local time"
+    },
+    "errors": {
+      "invalidTimestamp": "Enter a valid Unix timestamp.",
+      "invalidDate": "This date could not be recognized."
+    },
+    "aboutTimestamps": "About timestamps",
+    "about": {
+      "unix": "Seconds since January 1, 1970, 00:00:00 UTC (the Unix epoch). Values with 12 or more digits are read as milliseconds.",
+      "iso": "International standard date and time format, e.g. 2024-01-01T00:00:00.000Z",
+      "utc": "Coordinated Universal Time, the primary time standard"
+    }
+  },
+  "urlEncoder": {
+    "queryParameters": "Query parameters",
+    "urlToParse": "URL to parse",
+    "parse": "Parse URL",
+    "parts": {
+      "base": "Base URL",
+      "fragment": "Fragment"
+    },
+    "parameterCount": "{count, plural, one {# parameter} other {# parameters}}",
+    "columns": {
+      "parameter": "Parameter",
+      "encodedValue": "Encoded value",
+      "decodedValue": "Decoded value"
+    },
+    "empty": "(empty)",
+    "noParameters": "This URL has no query parameters.",
+    "encodeDecode": "Encode or decode",
+    "mode": "Encoding mode",
+    "modes": {
+      "component": "Component",
+      "uri": "Full URL"
+    },
+    "modeHints": {
+      "component": "Encodes every reserved character, including : / ? # & =. Use it for query values and path segments.",
+      "uri": "Keeps the URL structure (: / ? # & =) and only encodes spaces and other unsafe characters. Use it for complete URLs."
+    },
+    "enterText": "Enter a URL or text to encode or decode",
+    "encode": "Encode",
+    "decode": "Decode",
+    "results": {
+      "encode": "Encoded result",
+      "decode": "Decoded result"
+    },
+    "errors": {
+      "invalidCharacter": "The text contains an invalid Unicode character and cannot be encoded.",
+      "malformedSequence": "The text contains a malformed percent-encoded sequence and cannot be decoded."
+    },
+    "about": {
+      "title": "URL encoding",
+      "description": "URL encoding (also called percent-encoding) replaces characters that are reserved or unsafe in a URL with a % followed by the hexadecimal value of each of their UTF-8 bytes.",
+      "space": "Space",
+      "groups": {
+        "common": "Common",
+        "reserved": "Reserved",
+        "special": "Special"
+      }
+    }
+  },
+  "jwtDecoder": {
+    "inputToken": "Encoded token",
+    "pasteJwt": "Paste your JWT here (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…)",
+    "decodeToken": "Decode JWT",
+    "errors": {
+      "segments": "This is not a JWT: it must have three parts separated by dots.",
+      "headerEncoding": "The header is not valid Base64URL.",
+      "payloadEncoding": "The payload is not valid Base64URL.",
+      "headerJson": "The header is not a valid JSON object.",
+      "payloadJson": "The payload is not a valid JSON object."
+    },
+    "tokenStatus": "Token status",
+    "status": {
+      "valid": "Valid",
+      "expired": "Expired",
+      "notYetValid": "Not yet valid",
+      "noExpiry": "No expiration"
+    },
+    "claims": {
+      "iat": "Issued at",
+      "nbf": "Not before",
+      "exp": "Expiration time"
+    },
+    "parts": {
+      "header": "Header",
+      "payload": "Payload",
+      "signature": "Signature"
+    },
+    "unsigned": "This token is not signed.",
+    "about": {
+      "title": "About JWT",
+      "description": "A JSON Web Token (JWT) is a compact, URL-safe way of passing claims between two parties. It has three parts separated by dots: header, payload and signature.",
+      "header": "Metadata about the token, such as the signing algorithm (HS256, RS256…) and the token type (JWT).",
+      "payload": "The claims: statements about the user and any other data. Common claims include sub (subject), exp (expiration time) and iat (issued at).",
+      "signature": "Lets the receiver check that the token has not been tampered with. It is computed from the header, the payload and a secret or private key.",
+      "securityTitle": "Security note",
+      "security": "This tool only decodes tokens; it does not verify signatures. JWT data is encoded, not encrypted, so never put sensitive information in a token. Always verify tokens on the server."
+    }
+  },
+  "colorPicker": {
+    "selectColor": "Pick a color",
+    "colorFormats": "Color formats",
+    "opacity": "Opacity",
+    "example": "Example: {value}",
+    "hexExample": "Example: {value} or {short}",
+    "recentColors": "Recent colors",
+    "useColor": "Use {color}",
+    "colorFormatGuide": "Color format guide",
+    "about": {
+      "hex": "Hexadecimal notation: base-16 digits (0–9, A–F) for the red, green and blue values. The usual choice in CSS and design tools.",
+      "rgb": "Red, green and blue channels from 0 to 255, with an optional alpha (opacity) channel from 0 to 1. The standard for the web and digital displays.",
+      "hsl": "Hue (0–360°), saturation (0–100%) and lightness (0–100%), with optional alpha. More intuitive for adjusting colors and building palettes.",
+      "cmyk": "Cyan, magenta, yellow and key (black) ink percentages used in print. The conversion is a simple approximation without a color profile."
+    },
+    "usageTip": "Usage tip",
+    "usageTipDescription": "Type or paste a value in any format to convert it. The other fields update as soon as the color is valid.",
+    "copyFormat": "Copy {format}"
+  },
+  "contrastChecker": {
+    "foreground": {
+      "label": "Foreground color",
+      "pick": "Choose the foreground color"
+    },
+    "background": {
+      "label": "Background color",
+      "pick": "Choose the background color"
+    },
+    "invalidColor": "Enter a hex color without transparency, such as #1A2B3C or #FFF.",
+    "normalSample": "Normal text (16px)",
+    "largeSample": "Large text (24px bold)",
+    "contrastRatio": "Contrast ratio",
+    "rating": {
+      "aaa": "Passes AAA",
+      "aa": "Passes AA",
+      "aaLarge": "Passes AA for large text only",
+      "fail": "Not enough contrast"
+    },
+    "wcagResults": "WCAG results",
+    "level": "Level {level}",
+    "textSize": {
+      "normal": "Normal text",
+      "large": "Large text"
+    },
+    "pass": "Pass",
+    "fail": "Fail",
+    "suggestions": "Suggested text colors",
+    "sampleText": "Sample text",
+    "requirements": "WCAG requirements",
+    "levelDescription": {
+      "aa": "Minimum standard",
+      "aaa": "Enhanced standard"
+    },
+    "largeTextDefinition": "Large text means at least 18pt, or 14pt bold."
+  },
+  "markdownPreview": {
+    "editor": "Markdown editor",
+    "enterMarkdown": "Start typing Markdown here…",
+    "loadSample": "Load sample",
+    "previewWillAppear": "The preview will appear here",
+    "supportedFeatures": "Supported features",
+    "features": {
+      "basicSyntax": {
+        "title": "Basic syntax",
+        "description": "Headings, bold, italic, links and images"
+      },
+      "lists": {
+        "title": "Lists",
+        "description": "Ordered, unordered and task lists"
+      },
+      "codeBlocks": {
+        "title": "Code blocks",
+        "description": "Syntax highlighting for more than 100 languages"
+      },
+      "tables": {
+        "title": "Tables",
+        "description": "GitHub Flavored Markdown tables"
+      },
+      "blockquotes": {
+        "title": "Blockquotes",
+        "description": "Highlighted quotations"
+      },
+      "strikethrough": {
+        "title": "Strikethrough",
+        "description": "Cross out text with ~~double tildes~~"
+      }
+    }
+  },
+  "textDiff": {
+    "originalText": "Original text",
+    "modifiedText": "Modified text",
+    "enterOriginal": "Paste or type the original text here…",
+    "enterModified": "Paste or type the modified text here…",
+    "loadFile": "Load from file",
+    "readFailed": "The file could not be read.",
+    "swap": "Swap",
+    "clearAll": "Clear all",
+    "loadExample": "Load sample",
+    "lineNumbers": "Line numbers",
+    "wordHighlighting": "Word highlighting",
+    "collapseUnchanged": "Collapse unchanged lines",
+    "comparison": "Comparison",
+    "view": "View",
+    "sideBySide": "Side by side",
+    "unified": "Unified",
+    "original": "Original",
+    "modified": "Modified",
+    "unchangedLines": "{count, plural, one {# unchanged line} other {# unchanged lines}}",
+    "statistics": "Statistics",
+    "linesAdded": "{count, plural, one {line added} other {lines added}}",
+    "linesRemoved": "{count, plural, one {line removed} other {lines removed}}",
+    "totalLines": "{count, plural, one {line in total} other {lines in total}}",
+    "howToUse": "How to use",
+    "steps": {
+      "original": "Paste or load the original text.",
+      "modified": "Paste or load the modified version.",
+      "compare": "The differences are highlighted as you type.",
+      "options": "Use the options to switch views, hide line numbers or collapse unchanged lines."
+    },
+    "supportedFormats": "<strong>Supported formats:</strong> {formats}"
+  },
+  "numberConverter": {
+    "clearAll": "Clear all",
+    "base": "Base {radix}",
+    "fields": {
+      "dec": "Decimal",
+      "hex": "Hexadecimal",
+      "oct": "Octal",
+      "bin": "Binary",
+      "ones": "One’s complement",
+      "twos": "Two’s complement",
+      "float32": "IEEE 754 (32-bit float)",
+      "float64": "IEEE 754 (64-bit double)"
+    },
+    "placeholders": {
+      "dec": "Enter a number (e.g. 100 or 3.14)",
+      "hex": "Enter hex (e.g. 1A2B)",
+      "oct": "Enter octal (e.g. 144)",
+      "bin": "Enter binary (e.g. 1010)"
+    },
+    "enterBits": "Enter {bits}-bit binary",
+    "bitCount": "{count} of {bits} bits",
+    "notInteger": "Whole numbers only",
+    "outOfRange": "Out of range for {bits} bits ({min, number} to {max, number})",
+    "errors": {
+      "invalidDecimal": "Enter a number such as 42, -7 or 3.14.",
+      "invalidHex": "Use only the digits 0–9 and A–F.",
+      "invalidOctal": "Use only the digits 0–7.",
+      "invalidBinary": "Use only the digits 0 and 1."
+    },
+    "asciiCode": "ASCII code",
+    "codePoint": "Code point",
+    "surrogate": "UTF-16 surrogate",
+    "controlChars": {
+      "NUL": "Null",
+      "SOH": "Start of heading",
+      "STX": "Start of text",
+      "ETX": "End of text",
+      "EOT": "End of transmission",
+      "ENQ": "Enquiry",
+      "ACK": "Acknowledge",
+      "BEL": "Bell",
+      "BS": "Backspace",
+      "TAB": "Horizontal tab",
+      "LF": "Line feed",
+      "VT": "Vertical tab",
+      "FF": "Form feed",
+      "CR": "Carriage return",
+      "SO": "Shift out",
+      "SI": "Shift in",
+      "DLE": "Data link escape",
+      "DC1": "Device control 1",
+      "DC2": "Device control 2",
+      "DC3": "Device control 3",
+      "DC4": "Device control 4",
+      "NAK": "Negative acknowledge",
+      "SYN": "Synchronous idle",
+      "ETB": "End of transmission block",
+      "CAN": "Cancel",
+      "EM": "End of medium",
+      "SUB": "Substitute",
+      "ESC": "Escape",
+      "FS": "File separator",
+      "GS": "Group separator",
+      "RS": "Record separator",
+      "US": "Unit separator",
+      "DEL": "Delete"
+    },
+    "bitWidth": "Bit width (for one’s and two’s complement)",
+    "bitWidthOption": "{bits}-bit",
+    "complements": {
+      "ones": {
+        "intro": "<strong>Historical method</strong> for signed integers",
+        "negate": "To negate: flip all bits",
+        "example": "Example: 5 = 00000101 → -5 = 11111010",
+        "note": "Problem: two zeros (+0 and -0)"
+      },
+      "twos": {
+        "intro": "<strong>Modern standard</strong> for signed integers",
+        "negate": "To negate: flip all bits and add 1",
+        "example": "Example: 5 = 00000101 → flip = 11111010 → +1 = 11111011 (-5)",
+        "note": "Used by all modern CPUs (x86, ARM, etc.)"
+      }
+    },
+    "singlePrecision": "Single precision",
+    "doublePrecision": "Double precision",
+    "sign": "Sign",
+    "exponentBits": "Exponent ({bits} bits)",
+    "mantissaBits": "Mantissa ({bits} bits)",
+    "examples": {
+      "decimal": "Decimal: 100",
+      "ascii": "ASCII: ‘A’",
+      "twos": "Two’s complement (8-bit)"
+    }
+  },
+  "unitConverter": {
+    "category": "Category",
+    "categories": {
+      "temperature": "Temperature",
+      "length": "Length",
+      "weight": "Weight",
+      "volume": "Volume"
+    },
+    "units": {
+      "c": "Celsius",
+      "f": "Fahrenheit",
+      "k": "Kelvin",
+      "cm": "Centimeters",
+      "m": "Meters",
+      "km": "Kilometers",
+      "ft": "Feet",
+      "in": "Inches",
+      "mi": "Miles",
+      "g": "Grams",
+      "kg": "Kilograms",
+      "lb": "Pounds",
+      "oz": "Ounces",
+      "l": "Liters",
+      "ml": "Milliliters",
+      "gal": "US gallons",
+      "cup": "US cups"
+    },
+    "cupSymbol": "cup",
+    "value": "Value",
+    "enterValue": "Enter a value",
+    "invalidNumber": "Enter a valid number.",
+    "fromUnit": "From unit",
+    "convertedValues": "Converted values",
+    "outOfRange": "Out of range",
+    "examples": {
+      "freezingPoint": "Water freezes",
+      "boilingPoint": "Water boils",
+      "sameInBoth": "Same in Celsius and Fahrenheit"
+    }
+  },
+  "cronBuilder": {
+    "mode": "Input mode",
+    "visualBuilder": "Visual builder",
+    "textInput": "Text input",
+    "enterCron": "Enter a cron expression",
+    "expression": "Expression",
+    "fields": {
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day of month",
+      "month": "Month",
+      "dayOfWeek": "Day of week"
+    },
+    "humanReadable": "Human-readable description",
+    "nextRuns": "Next runs",
+    "noUpcomingRuns": "No upcoming runs.",
+    "presets": {
+      "title": "Presets",
+      "everyMinute": {
+        "label": "Every minute",
+        "description": "Runs every minute"
+      },
+      "every5Minutes": {
+        "label": "Every 5 minutes",
+        "description": "Runs every 5 minutes"
+      },
+      "every15Minutes": {
+        "label": "Every 15 minutes",
+        "description": "Runs every 15 minutes"
+      },
+      "every30Minutes": {
+        "label": "Every 30 minutes",
+        "description": "Runs every 30 minutes"
+      },
+      "hourly": {
+        "label": "Hourly",
+        "description": "Runs at the start of every hour"
+      },
+      "dailyMidnight": {
+        "label": "Daily at midnight",
+        "description": "Runs every day at 00:00"
+      },
+      "dailyNoon": {
+        "label": "Daily at noon",
+        "description": "Runs every day at 12:00"
+      },
+      "weeklySunday": {
+        "label": "Weekly (Sunday at midnight)",
+        "description": "Runs every Sunday at 00:00"
+      },
+      "monthlyFirst": {
+        "label": "Monthly (1st at midnight)",
+        "description": "Runs on the 1st of every month at 00:00"
+      },
+      "weekdays9am": {
+        "label": "Weekdays at 9 AM",
+        "description": "Runs Monday to Friday at 09:00"
+      }
+    },
+    "syntax": {
+      "title": "Cron syntax",
+      "any": "Any value",
+      "step": "Every 5 (minutes, hours…)",
+      "list": "Only 1, 3 and 5",
+      "range": "From 1 to 5",
+      "weekdays": "0 and 7 are Sunday, 6 is Saturday",
+      "months": "1 is January, 12 is December"
+    },
+    "errors": {
+      "empty": "Enter a cron expression.",
+      "fieldCount": "A cron expression needs exactly 5 fields separated by spaces.",
+      "invalidField": "Invalid value in “{field}”. Allowed values: {range}.",
+      "invalidExpression": "This is not a valid cron expression."
+    }
+  },
+  "ipCalculator": {
+    "inputTitle": "Address and prefix",
+    "ipAddress": "IP address",
+    "prefixLength": "Prefix length",
+    "pasteCidr": "Or paste an address in CIDR notation",
+    "errors": {
+      "invalidIp": "Enter a valid IPv4 address, such as 192.168.1.10.",
+      "invalidPrefix": "Enter a prefix between 0 and 32.",
+      "invalidCidr": "Use the address/prefix format, such as 192.168.1.0/24."
+    },
+    "networkInfo": "Network",
+    "networkAddress": "Network address",
+    "broadcastAddress": "Broadcast address",
+    "subnetMask": "Subnet mask",
+    "wildcardMask": "Wildcard mask",
+    "cidrNotation": "CIDR notation",
+    "none": "None",
+    "hostInfo": "Hosts",
+    "firstHost": "First host",
+    "lastHost": "Last host",
+    "totalAddresses": "Total addresses",
+    "usableHosts": "Usable hosts",
+    "ipClass": "IP class",
+    "addressTypes": {
+      "public": "Public",
+      "private": "Private (RFC 1918)",
+      "loopback": "Loopback",
+      "linkLocal": "Link-local",
+      "shared": "Shared address space (CGNAT)",
+      "multicast": "Multicast",
+      "documentation": "Documentation (TEST-NET)",
+      "reserved": "Reserved"
+    },
+    "notes": {
+      "pointToPoint": "A /31 subnet is a point-to-point link (RFC 3021): both addresses can be assigned to hosts and there is no broadcast address.",
+      "singleHost": "A /32 subnet identifies a single address, so it has no separate network or broadcast address."
+    },
+    "about": {
+      "title": "IP subnetting",
+      "cidr": "CIDR notation adds a slash and a number to an address (such as /24) to say how many leading bits belong to the network.",
+      "commonSizes": "Common sizes",
+      "size": "/{prefix}: {count, plural, one {# address} other {# addresses}}"
+    }
+  },
+  "userAgentParser": {
+    "inputUserAgent": "User agent string",
+    "pasteUserAgent": "Paste a user agent string or use your current browser",
+    "parse": "Parse user agent",
+    "useCurrentBrowser": "Use current browser",
+    "browser": "Browser",
+    "operatingSystem": "Operating system",
+    "device": "Device",
+    "version": "Version",
+    "notDetected": "Not detected",
+    "deviceTypes": {
+      "desktop": "Desktop",
+      "mobile": "Mobile",
+      "tablet": "Tablet",
+      "bot": "Bot or crawler",
+      "unknown": "Unknown"
+    },
+    "about": {
+      "title": "About user agents",
+      "description": "Browsers and other applications send a user agent string to identify themselves to web servers. It describes the browser, the operating system and the device.",
+      "uses": "Common uses: browser detection, feature compatibility, analytics and mobile detection."
+    }
+  },
+  "ogParser": {
+    "enterUrl": "Enter a URL",
+    "pasteUrl": "Paste a URL to parse",
+    "parseUrl": "Parse URL",
+    "parsing": "Parsing…",
+    "parsedMetadata": "Parsed metadata",
+    "noMetadata": "No metadata was found on this page.",
+    "previewImage": "Preview image",
+    "ogTitle": "Title",
+    "ogDescription": "Description",
+    "ogUrl": "URL",
+    "ogType": "Type",
+    "ogSiteName": "Site name",
+    "about": {
+      "title": "About Open Graph",
+      "description": "Open Graph is a protocol that turns web pages into rich objects on social networks. Facebook, X, LinkedIn and other platforms use it to build link previews.",
+      "commonTags": "Common tags: og:title, og:description, og:image, og:url, og:type"
+    }
+  },
+  "nav": {
+    "tools": "Tools",
+    "search": "Search tools…",
+    "clearSearch": "Clear search",
+    "noResults": "No tools match “{query}”",
+    "openMenu": "Open tool list",
+    "closeMenu": "Close tool list"
+  },
+  "caseConverter": {
+    "input": "Text",
+    "placeholder": "Type or paste some text",
+    "conversions": "Conversions",
+    "empty": "The conversions will appear here",
+    "underAMinute": "Under a minute",
+    "minutes": "{count} min",
+    "stats": {
+      "characters": "Characters",
+      "charactersNoSpaces": "Without spaces",
+      "words": "Words",
+      "sentences": "Sentences",
+      "lines": "Lines",
+      "paragraphs": "Paragraphs",
+      "readingTime": "Reading time"
+    },
+    "cases": {
+      "upper": "UPPER CASE",
+      "lower": "lower case",
+      "title": "Title Case",
+      "sentence": "Sentence case",
+      "camel": "camelCase",
+      "pascal": "PascalCase",
+      "snake": "snake_case",
+      "constant": "CONSTANT_CASE",
+      "kebab": "kebab-case",
+      "dot": "dot.case",
+      "slug": "URL slug"
+    },
+    "about": "How it works",
+    "tips": {
+      "programming": {
+        "title": "Programming cases",
+        "text": "camelCase, snake_case and the rest split words at spaces, punctuation and changes in case, so XMLHttpRequest becomes xml_http_request."
+      },
+      "slug": {
+        "title": "URL slugs",
+        "text": "Accents are removed and anything that isn't a letter or a number becomes a hyphen."
+      },
+      "reading": {
+        "title": "Reading time",
+        "text": "Based on an average reading speed of 238 words per minute."
+      }
+    }
+  },
+  "regexTester": {
+    "expression": "Regular expression",
+    "patternPlaceholder": "Type a pattern",
+    "flags": "Flags",
+    "flagNames": {
+      "g": "global",
+      "i": "ignore case",
+      "m": "multiline",
+      "s": "dot all",
+      "u": "unicode",
+      "y": "sticky"
+    },
+    "flagHints": {
+      "g": "Find every match, not just the first one",
+      "i": "Treat upper and lower case as the same",
+      "m": "Make ^ and $ match at the start and end of every line",
+      "s": "Let . match line breaks too",
+      "u": "Full Unicode matching, needed for \\p property escapes",
+      "y": "Only match where the previous match ended"
+    },
+    "invalid": "This expression isn't valid",
+    "timeout": "The expression took too long and was stopped. It probably backtracks too much on this text.",
+    "testString": "Test string",
+    "testPlaceholder": "Paste the text to search",
+    "result": "Matches in the text",
+    "matchCount": "{count, plural, =0 {No matches} one {# match} other {# matches}}",
+    "truncated": "Only the first {count} matches are shown.",
+    "emptyMatch": "empty match",
+    "matches": "Match details",
+    "columns": {
+      "match": "Match",
+      "position": "Position",
+      "groups": "Groups"
+    },
+    "groupUnmatched": "no match",
+    "replace": "Replace",
+    "replacement": "Replacement",
+    "replacementPlaceholder": "Replacement text, such as $2 $1",
+    "replaceTokens": {
+      "group": "group by number",
+      "named": "group by name",
+      "match": "whole match",
+      "dollar": "a dollar sign"
+    },
+    "replaced": "Text after replacing",
+    "cheatSheet": "Cheat sheet",
+    "tokens": {
+      "any": "Any character except line breaks",
+      "classes": "A digit, a word character, whitespace",
+      "negated": "Anything but a digit, a word character, whitespace",
+      "set": "One of a, b or c; none of them; a range",
+      "anchors": "Start and end of the text, or of each line with m",
+      "boundary": "Word boundary",
+      "quantifiers": "Zero or more, one or more, zero or one",
+      "range": "Between 2 and 5 times",
+      "lazy": "As few as possible",
+      "group": "Capture group",
+      "named": "Named capture group",
+      "nonCapturing": "Group without capturing",
+      "alternation": "a or b",
+      "lookahead": "Followed by, not followed by",
+      "lookbehind": "Preceded by, not preceded by",
+      "backreference": "The same text a group matched earlier"
+    },
+    "flavor": "This uses your browser's JavaScript regular expressions. Other languages, like Python or PCRE, differ in some details.",
+    "sampleText": "Write to ana.garcia@example.com or support@example.org.\nThe old address ana@example is not valid."
+  },
+  "dataConverter": {
+    "from": "From",
+    "to": "To",
+    "swap": "Swap input and output",
+    "indentation": "Indentation",
+    "spaces": "{count} spaces",
+    "delimiter": "CSV delimiter",
+    "delimiters": {
+      "auto": "Detect automatically",
+      "comma": "Comma",
+      "semicolon": "Semicolon",
+      "tab": "Tab"
+    },
+    "header": "CSV has a header row",
+    "typed": "Detect numbers and booleans",
+    "input": "{format} input",
+    "output": "{format} output",
+    "placeholder": "Paste your {format} here",
+    "outputPlaceholder": "The converted data will appear here",
+    "loadSample": "Load sample",
+    "errors": {
+      "syntax": "This isn't valid {format}.",
+      "syntaxLine": "This isn't valid {format}. Check line {line}.",
+      "syntaxAt": "This isn't valid {format}. Check line {line}, column {column}.",
+      "notTabular": "Only lists and objects can become CSV.",
+      "tomlRoot": "TOML needs a table at the top level, and this is a single value."
+    },
+    "notes": {
+      "multipleDocuments": "The YAML has {count} documents, so they were combined into a list.",
+      "wrapped": "TOML can't hold a list at the top level, so it was put under “{key}”.",
+      "nullsRemoved": "{count, plural, one {TOML has no empty values, so # empty field was left out.} other {TOML has no empty values, so # empty fields were left out.}}",
+      "flattened": "Nested objects became columns with dotted names, like address.city, and lists were written as JSON."
+    },
+    "about": "How it works",
+    "tips": {
+      "csv": {
+        "title": "CSV",
+        "text": "Each row becomes an object with the column names as keys. Without a header row, each row becomes a list."
+      },
+      "toml": {
+        "title": "TOML",
+        "text": "TOML has no null and needs a table at the top level, so empty values are left out and lists are put under a key."
+      },
+      "yaml": {
+        "title": "YAML",
+        "text": "A file with several documents separated by --- becomes a list."
+      },
+      "privacy": {
+        "title": "In your browser",
+        "text": "The conversion runs on your device. Nothing is uploaded."
+      }
+    }
+  },
+  "sqlFormatter": {
+    "dialect": "Dialect",
+    "standardSql": "Standard SQL",
+    "keywords": "Keywords",
+    "keywordCases": {
+      "preserve": "Keep as written",
+      "upper": "UPPERCASE",
+      "lower": "lowercase"
+    },
+    "indentation": "Indentation",
+    "spaces": "{count} spaces",
+    "tab": "Tab",
+    "input": "Query",
+    "placeholder": "Paste one or more SQL queries",
+    "loadSample": "Load sample",
+    "outputPlaceholder": "The formatted SQL will appear here",
+    "error": "The query could not be formatted with this dialect.",
+    "errorAt": "The query could not be formatted with this dialect. Check line {line}, column {column}.",
+    "about": "About the dialects",
+    "aboutText": "Each dialect knows its own keywords, quoting and parameters, like $1 in PostgreSQL or @name in SQL Server. If a valid query fails to format, pick the dialect of your database. The formatter only changes whitespace and keyword case, never the meaning of the query."
+  },
+  "qrReader": {
+    "dropTitle": "Drop an image with a QR code here or click to browse",
+    "dropHint": "You can also paste a screenshot with Ctrl+V or ⌘V",
+    "image": "Image",
+    "anotherImage": "Scan another image",
+    "result": "Content",
+    "reading": "Looking for a QR code…",
+    "notFound": "No QR code was found in this image. Try a sharper or larger image with the whole code visible.",
+    "loadFailed": "This image could not be opened.",
+    "kinds": {
+      "url": "Link",
+      "wifi": "Wi-Fi network",
+      "email": "Email",
+      "phone": "Phone number",
+      "sms": "Text message",
+      "geo": "Location",
+      "text": "Text"
+    },
+    "fields": {
+      "url": "Address",
+      "ssid": "Network",
+      "password": "Password",
+      "security": "Security",
+      "hidden": "Hidden",
+      "address": "To",
+      "subject": "Subject",
+      "body": "Message",
+      "number": "Number",
+      "message": "Message",
+      "latitude": "Latitude",
+      "longitude": "Longitude"
+    },
+    "security": {
+      "WPA": "WPA/WPA2",
+      "WEP": "WEP",
+      "nopass": "No password"
+    },
+    "yes": "Yes",
+    "no": "No",
+    "raw": "Raw content",
+    "openLink": "Open link",
+    "openMap": "Open in OpenStreetMap",
+    "about": "About",
+    "aboutText": "The image is read in your browser and is never uploaded. Links open in a new tab, so check the address before you open them."
+  },
+  "faviconGenerator": {
+    "dropTitle": "Drop an image here or click to browse",
+    "dropHint": "A square PNG of at least 512×512 pixels, or an SVG, works best",
+    "loadFailed": "This image could not be opened.",
+    "appearance": "Appearance",
+    "change": "Use another image",
+    "background": "Background",
+    "transparent": "Transparent",
+    "color": "Color",
+    "backgroundColor": "Background color",
+    "radius": "Corner radius: {value, number, percent}",
+    "padding": "Padding: {value, number, percent}",
+    "appName": "App name",
+    "shortName": "Short name",
+    "defaultName": "My website",
+    "themeColor": "Theme color",
+    "download": "Download ZIP",
+    "building": "Creating files…",
+    "preview": "Preview",
+    "previewAlt": "Icon at {size} pixels",
+    "snippet": "Add this to the head of your pages",
+    "files": "What's in the ZIP",
+    "fileDescriptions": {
+      "ico": "favicon.ico with 16, 32 and 48 pixel icons, which every browser understands",
+      "png": "PNG favicons at 16 and 32 pixels",
+      "apple": "apple-touch-icon.png at 180 pixels for iPhone and iPad home screens, always with a background",
+      "android": "192 and 512 pixel icons for Android and installed web apps",
+      "svg": "favicon.svg, sharp at any size, when you start from an SVG",
+      "manifest": "site.webmanifest with the app name and colors, and the HTML snippet above"
+    }
+  },
+  "certificateDecoder": {
+    "mode": "What to check",
+    "modes": {
+      "server": "Check a server",
+      "pem": "Paste a certificate"
+    },
+    "host": "Server",
+    "port": "Port",
+    "check": "Check",
+    "pem": "PEM certificate",
+    "decode": "Decode",
+    "trusted": "Trusted",
+    "notTrusted": "Not trusted",
+    "hostnameMatches": "The certificate covers this host name",
+    "hostnameMismatch": "The certificate does not cover this host name",
+    "connection": "Connected with {protocol} using {cipher}.",
+    "trustErrors": {
+      "CERT_HAS_EXPIRED": "A certificate in the chain has expired.",
+      "CERT_NOT_YET_VALID": "A certificate in the chain is not valid yet.",
+      "DEPTH_ZERO_SELF_SIGNED_CERT": "The certificate is self-signed.",
+      "SELF_SIGNED_CERT_IN_CHAIN": "The chain ends in a self-signed certificate that browsers don't trust.",
+      "UNABLE_TO_VERIFY_LEAF_SIGNATURE": "The server doesn't send its intermediate certificates, or they come from an untrusted authority.",
+      "UNABLE_TO_GET_ISSUER_CERT_LOCALLY": "The server doesn't send its intermediate certificates, or they come from an untrusted authority.",
+      "ERR_TLS_CERT_ALTNAME_INVALID": "The certificate was issued for other host names."
+    },
+    "status": {
+      "valid": "{days, plural, =0 {Expires today} one {Valid for # more day} other {Valid for # more days}}",
+      "expired": "{days, plural, =0 {Expired today} one {Expired # day ago} other {Expired # days ago}}",
+      "notYetValid": "Not valid yet"
+    },
+    "roles": {
+      "server": "Server certificate",
+      "intermediate": "Intermediate certificate",
+      "root": "Root certificate"
+    },
+    "fields": {
+      "subject": "Subject",
+      "issuer": "Issuer",
+      "validFrom": "Valid from",
+      "validTo": "Valid until",
+      "altNames": "Alternative names",
+      "key": "Public key",
+      "signature": "Signature algorithm",
+      "usage": "Extended key usage",
+      "authority": "Certificate authority",
+      "serial": "Serial number",
+      "sha256": "SHA-256 fingerprint",
+      "sha1": "SHA-1 fingerprint"
+    },
+    "keyBits": "{type} {bits} bits",
+    "usages": {
+      "serverAuth": "Server authentication",
+      "clientAuth": "Client authentication",
+      "codeSigning": "Code signing",
+      "emailProtection": "Email protection",
+      "timeStamping": "Time stamping",
+      "ocspSigning": "OCSP signing"
+    },
+    "yes": "Yes",
+    "no": "No",
+    "selfSigned": "self-signed",
+    "about": "About the checks",
+    "aboutText": "Trusted means the chain leads to an authority on the list browsers trust. The server check connects from this server, and only to public addresses. The certificate itself is public, so nothing secret is sent or shown."
+  },
+  "dnsLookup": {
+    "query": "Domain or IP address",
+    "resolver": "DNS server",
+    "lookUp": "Look up",
+    "notFound": "{name} does not exist. The DNS server answered that there is no such domain.",
+    "noRecords": "The domain exists but has none of these records.",
+    "columns": {
+      "type": "Type",
+      "value": "Value",
+      "ttl": "TTL"
+    },
+    "emptyTypes": "No {types} records.",
+    "failedTypes": "The DNS server did not answer for {types}. Try again or pick another server.",
+    "recordTypes": "Record types",
+    "types": {
+      "A": "IPv4 address",
+      "AAAA": "IPv6 address",
+      "CNAME": "Alias that points to another name",
+      "MX": "Mail servers, lowest number first",
+      "NS": "Name servers that hold the domain's records",
+      "TXT": "Text, such as SPF, DKIM or site verification",
+      "SOA": "Primary name server, admin contact and zone timers",
+      "CAA": "Certificate authorities allowed to issue certificates",
+      "SRV": "Server and port of a service, for names like _sip._tcp",
+      "PTR": "Name that belongs to an IP address"
+    },
+    "resolverNote": "Lookups go to the public DNS server you pick, so they show what the internet sees. Names that only exist on your own network won't resolve here."
+  },
+  "pdfTools": {
+    "mode": "What to do",
+    "modes": {
+      "merge": "Merge",
+      "extract": "Extract pages",
+      "split": "Split",
+      "images": "To images"
+    },
+    "modeHints": {
+      "merge": "Combine several PDFs into one, in the order you choose.",
+      "extract": "Make a new PDF with only the pages you pick, in any order.",
+      "split": "Break a PDF into separate files, one per page or one per range.",
+      "images": "Turn the pages into PNG or JPEG images."
+    },
+    "dropOne": "Drop a PDF here or click to browse",
+    "dropMany": "Drop PDFs here or click to browse",
+    "addMore": "Add more PDFs",
+    "dropHint": "Up to {limit} in total",
+    "invalidFile": "Only PDF files can be used.",
+    "tooLarge": "These files are too large. The limit is {limit} in total.",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "remove": "Remove",
+    "pages": "Pages",
+    "pagesOptional": "Pages (leave empty for all)",
+    "pagesHint": "Separate pages and ranges with commas. 8- means from page 8 to the end.",
+    "splitBy": "Split into",
+    "splitModes": {
+      "every": "One file per page",
+      "ranges": "One file per range"
+    },
+    "ranges": "Ranges",
+    "rangesHint": "Each range becomes its own file. 7- means from page 7 to the end.",
+    "format": "Image format",
+    "resolution": "Resolution",
+    "dpi": "{value} dpi",
+    "maxPages": "At {dpi} dpi you can convert up to {count} pages at a time.",
+    "run": {
+      "merge": "Merge PDFs",
+      "extract": "Extract pages",
+      "split": "Split PDF",
+      "images": "Convert to images"
+    },
+    "processing": "Processing the PDF…",
+    "done": {
+      "merge": "{count, plural, one {Merged into one PDF with # page} other {Merged into one PDF with # pages}}",
+      "extract": "{count, plural, one {Extracted # page} other {Extracted # pages}}",
+      "split": "{count, plural, one {Split into # file} other {Split into # files}}",
+      "images": "{count, plural, one {Converted # page to an image} other {Converted # pages to images}}"
+    },
+    "expired": "The file has expired. Run it again.",
+    "startOver": "Start again",
+    "failed": "The PDF could not be processed",
+    "pageOutOfRange": "{count, plural, one {This PDF has only # page. Check the pages you entered.} other {This PDF has # pages. Check the pages you entered.}}",
+    "about": "How it works",
+    "aboutText": "Files are processed with Poppler on this server and deleted five minutes after the result is ready. Encrypted or password-protected PDFs can't be processed."
+  },
+  "trim": {
+    "title": "Trim",
+    "toTheEnd": "End of the file",
+    "useCurrent": "Use the current playback position",
+    "badTime": "Use a time like 1:30 or 1:02:03.5",
+    "invalid": "The end has to come after the start, and both inside the file.",
+    "whole": "Leave both empty to keep the whole file. Use times like 1:30 or 1:02:03.5.",
+    "clip": "The result will be {length} long, from {start} to {end}."
+  },
+  "videoDownloader": {
+    "enterUrl": "Video link",
+    "pasteUrl": "Paste a link from YouTube, X, Instagram, Reddit…",
+    "lookUp": "Look up",
+    "lookingUp": "Looking up…",
+    "lookupFailed": "The video could not be looked up",
+    "another": "Use another link",
+    "items": "{count, plural, one {This post has # video} other {This post has # videos. Pick one.}}",
+    "audioOnlySource": "This source only has audio, so it will be saved as an audio file.",
+    "audioOnly": "Audio only",
+    "extractAudioDescription": "Extract the audio instead of downloading the video",
+    "videoQuality": "Video quality",
+    "qualityBest": "Best",
+    "audioFormat": "Audio format",
+    "startingDownload": "Starting download…",
+    "downloading": "Downloading…",
+    "finalizing": "Finalizing…",
+    "downloadComplete": "Download complete",
+    "downloadFile": "Download file",
+    "fileExpired": "The file has expired. Download it again.",
+    "downloadFailed": "The download failed",
+    "tryAnother": "Download another",
+    "usageNotice": "Usage and copyright",
+    "tips": {
+      "sites": {
+        "title": "Supported sites",
+        "text": "Anything yt-dlp supports: YouTube, X, Instagram, Reddit, Bluesky, Twitch, SoundCloud and many more. When a post has several videos you pick one."
+      },
+      "quality": {
+        "title": "Quality",
+        "text": "Best picks the highest resolution. The other options cap the resolution and prefer H.264, which plays everywhere."
+      },
+      "audio": {
+        "title": "Audio only",
+        "text": "Extract the audio as MP3, M4A, Opus, OGG or WAV."
+      },
+      "accounts": {
+        "title": "Sites that need an account",
+        "text": "Some sites, like Vimeo, only allow downloads from a signed-in account. Whoever runs this server can set that up with VOIDKOI_YTDLP_COOKIES."
+      },
+      "legal": {
+        "title": "Legal notice",
+        "text": "Only download content you have permission to download. Respect copyright law and the terms of each site."
+      },
+      "responsible": {
+        "title": "Use it responsibly",
+        "text": "Download your own content, public-domain videos or content you have explicit permission to use."
+      }
+    }
+  },
+  "errors": {
+    "rateLimited": "Too many requests. Wait a moment and try again.",
+    "noFile": "No file was provided.",
+    "invalidFormat": "That format is not valid.",
+    "unsupportedFormat": "This file format is not supported.",
+    "sameFormat": "The input and output formats are the same.",
+    "noUrl": "Enter a URL first.",
+    "invalidUrl": "That does not look like a valid URL.",
+    "unsupportedUrl": "This link is not supported. Paste the link of a video or post from a supported site.",
+    "urlNotAllowed": "This address points to a private network and cannot be fetched.",
+    "fetchFailed": "The page could not be fetched.",
+    "parseFailed": "The page could not be parsed.",
+    "jobIdRequired": "The job identifier is missing.",
+    "jobNotFound": "The job was not found. It may have expired.",
+    "jobNotCompleted": "The job has not finished yet.",
+    "fileExpired": "The file has expired. Files are kept for 5 minutes, so run it again.",
+    "conversionFailed": "The conversion failed.",
+    "downloadFailed": "The download failed.",
+    "metadataFailed": "The file could not be analyzed.",
+    "noAudioTrack": "No audio track was found in this file.",
+    "toolMissing": "A required program is not installed on the server.",
+    "pdfEngineMissing": "PDF output needs Typst installed on the server.",
+    "pdfEngineError": "The PDF engine failed. The document may contain unsupported formatting.",
+    "pdfExtractionFailed": "The text could not be extracted from the PDF. It may be corrupted or password-protected.",
+    "pdfExtractionUnavailable": "Reading PDF files needs pdftotext or Ghostscript installed on the server.",
+    "documentCorrupted": "The document could not be converted. It may be corrupted or in an unsupported format.",
+    "noDownloadableFormat": "No downloadable video format was found.",
+    "invalidHost": "Enter a domain name or an IP address.",
+    "lookupFailed": "The DNS lookup failed. Try again or pick another resolver.",
+    "certificateInvalid": "No valid certificate was found. Paste a PEM certificate, the text that starts with -----BEGIN CERTIFICATE-----.",
+    "connectionFailed": "Could not connect to the server and complete a TLS handshake.",
+    "pdfEncrypted": "This PDF is encrypted or protected with a password. Remove the protection and try again.",
+    "pdfInvalid": "This file could not be read as a PDF. It may be damaged.",
+    "invalidPages": "Enter pages like 1-3, 5, 8-.",
+    "pageOutOfRange": "Some of those pages are not in this PDF.",
+    "tooManyPages": "That is too many pages at this resolution. Pick fewer pages or a lower resolution.",
+    "tooManyFiles": "Too many files. Merge them in smaller groups.",
+    "notEnoughFiles": "Add at least two PDFs to merge.",
+    "loginRequired": "This site only allows downloads from a signed-in account. See VOIDKOI_YTDLP_COOKIES in the README.",
+    "mediaUnavailable": "This video is not available. It may be private or deleted.",
+    "mediaBlocked": "The site blocked this server, probably because of its location or IP address.",
+    "liveNotSupported": "Live streams cannot be downloaded. Try again when the stream has ended.",
+    "invalidTrim": "Check the start and end times. The end has to come after the start, inside the file.",
+    "gifTooLong": "This clip is too long for a GIF. Trim it to a shorter part."
+  }
+}

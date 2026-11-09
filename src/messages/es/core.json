@@ -1,0 +1,247 @@
+{
+  "app": {
+    "description": "Notas, tareas, archivos, chat, hábitos, herramientas y una wiki en un solo sitio.",
+    "tagline": "Tus apps, en un solo sitio"
+  },
+  "common": {
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "done": "Listo",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copyFailed": "No se ha podido copiar. Selecciona el enlace y cópialo a mano.",
+    "dismiss": "Descartar",
+    "loading": "Cargando"
+  },
+  "calendar": {
+    "previous": "Mes anterior",
+    "next": "Mes siguiente"
+  },
+  "nav": {
+    "label": "Principal",
+    "settings": "Ajustes",
+    "admin": "Administración",
+    "signOut": "Cerrar sesión"
+  },
+  "roles": {
+    "ADMIN": "Administrador",
+    "USER": "Usuario"
+  },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "toggle": "Tema: {theme}. Pulsa para cambiarlo."
+  },
+  "language": {
+    "label": "Idioma",
+    "toggle": "Idioma: {language}. Pulsa para cambiarlo."
+  },
+  "login": {
+    "username": "Usuario",
+    "password": "Contraseña",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "submit": "Entrar",
+    "submitting": "Entrando…",
+    "invalidCredentials": "Usuario o contraseña incorrectos",
+    "failed": "No se ha podido entrar. Inténtalo de nuevo.",
+    "setupDone": "Tu cuenta está lista. Entra para continuar.",
+    "signedOut": "Has cerrado la sesión.",
+    "oidc": {
+      "submit": "Entrar con {provider}",
+      "redirecting": "Yendo a {provider}…",
+      "accessDenied": "{provider} no ha dejado entrar a esta cuenta.",
+      "failed": "No se ha podido entrar con {provider}. Inténtalo de nuevo.",
+      "newAccount": "<b>{name}</b> aún no tiene cuenta aquí.",
+      "createAccount": "Crear cuenta",
+      "creatingAccount": "Creando la cuenta…",
+      "otherAccount": "Usar otra cuenta de {provider}"
+    }
+  },
+  "setup": {
+    "tagline": "Crea la cuenta de administrador",
+    "username": "Usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordHint": "Al menos {min} caracteres",
+    "confirmPassword": "Repite la contraseña",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "passwordTooShort": "La contraseña necesita al menos {min} caracteres",
+    "submit": "Crear cuenta",
+    "submitting": "Creando la cuenta…",
+    "note": "La primera cuenta es la de administrador. Después puede añadir a más gente."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "picture": {
+      "title": "Foto de perfil",
+      "choose": "Elige una foto",
+      "upload": "Subir una foto",
+      "change": "Cambiar foto",
+      "remove": "Quitar",
+      "working": "Guardando…",
+      "updated": "Foto actualizada",
+      "removed": "Foto quitada"
+    },
+    "account": {
+      "title": "Cuenta",
+      "username": "Usuario",
+      "email": "Correo electrónico",
+      "role": "Rol",
+      "name": "Nombre",
+      "namePlaceholder": "Lo ven los demás en lugar de tu usuario",
+      "nameSaved": "Nombre guardado"
+    },
+    "appearance": "Apariencia",
+    "language": "Idioma",
+    "signedInAs": "Has entrado como {username}",
+    "signOut": "Cerrar sesión",
+    "version": "voidkoi {version}",
+    "avatarEditor": {
+      "label": "Recorta tu foto de perfil",
+      "title": "Recorta tu foto",
+      "preview": "Vista previa",
+      "cropArea": "Zona de recorte",
+      "opening": "Abriendo la imagen",
+      "selected": "{size} × {size} seleccionado",
+      "cancel": "Cancelar",
+      "save": "Guardar foto",
+      "saving": "Guardando…",
+      "errors": {
+        "notAnImage": "Elige un archivo de imagen.",
+        "tooLarge": "Esa imagen es demasiado grande para abrirla.",
+        "unreadable": "Ese archivo no se ha podido leer como imagen.",
+        "cannotResize": "Este navegador no puede redimensionar imágenes.",
+        "cannotConvert": "No se ha podido convertir la imagen.",
+        "readFailed": "No se ha podido leer esa imagen.",
+        "uploadFailed": "No se ha podido subir esa imagen."
+      }
+    },
+    "apps": {
+      "title": "Apps",
+      "saved": "Apps guardadas",
+      "save": "Guardar apps"
+    }
+  },
+  "admin": {
+    "title": "Administración",
+    "onlyAdmins": "Solo los administradores pueden ver esta página",
+    "add": {
+      "title": "Añadir una persona",
+      "username": "Usuario",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "passwordHint": "Al menos {min} caracteres",
+      "role": "Rol",
+      "submit": "Añadir"
+    },
+    "users": {
+      "title": "Personas",
+      "add": "Añadir una persona",
+      "delete": "Borrar a {name}",
+      "deleted": "{name} se ha borrado",
+      "deleteTitle": "¿Borrar esta cuenta?",
+      "deleteConfirm": "Borrar cuenta",
+      "deleteBody": "{name} y todo lo que guarda en cada app se borran para siempre, y sus enlaces dejan de funcionar.",
+      "makeAdmin": "Hacer administrador",
+      "makeUser": "Hacer usuario",
+      "roleChanged": "{name} ahora es {role}"
+    }
+  },
+  "errors": {
+    "generic": "Algo ha salido mal",
+    "unauthorized": "Tu sesión ha terminado. Vuelve a entrar.",
+    "forbidden": "No puedes hacer eso",
+    "notFound": "Eso ya no existe",
+    "invalidInput": "Algunos valores no son válidos",
+    "invalidName": "Ese nombre no se puede usar",
+    "nameTaken": "Aquí ya hay algo con ese nombre",
+    "folderNotFound": "Esa carpeta ya no existe",
+    "cannotMoveIntoItself": "Una carpeta no puede ir dentro de sí misma",
+    "fileTooLarge": "Demasiado grande: supera el tamaño máximo",
+    "quotaExceeded": "No queda espacio suficiente",
+    "uploadNotFound": "La subida se ha perdido. Inténtalo de nuevo.",
+    "uploadIncomplete": "Parte del archivo no ha llegado. Inténtalo de nuevo.",
+    "chunkInvalid": "Parte del archivo ha llegado dañada. Inténtalo de nuevo.",
+    "folderGone": "Su carpeta se borró mientras se subía",
+    "linkNotFound": "Este enlace no funciona",
+    "linkExpired": "Este enlace ha caducado",
+    "linkUsedUp": "Este enlace se ha agotado",
+    "signInRequired": "Entra para abrirlo",
+    "passwordRequired": "Este enlace necesita su contraseña",
+    "wrongPassword": "Esa contraseña no es correcta",
+    "tooManyAttempts": "Demasiados intentos. Espera unos minutos y vuelve a probar.",
+    "invalidDate": "Elige una fecha futura",
+    "invalidLimit": "El límite de descargas tiene que ser un número entero, 1 o más",
+    "invalidPeople": "Algunas de esas personas no existen",
+    "usersManagedByProvider": "Las personas se gestionan en el proveedor de inicio de sesión",
+    "missingFields": "Rellena todos los campos",
+    "invalidEmail": "Ese correo electrónico no es válido",
+    "passwordLength": "La contraseña necesita entre {min} y {max} caracteres",
+    "invalidRole": "Ese rol no es válido",
+    "userExists": "Ese usuario o correo ya está en uso",
+    "userNotFound": "Esa persona ya no existe",
+    "cannotDeleteSelf": "No puedes borrar tu propia cuenta",
+    "invalidQuota": "Ese tamaño no es válido",
+    "invalidImage": "Esa imagen no se puede usar",
+    "imageTooLarge": "Esa imagen es demasiado grande",
+    "loadFailed": "No se ha podido cargar",
+    "saveFailed": "No se ha podido guardar",
+    "deleteFailed": "No se ha podido borrar",
+    "uploadFailed": "La subida ha fallado",
+    "restoreFailed": "No se ha podido restaurar",
+    "fetchUsersFailed": "No se ha podido cargar a las personas",
+    "createUserFailed": "No se ha podido añadir a la persona",
+    "deleteUserFailed": "No se ha podido borrar la cuenta",
+    "notEditable": "Este archivo no se puede editar aquí",
+    "editConflict": "Este archivo ha cambiado en otro sitio",
+    "folderFull": "No queda espacio suficiente en esta carpeta",
+    "noApps": "Elige al menos una app.",
+    "invalidLocale": "Ese idioma no está disponible.",
+    "cannotChangeOwnRole": "No puedes cambiar tu propio rol."
+  },
+  "password": {
+    "change": "Cambiar contraseña",
+    "current": "Contraseña actual",
+    "new": "Nueva contraseña",
+    "confirm": "Repite la nueva contraseña",
+    "mismatch": "Las contraseñas no coinciden",
+    "tooShort": "Al menos {min} caracteres",
+    "changed": "Contraseña cambiada",
+    "setFor": "Cambiar la contraseña de {name}",
+    "titleFor": "Contraseña de {name}",
+    "changedFor": "Contraseña de {name} cambiada",
+    "isSet": "Tiene contraseña",
+    "replace": "Cambiar"
+  },
+  "apps": {
+    "label": "Apps"
+  },
+  "welcome": {
+    "title": "Elige tus apps",
+    "continue": "Continuar",
+    "saving": "Guardando…",
+    "pickOne": "Elige al menos una app"
+  },
+  "shell": {
+    "apps": "Apps",
+    "switchApp": "Cambiar de app",
+    "account": "Cuenta",
+    "home": "Inicio",
+    "loadFailed": "No se ha podido cargar tu cuenta",
+    "tryAgain": "Volver a intentarlo",
+    "stillLoading": "Sigue cargando",
+    "reload": "Recargar"
+  },
+  "settingsNav": {
+    "label": "Secciones de ajustes",
+    "general": "General"
+  },
+  "adminNav": {
+    "label": "Secciones de administración",
+    "people": "Personas"
+  }
+}

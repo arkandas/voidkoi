@@ -1,0 +1,4 @@
+# Python deps for the logo generator (tested: numpy 1.26.4, shapely 2.1.2, Python 3.12)
+# System tools, also required: rsvg-convert and magick  ->  brew install librsvg imagemagick
+numpy>=1.26
+shapely>=2.0

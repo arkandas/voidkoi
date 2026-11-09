@@ -1,0 +1,319 @@
+{
+  "app": {
+    "name": "Wiki"
+  },
+  "visibility": {
+    "inherit": "Same as the folder",
+    "public": "Public",
+    "private": "Private",
+    "password": "Password"
+  },
+  "shell": {
+    "navigation": "Wiki",
+    "menu": "Pages",
+    "closeMenu": "Close",
+    "search": "Search",
+    "newPage": "New page",
+    "newFolder": "New folder",
+    "signIn": "Sign in",
+    "trash": "Trash"
+  },
+  "tree": {
+    "label": "Pages",
+    "untitled": "Untitled",
+    "expand": "Open {title}",
+    "collapse": "Close {title}",
+    "locked": "Password",
+    "draft": "Draft",
+    "changes": "Unpublished changes",
+    "public": "Public",
+    "private": "Private",
+    "password": "Password",
+    "actions": "Actions for {title}",
+    "newPage": "New page",
+    "newFolder": "New folder",
+    "edit": "Edit",
+    "share": "Share",
+    "settings": "Settings",
+    "history": "History",
+    "delete": "Delete"
+  },
+  "search": {
+    "label": "Search the wiki",
+    "placeholder": "Search pages",
+    "searching": "Searching…",
+    "none": "Nothing found for “{query}”",
+    "untitled": "Untitled"
+  },
+  "page": {
+    "breadcrumbs": "Where this page is",
+    "untitled": "Untitled",
+    "edit": "Edit",
+    "newPage": "New page",
+    "newFolder": "New folder",
+    "share": "Share",
+    "more": "More",
+    "history": "History",
+    "settings": "Settings",
+    "delete": "Delete",
+    "onThisPage": "On this page",
+    "updated": "Updated {date}",
+    "updatedBy": "Updated {date} by {name}",
+    "saved": "Draft saved {date}",
+    "savedBy": "Draft saved {date} by {name}",
+    "editThis": "Edit this page",
+    "pagination": "More pages",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "draft": {
+    "notPublished": "Not published",
+    "hasChanges": "Unpublished changes",
+    "showingDraft": "Showing the unpublished changes",
+    "showDraft": "Show them",
+    "showPublished": "Show the published page",
+    "edit": "Edit"
+  },
+  "folder": {
+    "untitled": "Untitled",
+    "draft": "Draft",
+    "count": "{count, plural, =0 {Empty} one {# item} other {# items}}",
+    "empty": "This folder is empty",
+    "emptyWiki": "No pages yet",
+    "newPage": "New page",
+    "newFolder": "New folder"
+  },
+  "prompts": {
+    "signInTitle": "Sign in to read this page",
+    "signIn": "Sign in",
+    "passwordTitle": "This page has a password",
+    "password": "Password",
+    "open": "Open"
+  },
+  "notFound": {
+    "title": "This page doesn’t exist",
+    "home": "Go to the start"
+  },
+  "markdown": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "diagram": "Diagram",
+    "diagramFailed": "This diagram couldn’t be drawn.",
+    "callouts": {
+      "note": "Note",
+      "tip": "Tip",
+      "info": "Info",
+      "warning": "Warning",
+      "danger": "Danger"
+    }
+  },
+  "dialogs": {
+    "create": {
+      "page": "New page",
+      "folder": "New folder",
+      "in": "In {folder}",
+      "title": "Title",
+      "createPage": "Create and edit",
+      "createFolder": "Create folder"
+    },
+    "share": {
+      "title": "Share {title}",
+      "loading": "Share",
+      "untitled": "Untitled",
+      "link": "Link",
+      "who": "Who can read it",
+      "inherit": "Same as {source}",
+      "passwordNew": "New password",
+      "passwordMissing": "Type a password, or pick something else.",
+      "save": "Save",
+      "saved": "Saved"
+    },
+    "settings": {
+      "pageTitle": "Settings for {title}",
+      "folderTitle": "Settings for {title}",
+      "loading": "Settings",
+      "untitled": "Untitled",
+      "title": "Title",
+      "address": "Address",
+      "folder": "Folder",
+      "topLevel": "Top level"
+    },
+    "delete": {
+      "title": "Delete this?",
+      "body": "{title} goes to the trash.",
+      "folderBody": "{title} and the {count, plural, one {# thing} other {# things}} in it go to the trash.",
+      "untitled": "Untitled",
+      "confirm": "Delete",
+      "done": "{title} is in the trash",
+      "undo": "Undo"
+    }
+  },
+  "editor": {
+    "tabTitle": "Editing {title}",
+    "untitled": "Untitled",
+    "back": "Back to the page",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Title",
+    "contentLabel": "Page text in Markdown",
+    "placeholder": "Write in Markdown…",
+    "publish": "Publish",
+    "publishDialog": {
+      "title": "Publish",
+      "first": "First version",
+      "added": "{count, plural, one {# line added} other {# lines added}}",
+      "removed": "{count, plural, one {# line removed} other {# lines removed}}",
+      "renamed": "Title: {from} → {to}",
+      "message": "What changed",
+      "messagePlaceholder": "Optional",
+      "submit": "Publish"
+    },
+    "published": "Published",
+    "discarded": "Changes discarded",
+    "saved": "Saved",
+    "saving": "Saving…",
+    "notSaved": "Not saved",
+    "retry": "Retry",
+    "conflict": "Someone else changed this page",
+    "conflictBy": "{name} changed this page",
+    "takeTheirs": "Load theirs",
+    "keepMine": "Keep mine",
+    "linkText": "text",
+    "imageAlt": "image",
+    "tableColumn": "Column",
+    "tableCell": "Cell",
+    "calloutText": "Text",
+    "uploading": "{count, plural, one {Uploading an image…} other {Uploading # images…}}",
+    "neverPublished": "Not published",
+    "unpublishedChanges": "Unpublished changes",
+    "upToDate": "Published",
+    "words": "{count, plural, =0 {No words} one {# word} other {# words}}",
+    "discardTitle": "Discard the changes?",
+    "discardBody": "The page goes back to its published version.",
+    "discardConfirm": "Discard",
+    "mode": {
+      "label": "View",
+      "write": "Write",
+      "split": "Write and preview",
+      "preview": "Preview"
+    },
+    "menu": {
+      "label": "More",
+      "view": "View page",
+      "history": "History",
+      "share": "Share",
+      "settings": "Settings",
+      "discard": "Discard changes",
+      "delete": "Delete"
+    },
+    "toolbar": {
+      "label": "Formatting",
+      "heading": "Heading (⌘⌥2)",
+      "bold": "Bold (⌘B)",
+      "italic": "Italic (⌘I)",
+      "strikethrough": "Strikethrough",
+      "code": "Code",
+      "link": "Link (⌘K)",
+      "pageLink": "Link to a page",
+      "bullets": "Bulleted list",
+      "numbers": "Numbered list",
+      "tasks": "Checklist",
+      "quote": "Quote",
+      "codeBlock": "Code block",
+      "table": "Table",
+      "image": "Picture",
+      "rule": "Divider",
+      "callout": "Callout"
+    },
+    "callouts": {
+      "note": "Note",
+      "tip": "Tip",
+      "info": "Info",
+      "warning": "Warning",
+      "danger": "Danger"
+    },
+    "picker": {
+      "title": "Link to a page",
+      "placeholder": "Find a page",
+      "none": "No pages match"
+    }
+  },
+  "history": {
+    "heading": "History",
+    "tabTitle": "History of {title}",
+    "back": "Back to the page",
+    "versions": "Versions",
+    "none": "Not published yet",
+    "version": "Version {number}",
+    "draft": "Unpublished changes",
+    "live": "Published",
+    "byOn": "{name} · {date}",
+    "show": "Show",
+    "changes": "Changes",
+    "text": "Text",
+    "against": "Compared with",
+    "nothing": "Nothing",
+    "layout": "Layout",
+    "unified": "One column",
+    "split": "Side by side",
+    "titleChanged": "Title:",
+    "noChanges": "Nothing changed in the text",
+    "hidden": "{count, plural, one {# unchanged line} other {# unchanged lines}}",
+    "restore": "Restore",
+    "restoreTitle": "Restore this version?",
+    "restoreBody": "Version {number} goes into the draft, to look over and publish.",
+    "restoreConfirm": "Restore",
+    "restored": "Version {number} is in the draft"
+  },
+  "trash": {
+    "title": "Trash",
+    "untitled": "Untitled",
+    "nothing": "The trash is empty",
+    "empty": "Empty trash",
+    "from": "From {folder}",
+    "fromTop": "From the top level",
+    "inside": "{count, plural, one {# thing inside} other {# things inside}}",
+    "daysLeft": "{count, plural, =0 {Goes today} one {# day left} other {# days left}}",
+    "restore": "Restore",
+    "restored": "{title} is back",
+    "open": "Open",
+    "deleteForever": "Delete {title} for good",
+    "deleted": "{title} is deleted for good",
+    "emptied": "The trash is empty",
+    "foreverTitle": "Delete for good?",
+    "foreverBody": "{title} and its history are deleted for good.",
+    "foreverConfirm": "Delete for good",
+    "emptyTitle": "Empty the trash?",
+    "emptyBody": "{count, plural, one {# thing is} other {# things are}} deleted for good, with their history.",
+    "emptyConfirm": "Empty trash"
+  },
+  "admin": {
+    "wiki": {
+      "title": "Wiki",
+      "name": "Name",
+      "home": "Start page",
+      "homeIndex": "List of the top level",
+      "visibility": "Who can read the wiki",
+      "passwordNew": "Password for the wiki",
+      "passwordMissing": "Type a password, or pick something else.",
+      "indexing": "Let search engines list public pages",
+      "save": "Save",
+      "saved": "Saved"
+    },
+    "editors": {
+      "title": "Editors",
+      "admin": "Admin",
+      "on": "{name} can edit",
+      "off": "{name} can only read",
+      "nobody": "Nobody uses the wiki"
+    }
+  },
+  "errors": {
+    "invalidTitle": "Give it a title",
+    "invalidSlug": "Use lowercase letters, numbers and dashes",
+    "slugTaken": "Something here already has that address",
+    "reservedSlug": "That address is taken by the wiki itself",
+    "nothingToPublish": "There’s nothing new to publish",
+    "notPublished": "This page isn’t published yet",
+    "publishFailed": "Couldn’t publish"
+  }
+}

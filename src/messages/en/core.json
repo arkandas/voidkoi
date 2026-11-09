@@ -1,0 +1,247 @@
+{
+  "app": {
+    "description": "Notes, tasks, files, chat, habits, tools and a wiki in one place.",
+    "tagline": "Your apps, in one place"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "done": "Done",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Couldn’t copy. Select the link and copy it by hand.",
+    "dismiss": "Dismiss",
+    "loading": "Loading"
+  },
+  "calendar": {
+    "previous": "Previous month",
+    "next": "Next month"
+  },
+  "nav": {
+    "label": "Main",
+    "settings": "Settings",
+    "admin": "Admin",
+    "signOut": "Sign out"
+  },
+  "roles": {
+    "ADMIN": "Admin",
+    "USER": "User"
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Theme: {theme}. Click to change."
+  },
+  "language": {
+    "label": "Language",
+    "toggle": "Language: {language}. Click to change."
+  },
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "invalidCredentials": "Wrong username or password",
+    "failed": "Couldn’t sign in. Try again.",
+    "setupDone": "Your account is ready. Sign in to continue.",
+    "signedOut": "You’ve signed out.",
+    "oidc": {
+      "submit": "Sign in with {provider}",
+      "redirecting": "Going to {provider}…",
+      "accessDenied": "{provider} didn’t let this account in.",
+      "failed": "Signing in with {provider} didn’t work. Try again.",
+      "newAccount": "<b>{name}</b> doesn’t have an account here yet.",
+      "createAccount": "Create account",
+      "creatingAccount": "Creating account…",
+      "otherAccount": "Use another {provider} account"
+    }
+  },
+  "setup": {
+    "tagline": "Create the admin account",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least {min} characters",
+    "confirmPassword": "Confirm password",
+    "passwordMismatch": "The passwords don’t match",
+    "passwordTooShort": "The password needs at least {min} characters",
+    "submit": "Create account",
+    "submitting": "Creating account…",
+    "note": "The first account is the admin. It can add more people later."
+  },
+  "settings": {
+    "title": "Settings",
+    "picture": {
+      "title": "Profile picture",
+      "choose": "Choose a picture",
+      "upload": "Upload a picture",
+      "change": "Change picture",
+      "remove": "Remove",
+      "working": "Saving…",
+      "updated": "Picture updated",
+      "removed": "Picture removed"
+    },
+    "account": {
+      "title": "Account",
+      "username": "Username",
+      "email": "Email",
+      "role": "Role",
+      "name": "Name",
+      "namePlaceholder": "Shown to others instead of your username",
+      "nameSaved": "Name saved"
+    },
+    "appearance": "Appearance",
+    "language": "Language",
+    "signedInAs": "Signed in as {username}",
+    "signOut": "Sign out",
+    "version": "voidkoi {version}",
+    "avatarEditor": {
+      "label": "Crop your profile picture",
+      "title": "Crop your picture",
+      "preview": "Preview",
+      "cropArea": "Crop area",
+      "opening": "Opening image",
+      "selected": "{size} × {size} selected",
+      "cancel": "Cancel",
+      "save": "Save picture",
+      "saving": "Saving…",
+      "errors": {
+        "notAnImage": "Choose an image file.",
+        "tooLarge": "That image is too large to open.",
+        "unreadable": "That file couldn’t be read as an image.",
+        "cannotResize": "This browser can’t resize images.",
+        "cannotConvert": "Couldn’t convert that image.",
+        "readFailed": "That image couldn’t be read.",
+        "uploadFailed": "That image couldn’t be uploaded."
+      }
+    },
+    "apps": {
+      "title": "Apps",
+      "saved": "Apps saved",
+      "save": "Save apps"
+    }
+  },
+  "admin": {
+    "title": "Admin",
+    "onlyAdmins": "Only admins can see this page",
+    "add": {
+      "title": "Add a person",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "passwordHint": "At least {min} characters",
+      "role": "Role",
+      "submit": "Add"
+    },
+    "users": {
+      "title": "People",
+      "add": "Add a person",
+      "delete": "Delete {name}",
+      "deleted": "Deleted {name}",
+      "deleteTitle": "Delete this account?",
+      "deleteConfirm": "Delete account",
+      "deleteBody": "{name} and everything they keep in every app are deleted for good, and their links stop working.",
+      "makeAdmin": "Make admin",
+      "makeUser": "Make user",
+      "roleChanged": "{name} is now {role}"
+    }
+  },
+  "errors": {
+    "generic": "Something went wrong",
+    "unauthorized": "Your session has ended. Sign in again.",
+    "forbidden": "You can’t do that",
+    "notFound": "That no longer exists",
+    "invalidInput": "Some of the values aren’t valid",
+    "invalidName": "That name can’t be used",
+    "nameTaken": "Something here already has that name",
+    "folderNotFound": "That folder no longer exists",
+    "cannotMoveIntoItself": "A folder can’t go inside itself",
+    "fileTooLarge": "Too big: it’s over the size limit",
+    "quotaExceeded": "Not enough storage left",
+    "uploadNotFound": "The upload was lost. Try again.",
+    "uploadIncomplete": "Part of the file didn’t arrive. Try again.",
+    "chunkInvalid": "Part of the file arrived damaged. Try again.",
+    "folderGone": "Its folder was deleted while it uploaded",
+    "linkNotFound": "This link doesn’t work",
+    "linkExpired": "This link has expired",
+    "linkUsedUp": "This link has been used up",
+    "signInRequired": "Sign in to open this",
+    "passwordRequired": "This link needs its password",
+    "wrongPassword": "That password isn’t right",
+    "tooManyAttempts": "Too many tries. Wait a few minutes and try again.",
+    "invalidDate": "Pick a date in the future",
+    "invalidLimit": "The download limit has to be a whole number, 1 or more",
+    "invalidPeople": "Some of those people don’t exist",
+    "usersManagedByProvider": "People are managed in the sign-in provider",
+    "missingFields": "Fill in every field",
+    "invalidEmail": "That email address isn’t valid",
+    "passwordLength": "The password needs between {min} and {max} characters",
+    "invalidRole": "That role isn’t valid",
+    "userExists": "That username or email is already taken",
+    "userNotFound": "That person no longer exists",
+    "cannotDeleteSelf": "You can’t delete your own account",
+    "invalidQuota": "That size isn’t valid",
+    "invalidImage": "That isn’t a picture that can be used",
+    "imageTooLarge": "That picture is too large",
+    "loadFailed": "Couldn’t load this",
+    "saveFailed": "Couldn’t save",
+    "deleteFailed": "Couldn’t delete",
+    "uploadFailed": "The upload failed",
+    "restoreFailed": "Couldn’t restore",
+    "fetchUsersFailed": "Couldn’t load the people",
+    "createUserFailed": "Couldn’t add the person",
+    "deleteUserFailed": "Couldn’t delete the account",
+    "notEditable": "This file can’t be edited here",
+    "editConflict": "This file changed somewhere else",
+    "folderFull": "Not enough room left in this folder",
+    "noApps": "Pick at least one app.",
+    "invalidLocale": "That language isn’t available.",
+    "cannotChangeOwnRole": "You can’t change your own role."
+  },
+  "password": {
+    "change": "Change password",
+    "current": "Current password",
+    "new": "New password",
+    "confirm": "Repeat the new password",
+    "mismatch": "The passwords don’t match",
+    "tooShort": "At least {min} characters",
+    "changed": "Password changed",
+    "setFor": "Set the password of {name}",
+    "titleFor": "Password for {name}",
+    "changedFor": "Password changed for {name}",
+    "isSet": "A password is set",
+    "replace": "Change"
+  },
+  "apps": {
+    "label": "Apps"
+  },
+  "welcome": {
+    "title": "Choose your apps",
+    "continue": "Continue",
+    "saving": "Saving…",
+    "pickOne": "Pick at least one app"
+  },
+  "shell": {
+    "apps": "Apps",
+    "switchApp": "Switch app",
+    "account": "Account",
+    "home": "Home",
+    "loadFailed": "Couldn’t load your account",
+    "tryAgain": "Try again",
+    "stillLoading": "Still loading",
+    "reload": "Reload"
+  },
+  "settingsNav": {
+    "label": "Settings sections",
+    "general": "General"
+  },
+  "adminNav": {
+    "label": "Admin sections",
+    "people": "People"
+  }
+}

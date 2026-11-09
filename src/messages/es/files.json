@@ -1,0 +1,382 @@
+{
+  "app": {
+    "name": "Files"
+  },
+  "browser": {
+    "title": "Mis archivos",
+    "sharedWithMe": "Compartidos conmigo",
+    "upload": "Subir",
+    "uploadMore": "Más formas de añadir archivos",
+    "uploadFolder": "Subir una carpeta",
+    "newFolder": "Nueva carpeta",
+    "create": "Crear",
+    "name": "Nombre",
+    "renameTitle": "Cambiar nombre",
+    "search": "Buscar en mis archivos",
+    "cancelSearch": "Cancelar",
+    "view": "Vista",
+    "viewList": "Lista",
+    "viewGrid": "Cuadrícula",
+    "path": "Ruta de la carpeta",
+    "selected": "{count, plural, one {# seleccionado} other {# seleccionados}}",
+    "select": "Seleccionar {name}",
+    "selectAll": "Seleccionar todo",
+    "clearSelection": "Quitar selección",
+    "sortBy": "Ordenar por {column}",
+    "columns": {
+      "name": "Nombre",
+      "size": "Tamaño",
+      "modified": "Modificado",
+      "sharing": "Compartido",
+      "actions": "Acciones"
+    },
+    "itemCount": "{count, plural, =0 {Vacía} one {# elemento} other {# elementos}}",
+    "sharedBy": "Compartido por {name}",
+    "downloadAll": "Descargar todo",
+    "empty": {
+      "title": "Suelta archivos aquí"
+    },
+    "emptyShared": "Esta carpeta está vacía",
+    "noResults": "Nada coincide con «{query}»",
+    "retry": "Reintentar",
+    "trashedOne": "{name} se ha movido a la papelera",
+    "trashedMany": "{count, plural, one {# elemento movido a la papelera} other {# elementos movidos a la papelera}}",
+    "undo": "Deshacer",
+    "moved": "{count, plural, one {# elemento movido a {folder}} other {# elementos movidos a {folder}}}",
+    "actions": {
+      "label": "Acciones de {name}",
+      "open": "Abrir",
+      "preview": "Vista previa",
+      "download": "Descargar",
+      "share": "Compartir",
+      "rename": "Cambiar nombre",
+      "move": "Mover",
+      "trash": "Mover a la papelera",
+      "favorite": "Añadir a favoritos",
+      "unfavorite": "Quitar de favoritos"
+    },
+    "sharing": {
+      "public": "Cualquiera con el enlace",
+      "users": "Usuarios con sesión y el enlace",
+      "people": "{count, plural, one {Compartido con # persona} other {Compartido con # personas}}",
+      "upload": "Enlace de subida"
+    },
+    "favorite": "Favorito"
+  },
+  "move": {
+    "titleOne": "Mover {name}",
+    "titleMany": "{count, plural, one {Mover # elemento} other {Mover # elementos}}",
+    "path": "Carpeta",
+    "noFolders": "Aquí no hay carpetas",
+    "here": "Mover aquí"
+  },
+  "share": {
+    "title": "Compartir {name}",
+    "linkTitle": "Enlace",
+    "anyone": "Cualquiera con el enlace",
+    "signedIn": "Solo con sesión",
+    "access": "Quién puede abrir el enlace",
+    "address": "Dirección del enlace",
+    "create": "Crear enlace",
+    "linkCreated": "Enlace creado",
+    "linkSaved": "Enlace actualizado",
+    "linkDeleted": "Enlace borrado. Ya no se abre.",
+    "password": "Contraseña",
+    "passwordNew": "Contraseña nueva",
+    "passwordMissing": "Escribe una contraseña o desactívala.",
+    "expiry": "Fecha de caducidad",
+    "limit": "Límite de descargas",
+    "limitUnit": "descargas",
+    "limitInvalid": "El límite tiene que ser un número entero, 1 o más.",
+    "downloads": "{count, plural, =0 {Aún sin descargas} one {Descargado una vez} other {Descargado # veces}}",
+    "deleteLink": "Borrar enlace",
+    "save": "Guardar cambios",
+    "peopleTitle": "Personas",
+    "nobody": "Todavía no hay nadie más aquí.",
+    "addPeople": "Añadir personas por nombre",
+    "removePerson": "Dejar de compartir con {name}",
+    "uploadTitle": "Enlace de subida",
+    "uploadCreate": "Crear enlace de subida",
+    "uploadCreated": "Enlace de subida creado",
+    "uploadSaved": "Enlace de subida actualizado",
+    "uploadDeleted": "Enlace de subida borrado. Ya no se abre.",
+    "uploadDelete": "Borrar enlace de subida",
+    "uploadAddress": "Dirección del enlace de subida",
+    "received": "{count, plural, =0 {Ningún archivo recibido} one {# archivo recibido} other {# archivos recibidos}}",
+    "qr": "Código QR",
+    "qrDownload": "Descargar",
+    "qrFile": "QR {name}",
+    "qrUploadFile": "QR de subida {name}",
+    "folderSize": "Tamaño de la carpeta",
+    "folderUsedOf": "<b>{used}</b> de {limit}",
+    "folderLeft": "Quedan {left}",
+    "folderFull": "Llena"
+  },
+  "viewer": {
+    "label": "{name}",
+    "position": "{index} de {count}",
+    "share": "Compartir",
+    "download": "Descargar",
+    "downloadSize": "Descargar · {size}",
+    "noPreview": "No hay vista previa para este tipo de archivo.",
+    "failed": "No se ha podido mostrar este archivo.",
+    "textCut": "Se muestran los primeros 512 KB. Descarga el archivo para ver el resto.",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "edit": "Editar",
+    "done": "Listo",
+    "saved": "Guardado",
+    "saving": "Guardando…",
+    "notSaved": "Sin guardar",
+    "retry": "Reintentar",
+    "conflict": "Ha cambiado en otro sitio",
+    "reload": "Recargar",
+    "keepMine": "Conservar el mío",
+    "editLabel": "Editar {name}",
+    "mode": {
+      "label": "Vista",
+      "editor": "Editor",
+      "split": "Vista dividida",
+      "preview": "Vista previa"
+    }
+  },
+  "player": {
+    "play": "Reproducir",
+    "pause": "Pausa",
+    "seek": "Posición",
+    "back": "Retroceder {seconds} segundos",
+    "forward": "Avanzar {seconds} segundos",
+    "mute": "Silenciar",
+    "unmute": "Activar sonido",
+    "volume": "Volumen",
+    "speed": "Velocidad",
+    "pictureInPicture": "Imagen en imagen",
+    "fullScreen": "Pantalla completa",
+    "exitFullScreen": "Salir de pantalla completa",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "close": "Detener",
+    "nowPlaying": "Reproduciendo",
+    "cantPlay": "No se ha podido reproducir este archivo.",
+    "download": "Descargar"
+  },
+  "reader": {
+    "contents": "Índice",
+    "previousPage": "Página anterior",
+    "nextPage": "Página siguiente",
+    "smallerText": "Texto más pequeño",
+    "largerText": "Texto más grande",
+    "cantOpen": "No se ha podido abrir este libro.",
+    "download": "Descargar",
+    "progress": "{percent} %"
+  },
+  "uploads": {
+    "label": "Subidas",
+    "uploading": "{count, plural, one {Subiendo # archivo} other {Subiendo # archivos}}",
+    "paused": "Subidas en pausa",
+    "offline": "Esperando conexión",
+    "offlineDetail": "{sent} de {size} · sigue en cuanto vuelvas a tener conexión",
+    "finished": "{count, plural, one {# archivo subido} other {# archivos subidos}}",
+    "someFailed": "{done, plural, one {# subido} other {# subidos}}, {failed} con error",
+    "allFailed": "{count, plural, one {La subida ha fallado} other {Han fallado # subidas}}",
+    "finishedDetail": "{size} en {minutes, plural, =0 {} one {# min } other {# min }}{seconds} s",
+    "calculating": "calculando…",
+    "pauseAll": "Pausar todo",
+    "resumeAll": "Reanudar todo",
+    "show": "Mostrar los archivos",
+    "hide": "Ocultar los archivos",
+    "close": "Cerrar",
+    "cancelAll": "Cancelar todo",
+    "cancelAllTitle": "¿Cancelar las subidas?",
+    "cancelAllConfirm": "Cancelar subidas",
+    "cancelAllBody": "{count, plural, one {El archivo que se está subiendo se detiene y se descarta lo que ya ha llegado.} other {Los # archivos que se están subiendo se detienen y se descarta lo que ya ha llegado.}} Los que ya terminaron se quedan.",
+    "more": "{count, plural, one {y # más} other {y # más}}",
+    "retry": "Reintentar {name}",
+    "pause": "Pausar {name}",
+    "resume": "Reanudar {name}",
+    "cancel": "Cancelar {name}",
+    "remove": "Quitar {name}",
+    "row": {
+      "done": "{size} · en {place}",
+      "paused": "En pausa · {sent} de {size}",
+      "waiting": "En espera · {size}",
+      "progress": "{sent} de {size}",
+      "tooLarge": "Demasiado grande: el máximo es {max}"
+    },
+    "left": {
+      "few": "casi listo",
+      "seconds": "quedan {count} s",
+      "minutes": "quedan {count} min",
+      "hours": "quedan {hours} h {minutes} min"
+    },
+    "conflict": {
+      "title": "{count, plural, one {{name} ya está en {folder}} other {# archivos ya están en {folder}}}",
+      "more": "y {count} más",
+      "keepBoth": "Conservar ambos",
+      "replace": "Reemplazar"
+    },
+    "sharedFailed": "Los archivos compartidos no han llegado. Vuelve a compartirlos.",
+    "sharedTitle": "{count, plural, one {¿Subir # archivo a Mis archivos?} other {¿Subir # archivos a Mis archivos?}}",
+    "sharedConfirm": "Subir"
+  },
+  "drop": {
+    "title": "Suelta para subir a {folder}",
+    "notHere": "Aquí no puedes subir archivos"
+  },
+  "shared": {
+    "title": "Compartidos",
+    "empty": "Todavía no has compartido nada",
+    "public": "Enlace público",
+    "users": "Enlace con sesión",
+    "password": "Contraseña",
+    "expired": "Caducado",
+    "expires": "Hasta el {date}",
+    "downloads": "{count, plural, one {# descarga} other {# descargas}}",
+    "downloadsOf": "{count} de {max} descargas",
+    "people": "{count, plural, one {# persona} other {# personas}}",
+    "copy": "Copiar enlace",
+    "copied": "Enlace copiado",
+    "copyFailed": "No se ha podido copiar el enlace",
+    "manage": "Ajustes de compartir de {name}",
+    "stop": "Dejar de compartir {name}",
+    "stopped": "{name} ya no está compartido",
+    "stopTitle": "¿Dejar de compartir?",
+    "stopConfirm": "Dejar de compartir",
+    "upload": "Enlace de subida",
+    "received": "{count, plural, =0 {Ningún archivo recibido} one {# archivo recibido} other {# archivos recibidos}}",
+    "copyUpload": "Copiar enlace de subida",
+    "stopLink": "El enlace a {name} deja de funcionar.",
+    "stopLinks": "Los dos enlaces a {name} dejan de funcionar.",
+    "stopPeople": "{count, plural, one {La persona con quien lo compartiste pierde el acceso.} other {Las # personas con quienes lo compartiste pierden el acceso.}}",
+    "folderLeft": "{size} · quedan {left}",
+    "folderFull": "{size} · llena"
+  },
+  "sharedWithMe": {
+    "title": "Compartidos conmigo",
+    "empty": "Aquí no hay nada todavía",
+    "from": "{name} · {date}",
+    "remove": "Quitar de mi lista",
+    "removed": "{name} se ha quitado de tu lista"
+  },
+  "trash": {
+    "title": "Papelera",
+    "empty": "Vaciar papelera",
+    "nothing": "La papelera está vacía",
+    "from": "De {folder} · borrado el {date}",
+    "daysLeft": "{count, plural, =0 {Se borra hoy} one {Queda # día} other {Quedan # días}}",
+    "restore": "Restaurar",
+    "restored": "{name} restaurado",
+    "restoredAs": "Restaurado como {name}",
+    "deleteForever": "Borrar {name} para siempre",
+    "deleteTitle": "¿Borrar para siempre?",
+    "deleteConfirm": "Borrar",
+    "deleteBody": "{name} se borra para siempre. No se puede deshacer.",
+    "emptyTitle": "¿Vaciar la papelera?",
+    "emptyConfirm": "Vaciar papelera",
+    "emptyBody": "{count, plural, one {# elemento se borra para siempre.} other {# elementos se borran para siempre.}} No se puede deshacer.",
+    "emptied": "La papelera está vacía"
+  },
+  "link": {
+    "pageTitle": "Compartido contigo",
+    "sharedBy": "Compartido por {name}",
+    "until": "Disponible hasta el {date}",
+    "download": "Descargar",
+    "downloadAll": "Descargar todo",
+    "downloadNamed": "Descargar {name}",
+    "openPreview": "Abrir vista previa",
+    "emptyFolder": "Esta carpeta está vacía",
+    "offline": "No se ha podido conectar con Files",
+    "retry": "Reintentar",
+    "notFound": {
+      "title": "Este enlace no funciona",
+      "body": "Puede que lo hayan borrado o que nunca haya existido."
+    },
+    "expired": {
+      "title": "Este enlace ha caducado",
+      "body": "Pide uno nuevo a quien te lo envió."
+    },
+    "usedUp": {
+      "title": "Este enlace se ha agotado",
+      "body": "Ha llegado a su límite de descargas. Pide uno nuevo a quien te lo envió."
+    },
+    "signIn": {
+      "title": "Entra para abrirlo",
+      "body": "{name} lo compartió con las personas que tienen cuenta aquí.",
+      "button": "Entrar"
+    },
+    "password": {
+      "title": "Este enlace tiene contraseña",
+      "body": "{name} lo ha protegido. Escribe la contraseña para ver lo que contiene.",
+      "label": "Contraseña",
+      "submit": "Abrir"
+    }
+  },
+  "uploadLink": {
+    "pageTitle": "Enviar archivos",
+    "title": "Envía archivos a {name}",
+    "drop": "Suelta los archivos aquí",
+    "choose": "Elegir archivos",
+    "passwordBody": "{name} lo ha protegido. Escribe la contraseña para enviar archivos."
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "empty": "Aún no tienes favoritos",
+    "remove": "Quitar {name} de favoritos",
+    "removed": "{name} se ha quitado de favoritos"
+  },
+  "storage": {
+    "label": "Almacenamiento",
+    "usedOf": "<b>{used}</b> de {quota}",
+    "used": "<b>{used}</b> usados"
+  },
+  "admin": {
+    "limits": {
+      "title": "Límites",
+      "upload": "Limitar el tamaño de cada archivo",
+      "quota": "Limitar el almacenamiento por persona",
+      "save": "Guardar límites",
+      "saved": "Límites guardados",
+      "uploadLink": "Limitar el tamaño de una carpeta con enlace de subida"
+    },
+    "quota": {
+      "title": "Almacenamiento de {name}",
+      "mode": "Límite de almacenamiento",
+      "default": "Por defecto",
+      "custom": "Propio",
+      "unlimited": "Sin límite",
+      "noLimit": "sin límite",
+      "defaultWith": "Por defecto ({size})"
+    },
+    "storage": {
+      "title": "Almacenamiento",
+      "usedOf": "{used} de {limit}",
+      "used": "{used} usados",
+      "mode": {
+        "default": "Límite por defecto",
+        "custom": "Límite propio",
+        "unlimited": "Sin límite"
+      },
+      "edit": "Almacenamiento",
+      "editFor": "Almacenamiento de {name}"
+    }
+  },
+  "nav": {
+    "files": "Mis archivos",
+    "filesShort": "Archivos",
+    "favorites": "Favoritos",
+    "shared": "Compartidos",
+    "sharedShort": "Compartido",
+    "sharedWithMe": "Compartidos conmigo",
+    "sharedWithMeShort": "Conmigo",
+    "trash": "Papelera"
+  },
+  "settings": {
+    "storage": {
+      "title": "Almacenamiento",
+      "limit": "Límite",
+      "free": "Libre",
+      "none": "Ninguno",
+      "largestFile": "Archivo más grande"
+    }
+  }
+}

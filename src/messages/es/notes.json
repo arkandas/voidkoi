@@ -1,0 +1,139 @@
+{
+  "app": {
+    "name": "Notes"
+  },
+  "untitled": "Sin título",
+  "list": {
+    "label": "Notas",
+    "show": "Mostrar notas",
+    "close": "Cerrar la lista de notas",
+    "newNote": "Nueva nota",
+    "newFolder": "Nueva carpeta",
+    "folderName": "Nombre de la carpeta…",
+    "folderExists": "Ya existe una carpeta llamada «{name}»",
+    "search": "Buscar notas…",
+    "clearSearch": "Borrar la búsqueda",
+    "matches": "{count, plural, one {# resultado} other {# resultados}} para «{query}»",
+    "nothingFound": "Sin resultados",
+    "empty": "Aún no hay notas",
+    "dropToUnfile": "Suelta aquí para sacarla de su carpeta"
+  },
+  "folder": {
+    "options": "Opciones de {name}",
+    "menu": "Opciones de la carpeta",
+    "color": "Color",
+    "noColor": "Sin color",
+    "icon": "Icono",
+    "newNote": "Nueva nota aquí",
+    "rename": "Cambiar nombre",
+    "delete": "Eliminar carpeta",
+    "empty": "Vacía",
+    "icons": {
+      "folder": "Carpeta",
+      "note": "Nota",
+      "star": "Estrella",
+      "pin": "Chincheta",
+      "bookmark": "Marcador",
+      "idea": "Idea",
+      "lab": "Laboratorio",
+      "book": "Libro",
+      "target": "Diana",
+      "work": "Trabajo",
+      "heart": "Corazón",
+      "code": "Código"
+    },
+    "colors": {
+      "red": "Rojo",
+      "orange": "Naranja",
+      "amber": "Ámbar",
+      "yellow": "Amarillo",
+      "lime": "Lima",
+      "green": "Verde",
+      "teal": "Verde azulado",
+      "cyan": "Cian",
+      "blue": "Azul",
+      "indigo": "Índigo",
+      "violet": "Violeta",
+      "fuchsia": "Fucsia",
+      "pink": "Rosa"
+    }
+  },
+  "trash": {
+    "title": "Papelera",
+    "back": "Volver",
+    "empty": "Vaciar papelera",
+    "deleteCount": "Eliminar {count}",
+    "cancel": "Cancelar",
+    "nothing": "La papelera está vacía",
+    "deletedOn": "Eliminada el {date}",
+    "restore": "Restaurar",
+    "deleteForever": "Eliminar"
+  },
+  "editor": {
+    "title": "Título",
+    "titlePlaceholder": "Título de la nota…",
+    "view": "Vista",
+    "views": {
+      "editor": "Editor",
+      "split": "Vista dividida",
+      "preview": "Vista previa"
+    },
+    "export": "Exportar nota",
+    "exportMarkdown": "Markdown (.md)",
+    "exportPdf": "PDF (vía impresión)",
+    "exportWord": "Word (.docx)",
+    "exportFailed": "No se ha podido crear el documento de Word",
+    "delete": "Eliminar nota",
+    "deleteConfirm": "Eliminar",
+    "cancel": "Cancelar",
+    "formatting": "Formato",
+    "toolbar": {
+      "bold": "Negrita",
+      "italic": "Cursiva",
+      "code": "Código",
+      "link": "Enlace",
+      "heading": "Encabezado",
+      "list": "Lista",
+      "quote": "Cita"
+    },
+    "insertImage": "Insertar imagen",
+    "insertImageHint": "Insertar imagen — o simplemente pega o suelta una",
+    "uploading": "Subiendo…",
+    "uploadingCount": "Subiendo {count}…",
+    "source": "Markdown",
+    "placeholder": "Escribe en Markdown…",
+    "dropImage": "Suelta la imagen aquí",
+    "dropImages": "Suelta las {count} imágenes aquí",
+    "saved": "Guardado",
+    "saving": "Guardando…",
+    "words": "{words, plural, one {# palabra} other {# palabras}}",
+    "notSaved": "Sin guardar — reintentando",
+    "retryNow": "Reintentar ahora",
+    "noneSelected": "Ninguna nota seleccionada",
+    "browse": "Ver notas"
+  },
+  "preview": {
+    "title": "Vista previa",
+    "empty": "Esta nota está vacía",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copyCode": "Copiar código"
+  },
+  "side": {
+    "open": "Abrir a la izquierda",
+    "locked": "A la izquierda",
+    "close": "Cerrar el panel izquierdo",
+    "view": "Mostrar",
+    "source": "Markdown",
+    "preview": "Vista previa",
+    "empty": "Esta nota está vacía"
+  },
+  "settings": {
+    "title": "Fuentes",
+    "text": "Texto",
+    "code": "Código",
+    "size": "Tamaño",
+    "sizeValue": "{size} px",
+    "system": "Sistema"
+  }
+}

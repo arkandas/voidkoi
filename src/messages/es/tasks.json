@@ -1,0 +1,145 @@
+{
+  "app": {
+    "name": "Tasks",
+    "boards": "Tableros",
+    "todo": "Pendientes",
+    "stickies": "Notas adhesivas"
+  },
+  "nav": {
+    "label": "Vistas"
+  },
+  "actions": {
+    "delete": "Eliminar",
+    "tryAgain": "Volver a intentarlo"
+  },
+  "boards": {
+    "closeList": "Cerrar la lista de tableros",
+    "reorder": "Arrastra para reordenar los tableros",
+    "new": "Nuevo tablero",
+    "empty": "Todavía no hay tableros",
+    "create": {
+      "title": "Nuevo tablero",
+      "titleLabel": "Título del tablero",
+      "titlePlaceholder": "Escribe el título del tablero…",
+      "descriptionLabel": "Descripción (opcional)",
+      "descriptionPlaceholder": "Describe para qué es este tablero…",
+      "submit": "Crear tablero"
+    }
+  },
+  "search": {
+    "placeholder": "Buscar…",
+    "label": "Buscar tareas, pendientes y notas adhesivas",
+    "clear": "Borrar búsqueda",
+    "searching": "Buscando…",
+    "noResults": "No hay resultados para «{query}»",
+    "tasks": "Tareas"
+  },
+  "board": {
+    "showBoards": "Mostrar tableros",
+    "edit": "Editar",
+    "editLabel": "Editar tablero",
+    "editTitle": "Editar tablero",
+    "titleLabel": "Título del tablero",
+    "titlePlaceholder": "Título del tablero…",
+    "descriptionLabel": "Descripción del tablero",
+    "descriptionPlaceholder": "Descripción…",
+    "delete": "Eliminar tablero",
+    "deleteConfirm": "¿Seguro que quieres eliminar el tablero <strong>«{title}»</strong>?",
+    "deleteContents": "Esto también eliminará {sections, plural, one {# sección} other {# secciones}}{tasks, plural, =0 {} one { y # tarea} other { y # tareas}}.",
+    "addSection": "Añadir sección",
+    "addSectionLabel": "Añadir sección",
+    "sectionPlaceholder": "Escribe el título de la sección…"
+  },
+  "section": {
+    "titleLabel": "Título de la sección",
+    "rename": "{title} (haz clic para cambiar el nombre)",
+    "delete": "Eliminar sección",
+    "deleteTitle": "Eliminar sección",
+    "deleteConfirm": "¿Seguro que quieres eliminar la sección <strong>«{title}»</strong>?",
+    "deleteTasks": "Esto también eliminará {count, plural, one {# tarea} other {# tareas}} de esta sección.",
+    "dropHere": "Suelta las tareas aquí",
+    "addTask": "Añadir tarea"
+  },
+  "task": {
+    "createTitle": "Nueva tarea",
+    "editTitle": "Editar tarea",
+    "titleLabel": "Título de la tarea",
+    "titlePlaceholder": "Título de la tarea…",
+    "descriptionLabel": "Descripción de la tarea",
+    "descriptionPlaceholder": "Descripción de la tarea (opcional, admite Markdown)…",
+    "section": "Sección",
+    "priority": "Prioridad",
+    "deadline": "Fecha límite",
+    "create": "Crear tarea",
+    "saveChanges": "Guardar cambios",
+    "edit": "Editar tarea",
+    "delete": "Eliminar tarea",
+    "deleteTitle": "Eliminar tarea",
+    "deleteConfirm": "¿Seguro que quieres eliminar la tarea <strong>«{title}»</strong>?"
+  },
+  "priority": {
+    "low": "Baja",
+    "medium": "Media",
+    "high": "Alta",
+    "urgent": "Urgente"
+  },
+  "todos": {
+    "new": "Nuevo pendiente",
+    "edit": "Editar pendiente",
+    "delete": "Eliminar pendiente",
+    "active": "Activos",
+    "completed": "Completados",
+    "clear": "Borrar",
+    "clearCompleted": "Borrar completados",
+    "markComplete": "Marcar como completado",
+    "markIncomplete": "Marcar como no completado",
+    "titleLabel": "Título",
+    "titlePlaceholder": "Escribe el título del pendiente…",
+    "descriptionLabel": "Descripción (opcional)",
+    "descriptionPlaceholder": "Añade más detalles…",
+    "deadlineLabel": "Fecha límite",
+    "create": "Crear",
+    "update": "Actualizar",
+    "empty": "Todavía no hay pendientes"
+  },
+  "stickyNotes": {
+    "add": "Añadir nota",
+    "placeholder": "Escribe tu nota…",
+    "textLabel": "Texto de la nota adhesiva",
+    "changeColor": "Cambiar color",
+    "edit": "Editar nota adhesiva",
+    "delete": "Eliminar nota adhesiva",
+    "emptyNote": "Nota vacía",
+    "trash": "Papelera",
+    "trashCount": "Papelera ({count})",
+    "emptyTrash": "Vaciar papelera",
+    "deleteCount": "Eliminar {count}",
+    "backToNotes": "Volver a las notas",
+    "restore": "Restaurar nota",
+    "deleted": "Eliminada el {date}",
+    "trashEmpty": "La papelera está vacía",
+    "empty": "Todavía no hay notas adhesivas",
+    "create": "Crear nota adhesiva"
+  },
+  "colors": {
+    "yellow": "Amarillo",
+    "blue": "Azul",
+    "green": "Verde",
+    "pink": "Rosa",
+    "orange": "Naranja",
+    "purple": "Morado",
+    "cyan": "Cian",
+    "red": "Rojo",
+    "lime": "Lima"
+  },
+  "dragAndDrop": {
+    "sortable": "ordenable",
+    "instructions": "Pulsa la barra espaciadora para cogerlo. Mientras lo arrastras, muévelo con las teclas de flecha. Vuelve a pulsar la barra espaciadora para soltarlo en su nueva posición, o pulsa Escape para cancelar.",
+    "pickedUp": "Has cogido {id}.",
+    "movedOver": "{id} se ha movido sobre la zona {over}.",
+    "notOver": "{id} ya no está sobre ninguna zona.",
+    "droppedOver": "{id} se ha soltado sobre la zona {over}.",
+    "dropped": "Se ha soltado {id}.",
+    "canceled": "Se ha cancelado el arrastre. Se ha soltado {id}."
+  }
+}

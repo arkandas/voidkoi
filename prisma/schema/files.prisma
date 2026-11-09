@@ -1,0 +1,151 @@
+// Files: folders and files, links, upload links, sharing with people, favorites.
+
+enum ItemKind {
+  FOLDER
+  FILE
+}
+
+enum LinkAccess {
+  PUBLIC
+  USERS
+}
+
+
+model Item {
+  id              Int         @id @default(autoincrement())
+  owner_id        Int
+  parent_id       Int?
+  kind            ItemKind
+  name            String      @db.VarChar(255)
+  name_key        String      @db.VarChar(255)
+  size            BigInt      @default(0)
+  mime            String?     @db.VarChar(255)
+  storage_key     String?     @unique
+  has_thumbnail   Boolean     @default(false)
+  /// A WebP the browser can show, for images it can't (HEIC, TIFF).
+  has_preview     Boolean     @default(false)
+  /// A thumbnail was attempted for these bytes, whether or not one could be made.
+  thumbnail_tried Boolean     @default(false)
+  width           Int?
+  height          Int?
+  trashed_at      DateTime?
+  trash_root_id   Int?
+  created_at      DateTime    @default(now())
+  updated_at      DateTime    @updatedAt
+  owner           User        @relation(fields: [owner_id], references: [id], onDelete: Cascade)
+  parent          Item?       @relation("Children", fields: [parent_id], references: [id], onDelete: Cascade)
+  children        Item[]      @relation("Children")
+  link            ShareLink?
+  upload_link     UploadLink?
+  shares          Share[]
+  favorites       Favorite[]
+
+  @@index([owner_id, parent_id, name_key])
+  @@index([parent_id])
+  @@index([owner_id, trashed_at])
+  @@index([trash_root_id])
+  @@map("files_items")
+}
+
+model Upload {
+  id             String      @id
+  owner_id       Int
+  parent_id      Int?
+  name           String      @db.VarChar(255)
+  size           BigInt
+  mime           String      @db.VarChar(255)
+  chunk_size     Int
+  received       Int[]       @default([])
+  /// A file with the same name in the folder is replaced, its old version going to the trash.
+  replace        Boolean     @default(false)
+  /// Set when it comes through an upload link: only that link can carry on with it.
+  upload_link_id Int?
+  created_at     DateTime    @default(now())
+  updated_at     DateTime    @updatedAt
+  owner          User        @relation(fields: [owner_id], references: [id], onDelete: Cascade)
+  upload_link    UploadLink? @relation(fields: [upload_link_id], references: [id], onDelete: Cascade)
+
+  @@index([owner_id])
+  @@index([updated_at])
+  @@index([upload_link_id])
+  @@map("files_uploads")
+}
+
+model ShareLink {
+  id             Int        @id @default(autoincrement())
+  token          String     @unique
+  item_id        Int        @unique
+  owner_id       Int
+  access         LinkAccess @default(PUBLIC)
+  password_hash  String?
+  expires_at     DateTime?
+  max_downloads  Int?
+  download_count Int        @default(0)
+  created_at     DateTime   @default(now())
+  updated_at     DateTime   @updatedAt
+  item           Item       @relation(fields: [item_id], references: [id], onDelete: Cascade)
+  owner          User       @relation(fields: [owner_id], references: [id], onDelete: Cascade)
+
+  @@index([owner_id])
+  @@map("files_share_links")
+}
+
+/// A link that lets people without an account put files in a folder, without seeing what is in it.
+model UploadLink {
+  id             Int       @id @default(autoincrement())
+  token          String    @unique
+  folder_id      Int       @unique
+  owner_id       Int
+  password_hash  String?
+  expires_at     DateTime?
+  /// Files that came in through it.
+  received_count Int       @default(0)
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+  folder         Item      @relation(fields: [folder_id], references: [id], onDelete: Cascade)
+  owner          User      @relation(fields: [owner_id], references: [id], onDelete: Cascade)
+  uploads        Upload[]
+
+  @@index([owner_id])
+  @@map("files_upload_links")
+}
+
+/// Starred by someone: their own items, or ones shared with them.
+model Favorite {
+  user_id    Int
+  item_id    Int
+  created_at DateTime @default(now())
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  item       Item     @relation(fields: [item_id], references: [id], onDelete: Cascade)
+
+  @@id([user_id, item_id])
+  @@index([item_id])
+  @@map("files_favorites")
+}
+
+model Share {
+  id         Int      @id @default(autoincrement())
+  item_id    Int
+  owner_id   Int
+  user_id    Int
+  created_at DateTime @default(now())
+  item       Item     @relation(fields: [item_id], references: [id], onDelete: Cascade)
+  owner      User     @relation("ShareOwner", fields: [owner_id], references: [id], onDelete: Cascade)
+  user       User     @relation("ShareRecipient", fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([item_id, user_id])
+  @@index([user_id])
+  @@index([owner_id])
+  @@map("files_shares")
+}
+
+model FilesSettings {
+  id                    Int      @id @default(1)
+  max_upload_bytes      BigInt?
+  default_quota_bytes   BigInt?
+  /// The most a folder with an upload link can hold, what is already in it included, before the link takes no more files. Null: no limit.
+  upload_link_max_bytes BigInt?
+  updated_at            DateTime @updatedAt
+
+  @@map("files_settings")
+}

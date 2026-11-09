@@ -1,0 +1,93 @@
+// Habits: weight, food, workouts and their templates, and a goal.
+
+model WeightEntry {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  date       DateTime @db.Date
+  weight     Decimal  @db.Decimal(5, 2)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, date])
+  @@map("habits_weights")
+}
+
+model CalorieEntry {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  date       DateTime @db.Date
+  food_item  String   @db.VarChar(255)
+  calories   Int
+  quantity   Decimal  @default(1.0) @db.Decimal(5, 2)
+  meal_type  String   @default("other") @db.VarChar(50)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, date])
+  @@map("habits_calories")
+}
+
+model ExerciseEntry {
+  id               Int      @id @default(autoincrement())
+  user_id          Int
+  date             DateTime @db.Date
+  exercise_name    String   @db.VarChar(255)
+  duration_minutes Int
+  calories_burned  Int      @default(0)
+  exercise_type    String   @default("other") @db.VarChar(100)
+  notes            String?  @db.Text
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+  user             User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, date])
+  @@map("habits_exercises")
+}
+
+model MealTemplate {
+  id               Int      @id @default(autoincrement())
+  user_id          Int
+  name             String   @db.VarChar(255)
+  calories         Int
+  default_quantity Decimal  @default(1.0) @db.Decimal(5, 2)
+  meal_type        String   @default("other") @db.VarChar(50)
+  description      String?  @db.Text
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+  user             User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, name])
+  @@map("habits_meal_templates")
+}
+
+model ExerciseTemplate {
+  id               Int      @id @default(autoincrement())
+  user_id          Int
+  name             String   @db.VarChar(255)
+  duration_minutes Int
+  calories         Int      @default(0)
+  exercise_type    String   @default("other") @db.VarChar(100)
+  notes            String?  @db.Text
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+  user             User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, name])
+  @@map("habits_exercise_templates")
+}
+
+model Goal {
+  id              Int       @id @default(autoincrement())
+  user_id         Int       @unique
+  target_weight   Decimal?  @db.Decimal(5, 2)
+  start_weight    Decimal?  @db.Decimal(5, 2)
+  start_date      DateTime? @db.Date
+  weekly_workouts Int?
+  weekly_rate     Decimal?  @db.Decimal(4, 2)
+  updated_at      DateTime  @updatedAt
+  user            User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("habits_goals")
+}

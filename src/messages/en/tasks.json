@@ -1,0 +1,145 @@
+{
+  "app": {
+    "name": "Tasks",
+    "boards": "Boards",
+    "todo": "To-do",
+    "stickies": "Sticky notes"
+  },
+  "nav": {
+    "label": "Views"
+  },
+  "actions": {
+    "delete": "Delete",
+    "tryAgain": "Try again"
+  },
+  "boards": {
+    "closeList": "Close board list",
+    "reorder": "Drag to reorder boards",
+    "new": "New board",
+    "empty": "No boards yet",
+    "create": {
+      "title": "New board",
+      "titleLabel": "Board title",
+      "titlePlaceholder": "Enter board title…",
+      "descriptionLabel": "Description (optional)",
+      "descriptionPlaceholder": "Describe what this board is for…",
+      "submit": "Create board"
+    }
+  },
+  "search": {
+    "placeholder": "Search…",
+    "label": "Search tasks, to-dos and sticky notes",
+    "clear": "Clear search",
+    "searching": "Searching…",
+    "noResults": "No results for “{query}”",
+    "tasks": "Tasks"
+  },
+  "board": {
+    "showBoards": "Show boards",
+    "edit": "Edit",
+    "editLabel": "Edit board",
+    "editTitle": "Edit board",
+    "titleLabel": "Board title",
+    "titlePlaceholder": "Board title…",
+    "descriptionLabel": "Board description",
+    "descriptionPlaceholder": "Description…",
+    "delete": "Delete board",
+    "deleteConfirm": "Are you sure you want to delete the board <strong>“{title}”</strong>?",
+    "deleteContents": "This will also delete {sections, plural, one {# section} other {# sections}}{tasks, plural, =0 {} one { and # task} other { and # tasks}}.",
+    "addSection": "Add section",
+    "addSectionLabel": "Add section",
+    "sectionPlaceholder": "Enter section title…"
+  },
+  "section": {
+    "titleLabel": "Section title",
+    "rename": "{title} (click to rename)",
+    "delete": "Delete section",
+    "deleteTitle": "Delete section",
+    "deleteConfirm": "Are you sure you want to delete the section <strong>“{title}”</strong>?",
+    "deleteTasks": "This will also delete {count, plural, one {# task} other {# tasks}} in this section.",
+    "dropHere": "Drop tasks here",
+    "addTask": "Add task"
+  },
+  "task": {
+    "createTitle": "New task",
+    "editTitle": "Edit task",
+    "titleLabel": "Task title",
+    "titlePlaceholder": "Task title…",
+    "descriptionLabel": "Task description",
+    "descriptionPlaceholder": "Task description (optional, Markdown supported)…",
+    "section": "Section",
+    "priority": "Priority",
+    "deadline": "Deadline",
+    "create": "Create task",
+    "saveChanges": "Save changes",
+    "edit": "Edit task",
+    "delete": "Delete task",
+    "deleteTitle": "Delete task",
+    "deleteConfirm": "Are you sure you want to delete the task <strong>“{title}”</strong>?"
+  },
+  "priority": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "urgent": "Urgent"
+  },
+  "todos": {
+    "new": "New item",
+    "edit": "Edit item",
+    "delete": "Delete item",
+    "active": "Active",
+    "completed": "Completed",
+    "clear": "Clear",
+    "clearCompleted": "Clear completed",
+    "markComplete": "Mark as complete",
+    "markIncomplete": "Mark as incomplete",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Enter item title…",
+    "descriptionLabel": "Description (optional)",
+    "descriptionPlaceholder": "Add more details…",
+    "deadlineLabel": "Deadline",
+    "create": "Create",
+    "update": "Update",
+    "empty": "No items yet"
+  },
+  "stickyNotes": {
+    "add": "Add note",
+    "placeholder": "Write your note…",
+    "textLabel": "Sticky note text",
+    "changeColor": "Change color",
+    "edit": "Edit sticky note",
+    "delete": "Delete sticky note",
+    "emptyNote": "Empty note",
+    "trash": "Trash",
+    "trashCount": "Trash ({count})",
+    "emptyTrash": "Empty trash",
+    "deleteCount": "Delete {count}",
+    "backToNotes": "Back to notes",
+    "restore": "Restore note",
+    "deleted": "Deleted {date}",
+    "trashEmpty": "The trash is empty",
+    "empty": "No sticky notes yet",
+    "create": "Create sticky note"
+  },
+  "colors": {
+    "yellow": "Yellow",
+    "blue": "Blue",
+    "green": "Green",
+    "pink": "Pink",
+    "orange": "Orange",
+    "purple": "Purple",
+    "cyan": "Cyan",
+    "red": "Red",
+    "lime": "Lime"
+  },
+  "dragAndDrop": {
+    "sortable": "sortable",
+    "instructions": "To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.",
+    "pickedUp": "Picked up draggable item {id}.",
+    "movedOver": "Draggable item {id} was moved over droppable area {over}.",
+    "notOver": "Draggable item {id} is no longer over a droppable area.",
+    "droppedOver": "Draggable item {id} was dropped over droppable area {over}.",
+    "dropped": "Draggable item {id} was dropped.",
+    "canceled": "Dragging was canceled. Draggable item {id} was dropped."
+  }
+}

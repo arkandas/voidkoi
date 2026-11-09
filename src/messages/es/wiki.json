@@ -1,0 +1,319 @@
+{
+  "app": {
+    "name": "Wiki"
+  },
+  "visibility": {
+    "inherit": "Igual que la carpeta",
+    "public": "Pública",
+    "private": "Privada",
+    "password": "Contraseña"
+  },
+  "shell": {
+    "navigation": "Wiki",
+    "menu": "Páginas",
+    "closeMenu": "Cerrar",
+    "search": "Buscar",
+    "newPage": "Nueva página",
+    "newFolder": "Nueva carpeta",
+    "signIn": "Entrar",
+    "trash": "Papelera"
+  },
+  "tree": {
+    "label": "Páginas",
+    "untitled": "Sin título",
+    "expand": "Abrir {title}",
+    "collapse": "Cerrar {title}",
+    "locked": "Contraseña",
+    "draft": "Borrador",
+    "changes": "Cambios sin publicar",
+    "public": "Pública",
+    "private": "Privada",
+    "password": "Contraseña",
+    "actions": "Acciones de {title}",
+    "newPage": "Nueva página",
+    "newFolder": "Nueva carpeta",
+    "edit": "Editar",
+    "share": "Compartir",
+    "settings": "Ajustes",
+    "history": "Historial",
+    "delete": "Borrar"
+  },
+  "search": {
+    "label": "Buscar en la wiki",
+    "placeholder": "Buscar páginas",
+    "searching": "Buscando…",
+    "none": "No se ha encontrado nada para «{query}»",
+    "untitled": "Sin título"
+  },
+  "page": {
+    "breadcrumbs": "Dónde está esta página",
+    "untitled": "Sin título",
+    "edit": "Editar",
+    "newPage": "Nueva página",
+    "newFolder": "Nueva carpeta",
+    "share": "Compartir",
+    "more": "Más",
+    "history": "Historial",
+    "settings": "Ajustes",
+    "delete": "Borrar",
+    "onThisPage": "En esta página",
+    "updated": "Actualizada el {date}",
+    "updatedBy": "Actualizada el {date} por {name}",
+    "saved": "Borrador guardado el {date}",
+    "savedBy": "Borrador guardado el {date} por {name}",
+    "editThis": "Editar esta página",
+    "pagination": "Más páginas",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "draft": {
+    "notPublished": "Sin publicar",
+    "hasChanges": "Cambios sin publicar",
+    "showingDraft": "Mostrando los cambios sin publicar",
+    "showDraft": "Verlos",
+    "showPublished": "Ver la página publicada",
+    "edit": "Editar"
+  },
+  "folder": {
+    "untitled": "Sin título",
+    "draft": "Borrador",
+    "count": "{count, plural, =0 {Vacía} one {# elemento} other {# elementos}}",
+    "empty": "Esta carpeta está vacía",
+    "emptyWiki": "Todavía no hay páginas",
+    "newPage": "Nueva página",
+    "newFolder": "Nueva carpeta"
+  },
+  "prompts": {
+    "signInTitle": "Entra para leer esta página",
+    "signIn": "Entrar",
+    "passwordTitle": "Esta página tiene contraseña",
+    "password": "Contraseña",
+    "open": "Abrir"
+  },
+  "notFound": {
+    "title": "Esta página no existe",
+    "home": "Ir al inicio"
+  },
+  "markdown": {
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "diagram": "Diagrama",
+    "diagramFailed": "No se ha podido dibujar este diagrama.",
+    "callouts": {
+      "note": "Nota",
+      "tip": "Consejo",
+      "info": "Información",
+      "warning": "Aviso",
+      "danger": "Peligro"
+    }
+  },
+  "dialogs": {
+    "create": {
+      "page": "Nueva página",
+      "folder": "Nueva carpeta",
+      "in": "En {folder}",
+      "title": "Título",
+      "createPage": "Crear y editar",
+      "createFolder": "Crear carpeta"
+    },
+    "share": {
+      "title": "Compartir {title}",
+      "loading": "Compartir",
+      "untitled": "Sin título",
+      "link": "Enlace",
+      "who": "Quién puede leerla",
+      "inherit": "Igual que {source}",
+      "passwordNew": "Contraseña nueva",
+      "passwordMissing": "Escribe una contraseña o elige otra opción.",
+      "save": "Guardar",
+      "saved": "Guardado"
+    },
+    "settings": {
+      "pageTitle": "Ajustes de {title}",
+      "folderTitle": "Ajustes de {title}",
+      "loading": "Ajustes",
+      "untitled": "Sin título",
+      "title": "Título",
+      "address": "Dirección",
+      "folder": "Carpeta",
+      "topLevel": "Nivel superior"
+    },
+    "delete": {
+      "title": "¿Borrar esto?",
+      "body": "{title} va a la papelera.",
+      "folderBody": "{title} va a la papelera con todo lo que contiene ({count, plural, one {# elemento} other {# elementos}}).",
+      "untitled": "Sin título",
+      "confirm": "Borrar",
+      "done": "{title} está en la papelera",
+      "undo": "Deshacer"
+    }
+  },
+  "editor": {
+    "tabTitle": "Editando {title}",
+    "untitled": "Sin título",
+    "back": "Volver a la página",
+    "titleLabel": "Título",
+    "titlePlaceholder": "Título",
+    "contentLabel": "Texto de la página en Markdown",
+    "placeholder": "Escribe en Markdown…",
+    "publish": "Publicar",
+    "publishDialog": {
+      "title": "Publicar",
+      "first": "Primera versión",
+      "added": "{count, plural, one {# línea añadida} other {# líneas añadidas}}",
+      "removed": "{count, plural, one {# línea quitada} other {# líneas quitadas}}",
+      "renamed": "Título: {from} → {to}",
+      "message": "Qué ha cambiado",
+      "messagePlaceholder": "Opcional",
+      "submit": "Publicar"
+    },
+    "published": "Publicada",
+    "discarded": "Cambios descartados",
+    "saved": "Guardado",
+    "saving": "Guardando…",
+    "notSaved": "Sin guardar",
+    "retry": "Reintentar",
+    "conflict": "Otra persona ha cambiado esta página",
+    "conflictBy": "{name} ha cambiado esta página",
+    "takeTheirs": "Cargar la suya",
+    "keepMine": "Quedarme con la mía",
+    "linkText": "texto",
+    "imageAlt": "imagen",
+    "tableColumn": "Columna",
+    "tableCell": "Celda",
+    "calloutText": "Texto",
+    "uploading": "{count, plural, one {Subiendo una imagen…} other {Subiendo # imágenes…}}",
+    "neverPublished": "Sin publicar",
+    "unpublishedChanges": "Cambios sin publicar",
+    "upToDate": "Publicada",
+    "words": "{count, plural, =0 {Sin palabras} one {# palabra} other {# palabras}}",
+    "discardTitle": "¿Descartar los cambios?",
+    "discardBody": "La página vuelve a su versión publicada.",
+    "discardConfirm": "Descartar",
+    "mode": {
+      "label": "Vista",
+      "write": "Escribir",
+      "split": "Escribir y vista previa",
+      "preview": "Vista previa"
+    },
+    "menu": {
+      "label": "Más",
+      "view": "Ver página",
+      "history": "Historial",
+      "share": "Compartir",
+      "settings": "Ajustes",
+      "discard": "Descartar cambios",
+      "delete": "Borrar"
+    },
+    "toolbar": {
+      "label": "Formato",
+      "heading": "Encabezado (⌘⌥2)",
+      "bold": "Negrita (⌘B)",
+      "italic": "Cursiva (⌘I)",
+      "strikethrough": "Tachado",
+      "code": "Código",
+      "link": "Enlace (⌘K)",
+      "pageLink": "Enlace a una página",
+      "bullets": "Lista con viñetas",
+      "numbers": "Lista numerada",
+      "tasks": "Lista de tareas",
+      "quote": "Cita",
+      "codeBlock": "Bloque de código",
+      "table": "Tabla",
+      "image": "Imagen",
+      "rule": "Separador",
+      "callout": "Aviso destacado"
+    },
+    "callouts": {
+      "note": "Nota",
+      "tip": "Consejo",
+      "info": "Información",
+      "warning": "Aviso",
+      "danger": "Peligro"
+    },
+    "picker": {
+      "title": "Enlace a una página",
+      "placeholder": "Buscar una página",
+      "none": "Ninguna página coincide"
+    }
+  },
+  "history": {
+    "heading": "Historial",
+    "tabTitle": "Historial de {title}",
+    "back": "Volver a la página",
+    "versions": "Versiones",
+    "none": "Todavía sin publicar",
+    "version": "Versión {number}",
+    "draft": "Cambios sin publicar",
+    "live": "Publicada",
+    "byOn": "{name} · {date}",
+    "show": "Mostrar",
+    "changes": "Cambios",
+    "text": "Texto",
+    "against": "Comparada con",
+    "nothing": "Nada",
+    "layout": "Disposición",
+    "unified": "Una columna",
+    "split": "Lado a lado",
+    "titleChanged": "Título:",
+    "noChanges": "El texto no ha cambiado",
+    "hidden": "{count, plural, one {# línea sin cambios} other {# líneas sin cambios}}",
+    "restore": "Restaurar",
+    "restoreTitle": "¿Restaurar esta versión?",
+    "restoreBody": "La versión {number} pasa al borrador, para revisarla y publicarla.",
+    "restoreConfirm": "Restaurar",
+    "restored": "La versión {number} está en el borrador"
+  },
+  "trash": {
+    "title": "Papelera",
+    "untitled": "Sin título",
+    "nothing": "La papelera está vacía",
+    "empty": "Vaciar papelera",
+    "from": "De {folder}",
+    "fromTop": "Del nivel superior",
+    "inside": "{count, plural, one {# elemento dentro} other {# elementos dentro}}",
+    "daysLeft": "{count, plural, =0 {Se borra hoy} one {Queda # día} other {Quedan # días}}",
+    "restore": "Restaurar",
+    "restored": "{title} ha vuelto",
+    "open": "Abrir",
+    "deleteForever": "Borrar {title} para siempre",
+    "deleted": "{title} se ha borrado para siempre",
+    "emptied": "La papelera está vacía",
+    "foreverTitle": "¿Borrar para siempre?",
+    "foreverBody": "{title} y su historial se borran para siempre.",
+    "foreverConfirm": "Borrar para siempre",
+    "emptyTitle": "¿Vaciar la papelera?",
+    "emptyBody": "{count, plural, one {# elemento se borra} other {# elementos se borran}} para siempre, con su historial.",
+    "emptyConfirm": "Vaciar papelera"
+  },
+  "admin": {
+    "wiki": {
+      "title": "Wiki",
+      "name": "Nombre",
+      "home": "Página de inicio",
+      "homeIndex": "Lista del nivel superior",
+      "visibility": "Quién puede leer la wiki",
+      "passwordNew": "Contraseña de la wiki",
+      "passwordMissing": "Escribe una contraseña o elige otra opción.",
+      "indexing": "Dejar que los buscadores muestren las páginas públicas",
+      "save": "Guardar",
+      "saved": "Guardado"
+    },
+    "editors": {
+      "title": "Editores",
+      "admin": "Administrador",
+      "on": "{name} puede editar",
+      "off": "{name} solo puede leer",
+      "nobody": "Nadie usa la wiki"
+    }
+  },
+  "errors": {
+    "invalidTitle": "Ponle un título",
+    "invalidSlug": "Usa minúsculas, números y guiones",
+    "slugTaken": "Aquí ya hay algo con esa dirección",
+    "reservedSlug": "Esa dirección la usa la propia wiki",
+    "nothingToPublish": "No hay nada nuevo que publicar",
+    "notPublished": "Esta página todavía no está publicada",
+    "publishFailed": "No se ha podido publicar"
+  }
+}

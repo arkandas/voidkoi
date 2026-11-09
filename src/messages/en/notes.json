@@ -1,0 +1,139 @@
+{
+  "app": {
+    "name": "Notes"
+  },
+  "untitled": "Untitled",
+  "list": {
+    "label": "Notes",
+    "show": "Show notes",
+    "close": "Close note list",
+    "newNote": "New note",
+    "newFolder": "New folder",
+    "folderName": "Folder name…",
+    "folderExists": "A folder called “{name}” already exists",
+    "search": "Search notes…",
+    "clearSearch": "Clear search",
+    "matches": "{count, plural, one {# match} other {# matches}} for “{query}”",
+    "nothingFound": "Nothing found",
+    "empty": "No notes yet",
+    "dropToUnfile": "Drop here to remove from its folder"
+  },
+  "folder": {
+    "options": "Options for {name}",
+    "menu": "Folder options",
+    "color": "Color",
+    "noColor": "No color",
+    "icon": "Icon",
+    "newNote": "New note here",
+    "rename": "Rename",
+    "delete": "Delete folder",
+    "empty": "Empty",
+    "icons": {
+      "folder": "Folder",
+      "note": "Note",
+      "star": "Star",
+      "pin": "Pin",
+      "bookmark": "Bookmark",
+      "idea": "Idea",
+      "lab": "Lab",
+      "book": "Book",
+      "target": "Target",
+      "work": "Work",
+      "heart": "Heart",
+      "code": "Code"
+    },
+    "colors": {
+      "red": "Red",
+      "orange": "Orange",
+      "amber": "Amber",
+      "yellow": "Yellow",
+      "lime": "Lime",
+      "green": "Green",
+      "teal": "Teal",
+      "cyan": "Cyan",
+      "blue": "Blue",
+      "indigo": "Indigo",
+      "violet": "Violet",
+      "fuchsia": "Fuchsia",
+      "pink": "Pink"
+    }
+  },
+  "trash": {
+    "title": "Trash",
+    "back": "Back to notes",
+    "empty": "Empty trash",
+    "deleteCount": "Delete {count}",
+    "cancel": "Cancel",
+    "nothing": "The trash is empty",
+    "deletedOn": "Deleted {date}",
+    "restore": "Restore",
+    "deleteForever": "Delete forever"
+  },
+  "editor": {
+    "title": "Title",
+    "titlePlaceholder": "Note title…",
+    "view": "View",
+    "views": {
+      "editor": "Editor",
+      "split": "Split",
+      "preview": "Preview"
+    },
+    "export": "Export note",
+    "exportMarkdown": "Markdown (.md)",
+    "exportPdf": "PDF (via print)",
+    "exportWord": "Word (.docx)",
+    "exportFailed": "Couldn’t make the Word document",
+    "delete": "Delete note",
+    "deleteConfirm": "Delete",
+    "cancel": "Cancel",
+    "formatting": "Formatting",
+    "toolbar": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "code": "Code",
+      "link": "Link",
+      "heading": "Heading",
+      "list": "List",
+      "quote": "Quote"
+    },
+    "insertImage": "Insert image",
+    "insertImageHint": "Insert image — or just paste or drop one",
+    "uploading": "Uploading…",
+    "uploadingCount": "Uploading {count}…",
+    "source": "Markdown",
+    "placeholder": "Write in markdown…",
+    "dropImage": "Drop image here",
+    "dropImages": "Drop {count} images here",
+    "saved": "Saved",
+    "saving": "Saving…",
+    "words": "{words, plural, one {# word} other {# words}}",
+    "notSaved": "Not saved — retrying",
+    "retryNow": "Retry now",
+    "noneSelected": "No note selected",
+    "browse": "Browse"
+  },
+  "preview": {
+    "title": "Preview",
+    "empty": "This note is empty",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyCode": "Copy code"
+  },
+  "side": {
+    "open": "Open on the left",
+    "locked": "On the left",
+    "close": "Close the left pane",
+    "view": "Show",
+    "source": "Markdown",
+    "preview": "Preview",
+    "empty": "This note is empty"
+  },
+  "settings": {
+    "title": "Fonts",
+    "text": "Text",
+    "code": "Code",
+    "size": "Size",
+    "sizeValue": "{size} px",
+    "system": "System"
+  }
+}

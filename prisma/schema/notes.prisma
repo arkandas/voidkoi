@@ -1,0 +1,55 @@
+// Notes: Markdown notes in folders, with the images pasted into them.
+
+model Note {
+  id         Int       @id @default(autoincrement())
+  title      String    @default("Untitled")
+  content    String    @default("")
+  folder     String    @default("")
+  position   Int       @default(0)
+  deleted_at DateTime?
+  user_id    Int
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  user       User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("notes_notes")
+}
+
+model NoteFolder {
+  id         Int      @id @default(autoincrement())
+  name       String
+  color      String?
+  icon       String?
+  user_id    Int
+  created_at DateTime @default(now())
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("notes_folders")
+}
+
+model NoteImage {
+  id         String   @id
+  mime       String
+  width      Int
+  height     Int
+  bytes      Int
+  user_id    Int?
+  created_at DateTime @default(now())
+  user       User?    @relation(fields: [user_id], references: [id], onDelete: SetNull)
+
+  @@index([user_id])
+  @@map("notes_images")
+}
+
+/// How an account's notes are drawn: the fonts and the text size picked in Settings.
+model NoteSettings {
+  user_id   Int    @id
+  text_font String
+  code_font String
+  font_size Int
+  user      User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("notes_settings")
+}

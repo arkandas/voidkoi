@@ -1,0 +1,619 @@
+@import 'tailwindcss';
+
+/*
+ * One design for every app: the same tokens, the same system font, the same
+ * shapes. Each app has its own accent, set where `data-app` names it: Notes
+ * terracotta, Tasks emerald, Files cyan, Talk purple, Habits amber, Utilikit
+ * blue, Wiki rose. The suite's own pages, like Settings, use the violet of the logo.
+ *
+ * Every colour is an `r g b` triplet so Tailwind can mix opacity into it, and
+ * the theme is `inline` so a colour is read where it is used: inside an app,
+ * its accent. lib/palette.test.ts parses this file and checks that every pair
+ * the interface puts together clears WCAG 2.1: 4.5:1 for text, 3:1 for icons.
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-canvas: rgb(var(--canvas-rgb));
+  --color-surface: rgb(var(--surface-rgb));
+  --color-raised: rgb(var(--raised-rgb));
+  --color-card: rgb(var(--card-rgb));
+  --color-muted: rgb(var(--muted-rgb));
+
+  --color-line: rgb(var(--line-rgb));
+  --color-line-strong: rgb(var(--line-strong-rgb));
+
+  --color-ink: rgb(var(--ink-rgb));
+  --color-ink-muted: rgb(var(--ink-muted-rgb));
+  --color-ink-faint: rgb(var(--ink-faint-rgb));
+
+  --color-accent: rgb(var(--accent-rgb));
+  --color-accent-hover: rgb(var(--accent-hover-rgb));
+  --color-accent-soft: rgb(var(--accent-soft-rgb));
+  --color-accent-ink: rgb(var(--accent-ink-rgb));
+
+  --color-danger: rgb(var(--danger-rgb));
+  --color-danger-soft: rgb(var(--danger-soft-rgb));
+
+  --color-success: rgb(var(--success-rgb));
+  --color-success-soft: rgb(var(--success-soft-rgb));
+  --color-success-ink: rgb(var(--success-ink-rgb));
+
+  --color-warning: rgb(var(--warning-rgb));
+  --color-warning-soft: rgb(var(--warning-soft-rgb));
+
+  --color-scrim: var(--scrim);
+
+  /* Well-known file types: their icon and extension. */
+  --color-kind-pdf: rgb(var(--kind-pdf-rgb));
+  --color-kind-document: rgb(var(--kind-document-rgb));
+  --color-kind-spreadsheet: rgb(var(--kind-spreadsheet-rgb));
+  --color-kind-presentation: rgb(var(--kind-presentation-rgb));
+  --color-kind-archive: rgb(var(--kind-archive-rgb));
+  --color-kind-image: rgb(var(--kind-image-rgb));
+  --color-kind-video: rgb(var(--kind-video-rgb));
+  --color-kind-audio: rgb(var(--kind-audio-rgb));
+  --color-star: rgb(var(--star-rgb));
+
+  /* The viewer. Dark in both themes: a photo or a video reads best on near-black. */
+  --color-stage: rgb(var(--stage-rgb));
+  --color-stage-ink: rgb(var(--stage-ink-rgb));
+  --color-stage-ink-muted: rgb(var(--stage-ink-muted-rgb));
+
+  --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace;
+}
+
+:root {
+  color-scheme: light;
+
+  --canvas-rgb: 238 243 245;
+  --surface-rgb: 249 251 252;
+  --raised-rgb: 255 255 255;
+  --card-rgb: 255 255 255;
+  --muted-rgb: 228 236 239;
+  --line-rgb: 216 225 229;
+  --line-strong-rgb: 187 199 205;
+
+  --ink-rgb: 16 24 28;
+  --ink-muted-rgb: 70 84 92;
+  --ink-faint-rgb: 91 106 114;
+
+  --accent-rgb: 94 72 214;
+  --accent-hover-rgb: 77 57 184;
+  --accent-soft-rgb: 236 233 254;
+  --accent-ink-rgb: 255 255 255;
+
+  --danger-rgb: 185 28 28;
+  --danger-soft-rgb: 254 226 226;
+
+  --success-rgb: 4 120 87;
+  --success-soft-rgb: 209 250 229;
+  --success-ink-rgb: 255 255 255;
+
+  --warning-rgb: 180 83 9;
+  --warning-soft-rgb: 254 243 199;
+
+  --kind-pdf-rgb: 196 36 36;
+  --kind-document-rgb: 29 78 216;
+  --kind-spreadsheet-rgb: 21 113 58;
+  --kind-presentation-rgb: 184 61 12;
+  --kind-archive-rgb: 146 64 14;
+  --kind-image-rgb: 117 52 214;
+  --kind-video-rgb: 184 24 92;
+  --kind-audio-rgb: 67 56 202;
+
+  --star-rgb: 202 106 4;
+
+  --stage-rgb: 9 13 15;
+  --stage-ink-rgb: 236 241 243;
+  --stage-ink-muted-rgb: 178 190 196;
+
+  --scrim: rgb(10 24 30 / 0.45);
+  --sheen: rgb(255 255 255 / 0.5);
+  --shadow-pop: 0 1px 2px rgb(16 24 40 / 0.06), 0 24px 52px -18px rgb(16 24 40 / 0.34);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --canvas-rgb: 12 16 18;
+  --surface-rgb: 20 25 28;
+  --raised-rgb: 16 21 23;
+  --card-rgb: 28 35 39;
+  --muted-rgb: 35 43 47;
+  --line-rgb: 42 51 56;
+  --line-strong-rgb: 66 78 85;
+
+  --ink-rgb: 234 240 242;
+  --ink-muted-rgb: 165 178 184;
+  --ink-faint-rgb: 133 147 154;
+
+  --accent-rgb: 157 134 255;
+  --accent-hover-rgb: 186 170 255;
+  --accent-soft-rgb: 34 29 64;
+  --accent-ink-rgb: 14 10 31;
+
+  --danger-rgb: 248 113 113;
+  --danger-soft-rgb: 60 26 26;
+
+  --success-rgb: 52 211 153;
+  --success-soft-rgb: 18 46 36;
+  --success-ink-rgb: 5 26 18;
+
+  --warning-rgb: 251 191 36;
+  --warning-soft-rgb: 56 38 8;
+
+  --kind-pdf-rgb: 248 113 113;
+  --kind-document-rgb: 96 165 250;
+  --kind-spreadsheet-rgb: 74 222 128;
+  --kind-presentation-rgb: 251 146 60;
+  --kind-archive-rgb: 252 211 77;
+  --kind-image-rgb: 167 139 250;
+  --kind-video-rgb: 244 114 182;
+  --kind-audio-rgb: 129 140 248;
+
+  --star-rgb: 251 191 36;
+
+  --scrim: rgb(0 0 0 / 0.7);
+  --sheen: rgb(255 255 255 / 0.4);
+  --shadow-pop: 0 1px 2px rgb(0 0 0 / 0.5), 0 26px 60px -18px rgb(0 0 0 / 0.75);
+}
+
+/* Each app's accent: light, then dark. */
+[data-app='notes'] {
+  --accent-rgb: 164 71 42;
+  --accent-hover-rgb: 138 57 33;
+  --accent-soft-rgb: 240 222 211;
+  --accent-ink-rgb: 255 250 246;
+}
+[data-app='tasks'] {
+  --accent-rgb: 4 120 87;
+  --accent-hover-rgb: 6 95 70;
+  --accent-soft-rgb: 220 240 229;
+  --accent-ink-rgb: 255 255 255;
+}
+[data-app='files'] {
+  --accent-rgb: 14 116 144;
+  --accent-hover-rgb: 21 94 117;
+  --accent-soft-rgb: 216 243 249;
+  --accent-ink-rgb: 255 255 255;
+}
+[data-app='talk'] {
+  --accent-rgb: 109 40 217;
+  --accent-hover-rgb: 91 33 182;
+  --accent-soft-rgb: 237 233 254;
+  --accent-ink-rgb: 255 255 255;
+}
+[data-app='habits'] {
+  --accent-rgb: 180 83 9;
+  --accent-hover-rgb: 146 64 14;
+  --accent-soft-rgb: 255 243 232;
+  --accent-ink-rgb: 255 255 255;
+}
+[data-app='utilikit'] {
+  --accent-rgb: 37 99 235;
+  --accent-hover-rgb: 29 78 216;
+  --accent-soft-rgb: 233 241 254;
+  --accent-ink-rgb: 255 255 255;
+}
+[data-app='wiki'] {
+  --accent-rgb: 190 18 60;
+  --accent-hover-rgb: 159 18 57;
+  --accent-soft-rgb: 255 228 230;
+  --accent-ink-rgb: 255 255 255;
+}
+.dark [data-app='notes'] {
+  --accent-rgb: 238 142 97;
+  --accent-hover-rgb: 246 168 128;
+  --accent-soft-rgb: 56 37 29;
+  --accent-ink-rgb: 17 18 20;
+}
+.dark [data-app='tasks'] {
+  --accent-rgb: 52 211 153;
+  --accent-hover-rgb: 110 231 183;
+  --accent-soft-rgb: 21 45 37;
+  --accent-ink-rgb: 2 44 34;
+}
+.dark [data-app='files'] {
+  --accent-rgb: 6 182 212;
+  --accent-hover-rgb: 34 211 238;
+  --accent-soft-rgb: 14 44 53;
+  --accent-ink-rgb: 3 22 28;
+}
+.dark [data-app='talk'] {
+  --accent-rgb: 167 139 250;
+  --accent-hover-rgb: 196 181 253;
+  --accent-soft-rgb: 39 31 70;
+  --accent-ink-rgb: 22 12 48;
+}
+.dark [data-app='habits'] {
+  --accent-rgb: 217 119 6;
+  --accent-hover-rgb: 232 137 15;
+  --accent-soft-rgb: 48 31 6;
+  --accent-ink-rgb: 39 23 2;
+}
+.dark [data-app='utilikit'] {
+  --accent-rgb: 96 165 250;
+  --accent-hover-rgb: 147 197 253;
+  --accent-soft-rgb: 16 26 51;
+  --accent-ink-rgb: 10 10 10;
+}
+/* The wiki's dark danger is a plain red, so it doesn't blur with the rose. */
+.dark [data-app='wiki'] {
+  --accent-rgb: 251 113 133;
+  --accent-hover-rgb: 253 164 175;
+  --accent-soft-rgb: 66 20 32;
+  --accent-ink-rgb: 42 6 16;
+  --danger-rgb: 242 85 85;
+}
+
+:root,
+.dark,
+[data-app] {
+  --canvas: rgb(var(--canvas-rgb));
+  --surface: rgb(var(--surface-rgb));
+  --raised: rgb(var(--raised-rgb));
+  --card: rgb(var(--card-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --line: rgb(var(--line-rgb));
+  --line-strong: rgb(var(--line-strong-rgb));
+  --ink: rgb(var(--ink-rgb));
+  --ink-muted: rgb(var(--ink-muted-rgb));
+  --ink-faint: rgb(var(--ink-faint-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --accent-hover: rgb(var(--accent-hover-rgb));
+  --accent-soft: rgb(var(--accent-soft-rgb));
+  --accent-ink: rgb(var(--accent-ink-rgb));
+  --danger: rgb(var(--danger-rgb));
+  --danger-soft: rgb(var(--danger-soft-rgb));
+  --success: rgb(var(--success-rgb));
+  --success-soft: rgb(var(--success-soft-rgb));
+  --success-ink: rgb(var(--success-ink-rgb));
+  --warning: rgb(var(--warning-rgb));
+  --warning-soft: rgb(var(--warning-soft-rgb));
+}
+
+@layer base {
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  * {
+    color: inherit;
+  }
+
+  ::placeholder {
+    color: var(--ink-faint);
+    opacity: 1;
+  }
+
+  input,
+  textarea,
+  select {
+    color: var(--ink);
+    background-color: transparent;
+  }
+
+  button {
+    color: inherit;
+  }
+
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  /* The dark soft accents barely show on the dark page, so a selection takes the accent itself. */
+  .dark ::selection {
+    background: color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+
+  input[type='checkbox'],
+  input[type='radio'],
+  input[type='range'] {
+    accent-color: var(--accent);
+  }
+
+  /* Native dialog: the app draws the backdrop so it matches the palette. */
+  dialog {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    max-width: none;
+    max-height: none;
+    overflow: visible;
+  }
+
+  dialog::backdrop {
+    background: var(--scrim);
+  }
+
+  @media (min-width: 40rem) {
+    dialog::backdrop {
+      backdrop-filter: blur(4px);
+    }
+  }
+}
+
+textarea::-webkit-scrollbar,
+.themed-scroll::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+textarea::-webkit-scrollbar-track,
+.themed-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb,
+.themed-scroll::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.themed-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+/* Scrolls with no bar beside the content, as a dialog's body does. */
+@utility scrollbar-hidden {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.app-shell {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/*
+ * Identity colours: ten hues, one per person, picked from the user id. The
+ * same ones Talk uses, so a person is the same colour in every app.
+ */
+.avatar-disc {
+  background-color: rgb(var(--avatar-rgb));
+  color: rgb(var(--avatar-ink-rgb));
+}
+
+.avatar-1 { --avatar-rgb: 196 71 95; --avatar-ink-rgb: 255 255 255; }
+.avatar-2 { --avatar-rgb: 193 79 26; --avatar-ink-rgb: 255 255 255; }
+.avatar-3 { --avatar-rgb: 156 104 25; --avatar-ink-rgb: 255 255 255; }
+.avatar-4 { --avatar-rgb: 120 118 25; --avatar-ink-rgb: 255 255 255; }
+.avatar-5 { --avatar-rgb: 28 133 44; --avatar-ink-rgb: 255 255 255; }
+.avatar-6 { --avatar-rgb: 29 129 112; --avatar-ink-rgb: 255 255 255; }
+.avatar-7 { --avatar-rgb: 29 127 140; --avatar-ink-rgb: 255 255 255; }
+.avatar-8 { --avatar-rgb: 27 119 191; --avatar-ink-rgb: 255 255 255; }
+.avatar-9 { --avatar-rgb: 106 101 208; --avatar-ink-rgb: 255 255 255; }
+.avatar-10 { --avatar-rgb: 159 85 181; --avatar-ink-rgb: 255 255 255; }
+
+.dark .avatar-1 { --avatar-rgb: 250 161 171; --avatar-ink-rgb: 46 15 20; }
+.dark .avatar-2 { --avatar-rgb: 250 166 133; --avatar-ink-rgb: 45 17 6; }
+.dark .avatar-3 { --avatar-rgb: 248 172 61; --avatar-ink-rgb: 39 23 2; }
+.dark .avatar-4 { --avatar-rgb: 199 196 63; --avatar-ink-rgb: 29 28 2; }
+.dark .avatar-5 { --avatar-rgb: 123 215 127; --avatar-ink-rgb: 9 32 11; }
+.dark .avatar-6 { --avatar-rgb: 55 218 190; --avatar-ink-rgb: 3 32 27; }
+.dark .avatar-7 { --avatar-rgb: 55 212 232; --avatar-ink-rgb: 3 31 35; }
+.dark .avatar-8 { --avatar-rgb: 139 196 250; --avatar-ink-rgb: 5 28 48; }
+.dark .avatar-9 { --avatar-rgb: 180 183 250; --avatar-ink-rgb: 23 23 49; }
+.dark .avatar-10 { --avatar-rgb: 228 159 250; --avatar-ink-rgb: 36 18 41; }
+
+/* Text over a picture needs its own ground. */
+.scrim-top {
+  background: linear-gradient(to bottom, rgb(var(--stage-rgb) / 0.8), transparent);
+}
+
+/* ---------------------------------------------------------------------------
+ * Uploads
+ * ------------------------------------------------------------------------- */
+
+/* A light that runs along a bar while bytes are moving. */
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--sheen), transparent);
+  transform: translateX(-100%);
+  animation: sheen 1.4s ease-in-out infinite;
+}
+
+@keyframes sheen {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.upload-panel {
+  box-shadow: var(--shadow-pop);
+  animation: panel-in 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* The same panel on an upload link's page, where it sits in the page. */
+.upload-card {
+  animation: panel-in 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+}
+
+.upload-row {
+  animation: row-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.bob {
+  animation: bob 1.3s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.pop {
+  animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+.ring-fill {
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+.drop-overlay {
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.16s ease-out both;
+}
+
+.drop-frame {
+  border: 2px dashed color-mix(in srgb, var(--accent) 65%, transparent);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+.drop-badge {
+  box-shadow: 0 18px 36px -14px var(--accent);
+  animation: float 1.6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Hidden at first and shown after a long wait, by the stylesheet alone: it comes up even when no script runs. */
+.after-a-while {
+  animation: after-a-while 0.2s ease-out 20s both;
+}
+
+@keyframes after-a-while {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* A file that just arrived glows for a moment where it lands in the list. */
+.just-added {
+  animation: just-added 2.8s ease-out both;
+}
+
+@keyframes just-added {
+  0%,
+  35% {
+    background-color: color-mix(in srgb, var(--accent) 14%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Where dragged items would land. */
+.drop-target {
+  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.login-page {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--canvas);
+  padding-top: max(2rem, env(safe-area-inset-top, 0px));
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
+}
+
+/* The grid behind the signed-out pages: fine lines, and a stronger one every fifth. */
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    repeating-linear-gradient(to right, color-mix(in srgb, var(--line-strong) 34%, transparent) 0 1px, transparent 1px 115px),
+    repeating-linear-gradient(to bottom, color-mix(in srgb, var(--line-strong) 34%, transparent) 0 1px, transparent 1px 115px),
+    repeating-linear-gradient(to right, color-mix(in srgb, var(--line) 42%, transparent) 0 1px, transparent 1px 23px),
+    repeating-linear-gradient(to bottom, color-mix(in srgb, var(--line) 42%, transparent) 0 1px, transparent 1px 23px);
+}
+
+/*
+ * Reduced motion: animations end at once, and nothing transitions. A tiny
+ * transition instead would apply to every property of every element (`all` is
+ * the default), so a layout read right after a change would still be the old one.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+
+  .sheen::after {
+    display: none;
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "app": {
+    "name": "Talk"
+  },
+  "nav": {
+    "label": "Talk",
+    "chats": "Chats",
+    "calls": "Calls",
+    "people": "People",
+    "files": "Files",
+    "reconnecting": "Reconnecting…"
+  },
+  "chat": {
+    "title": "Chats",
+    "startChat": "New chat",
+    "noConversationOpen": "No conversation open",
+    "search": {
+      "placeholder": "Search…",
+      "label": "Search conversations",
+      "clear": "Clear search"
+    },
+    "errors": {
+      "open": "Could not open that conversation.",
+      "load": "Could not load that conversation.",
+      "loadEarlier": "Could not load earlier messages.",
+      "notSent": "Not connected. Your message was not sent.",
+      "deleteMessage": "That message could not be deleted.",
+      "deleteCall": "That call could not be deleted.",
+      "clear": "That conversation could not be cleared.",
+      "fileNotSent": "That file could not be sent. Attach it again.",
+      "refused": "That message could not be sent."
+    },
+    "status": {
+      "online": "Online",
+      "inCall": "In a call",
+      "offline": "Offline"
+    },
+    "list": {
+      "label": "Conversations",
+      "noMatch": "No one called “{query}”",
+      "emptyTitle": "No conversations yet",
+      "noMessages": "No messages yet",
+      "photo": "Photo"
+    },
+    "header": {
+      "back": "Back to conversations",
+      "videoCall": "Video call {name}",
+      "call": "Call {name}",
+      "actions": "Conversation actions",
+      "clear": "Clear this chat",
+      "delete": "Delete chat"
+    },
+    "composer": {
+      "placeholder": "Write a message",
+      "placeholderTo": "Message {name}",
+      "label": "Message",
+      "send": "Send message",
+      "attach": "Attach files",
+      "chooseFiles": "Choose files to send"
+    },
+    "timeline": {
+      "label": "Conversation",
+      "loading": "Loading messages",
+      "loadingEarlier": "Loading earlier messages",
+      "emptyTitle": "No messages yet"
+    },
+    "message": {
+      "deleted": "Message deleted",
+      "actions": "Message actions",
+      "deleteForEveryone": "Delete for everyone",
+      "deleteForMe": "Delete for me",
+      "openImage": "Open {name}",
+      "download": "Download {name}"
+    },
+    "viewer": {
+      "label": "{name}",
+      "you": "You",
+      "download": "Download {name}",
+      "showInChat": "Show in chat",
+      "failed": "This picture could not be loaded."
+    },
+    "attach": {
+      "progress": "Uploading {name}",
+      "uploading": "{percent}% of {size}",
+      "cancel": "Stop sending {name}",
+      "remove": "Remove {name}",
+      "retry": "Try sending {name} again",
+      "failed": "The file could not be sent.",
+      "notSent": "Not connected. The file was not sent.",
+      "tooLarge": "“{name}” is over {max}.",
+      "tooLargeMany": "{count, plural, one {# file is} other {# files are}} over {max}.",
+      "dropHere": "Drop to send to {name}"
+    },
+    "call": {
+      "outcome": {
+        "answered": "Call",
+        "video": "Video call",
+        "noAnswer": "Missed call",
+        "declined": "Call declined",
+        "cancelled": "Cancelled call",
+        "busy": "Busy",
+        "failed": "Call failed"
+      },
+      "delete": "Delete this {outcome, select, no_answer {missed call} declined {declined call} cancelled {cancelled call} busy {busy call} failed {failed call} other {call}} from your history",
+      "deleteTitle": "Delete from your history"
+    },
+    "newChat": {
+      "label": "Start a new chat",
+      "title": "New chat",
+      "searchLabel": "Search people",
+      "searchPlaceholder": "Search by name or username",
+      "loadFailed": "Could not load the list of people.",
+      "loading": "Loading people",
+      "listLabel": "People",
+      "emptyTitle": "Nobody else yet",
+      "noMatchTitle": "Nobody by that name",
+      "cancel": "Cancel"
+    },
+    "deleteChat": {
+      "title": "Delete the chat with {name}?",
+      "cancel": "Cancel",
+      "confirm": "Delete chat",
+      "deleting": "Deleting…",
+      "deleted": "Chat deleted.",
+      "failed": "That chat could not be deleted.",
+      "groupTitle": "Delete the chat “{name}”?"
+    },
+    "notice": {
+      "created": "{actorIsYou, select, yes {You created the group “{name}”} other {{actor} created the group “{name}”}}",
+      "added": "{actorIsYou, select, yes {You added {target}} other {{targetIsYou, select, yes {{actor} added you} other {{actor} added {target}}}}}",
+      "removed": "{actorIsYou, select, yes {You removed {target}} other {{targetIsYou, select, yes {{actor} removed you} other {{actor} removed {target}}}}}",
+      "left": "{actorIsYou, select, yes {You left} other {{actor} left}}",
+      "renamed": "{actorIsYou, select, yes {You renamed the group to “{name}”} other {{actor} renamed the group to “{name}”}}",
+      "owner": "{targetIsYou, select, yes {You’re now the owner} other {{target} is now the owner}}",
+      "photoChanged": "{actorIsYou, select, yes {You changed the group photo} other {{actor} changed the group photo}}",
+      "photoRemoved": "{actorIsYou, select, yes {You removed the group photo} other {{actor} removed the group photo}}",
+      "someone": "Someone",
+      "you": "You",
+      "youInList": "you",
+      "onlyYou": "Only you",
+      "memberCount": "{count, plural, one {# member} other {# members}}",
+      "sender": "{name}: {text}"
+    },
+    "group": {
+      "newGroup": "New group",
+      "readOnly": "You’re no longer in this group",
+      "notMember": "You’re no longer in this group.",
+      "create": {
+        "label": "Create a group",
+        "title": "New group",
+        "back": "Back",
+        "nameLabel": "Group name",
+        "namePlaceholder": "Family, Book club…",
+        "peopleLabel": "People in the group",
+        "chosen": "{count, plural, =0 {Choose at least one person} one {# person chosen} other {# people chosen}}",
+        "limit": "{max} people at most.",
+        "submit": "Create group",
+        "creating": "Creating…",
+        "failed": "The group could not be created."
+      },
+      "header": {
+        "openInfo": "Group info for {name}",
+        "info": "Group info",
+        "leave": "Leave group",
+        "deleteGroup": "Delete group",
+        "deleteChat": "Delete chat"
+      },
+      "info": {
+        "label": "Group info for {name}",
+        "title": "Group info",
+        "rename": "Rename group",
+        "nameLabel": "Group name",
+        "save": "Save",
+        "saving": "Saving…",
+        "cancel": "Cancel",
+        "renameFailed": "The group could not be renamed.",
+        "members": "{count, plural, one {# member} other {# members}}",
+        "membersLabel": "Members",
+        "owner": "Owner",
+        "you": "(you)",
+        "addPeople": "Add people",
+        "addTitle": "Add people",
+        "add": "{count, plural, =0 {Add} one {Add # person} other {Add # people}}",
+        "adding": "Adding…",
+        "addFailed": "Those people could not be added.",
+        "noOneToAdd": "There’s nobody else to add.",
+        "remove": "Remove {name} from the group",
+        "removeConfirm": "Remove {name} from the group?",
+        "removeAction": "Remove",
+        "removeFailed": "{name} could not be removed.",
+        "inactive": "You’re no longer in this group.",
+        "leave": "Leave group",
+        "deleteGroup": "Delete group",
+        "deleteChat": "Delete chat",
+        "photoChange": "Change photo",
+        "photoSet": "Add a photo",
+        "photoRemove": "Remove photo",
+        "photoWorking": "Working…",
+        "photoFailed": "The group photo could not be changed.",
+        "photoChoose": "Choose a group photo"
+      },
+      "leave": {
+        "title": "Leave “{name}”?",
+        "cancel": "Cancel",
+        "confirm": "Leave group",
+        "leaving": "Leaving…",
+        "left": "You left “{name}”.",
+        "failed": "Could not leave the group."
+      },
+      "delete": {
+        "title": "Delete “{name}” for everyone?",
+        "cancel": "Cancel",
+        "confirm": "Delete group",
+        "deleting": "Deleting…",
+        "deleted": "Group deleted.",
+        "failed": "The group could not be deleted."
+      }
+    }
+  },
+  "calls": {
+    "status": {
+      "calling": "Calling…",
+      "incomingCall": "Incoming call",
+      "incomingVideoCall": "Incoming video call",
+      "connecting": "Connecting…",
+      "connected": "Connected",
+      "connectionFailed": "Connection failed",
+      "busy": "Busy",
+      "unavailable": "Unavailable",
+      "noAnswer": "No answer",
+      "declined": "Call declined",
+      "cancelled": "Call cancelled",
+      "failed": "Call failed",
+      "ended": "Call ended"
+    },
+    "history": {
+      "title": "Calls",
+      "clear": "Clear history",
+      "filterLabel": "Filter calls",
+      "filterAll": "All",
+      "filterMissed": "Missed",
+      "loading": "Loading calls",
+      "empty": "No calls yet",
+      "emptyMissed": "No missed calls",
+      "listLabel": "Call history",
+      "summary": "— {direction, select, incoming {incoming call} other {outgoing call}}, {outcome}",
+      "deleteLabel": "Delete the {direction, select, incoming {incoming} other {outgoing}} call with {name} from your history",
+      "deleteTitle": "Delete from your history",
+      "callBack": "Call {name} back",
+      "videoCallBack": "Video call {name} back",
+      "loadMore": "Load earlier calls",
+      "loadingMore": "Loading…",
+      "loadFailed": "Could not load your call history.",
+      "loadMoreFailed": "Could not load earlier calls.",
+      "deleteFailed": "That call could not be deleted.",
+      "clearFailed": "Your call history could not be cleared.",
+      "outcome": {
+        "answered": "Answered",
+        "missed": "Missed",
+        "noAnswer": "No answer",
+        "declined": "Declined",
+        "declinedByThem": "Declined by them",
+        "cancelled": "Cancelled",
+        "busy": "Busy",
+        "failed": "Failed"
+      }
+    },
+    "modal": {
+      "tabTitle": "{media, select, video {📹} other {📞}} {name} is calling",
+      "tabTitleNoName": "📞 Incoming call",
+      "videoCall": "Video call",
+      "decline": "Decline",
+      "declineCall": "Decline call",
+      "accept": "Accept",
+      "acceptCall": "Accept call",
+      "cancel": "Cancel",
+      "cancelCall": "Cancel call"
+    },
+    "controls": {
+      "mute": "Mute",
+      "muted": "Muted",
+      "muteMicrophone": "Mute microphone",
+      "unmuteMicrophone": "Unmute microphone",
+      "cameraOn": "Turn camera on",
+      "cameraOff": "Turn camera off",
+      "minimise": "Minimise",
+      "minimiseCall": "Minimise call",
+      "hangUp": "Hang up",
+      "showCall": "Show the call"
+    },
+    "stage": {
+      "peerCamera": "{name}'s camera",
+      "yourCamera": "Your camera",
+      "peerCameraOff": "{name} has their camera off",
+      "noCamera": "No camera available — you are audio only"
+    },
+    "waveform": {
+      "label": "Sound levels for {name} and you",
+      "legendLabel": "Which half of the waveform is whose",
+      "you": "You"
+    },
+    "devices": {
+      "system": "Same as system",
+      "unnamed": "{kind, select, audioinput {Microphone} videoinput {Camera} other {Speaker}} {number}",
+      "chosenDevice": "Chosen device",
+      "menu": {
+        "audioinput": "Change microphone",
+        "videoinput": "Change camera",
+        "audiooutput": "Change speaker",
+        "notConnected": "Not connected"
+      },
+      "settings": {
+        "title": "Camera & microphone",
+        "lost": "Not connected: {devices}",
+        "microphone": "Microphone",
+        "camera": "Camera",
+        "speaker": "Speaker",
+        "notConnected": "{name} (not connected)",
+        "preview": "Camera preview",
+        "opening": "Opening…",
+        "noCamera": "No camera",
+        "previewOff": "Preview is off",
+        "level": "Microphone level",
+        "using": "Using {device}",
+        "silentTitle": "No sound from this microphone.",
+        "test": "Test devices",
+        "stopTest": "Stop test",
+        "blocked": "The browser blocked the microphone and camera.",
+        "openFailed": "Could not open the microphone or camera."
+      }
+    }
+  },
+  "people": {
+    "title": "People",
+    "status": {
+      "online": "Online",
+      "inCall": "In a call",
+      "offline": "Offline"
+    },
+    "loading": "Loading people",
+    "loadFailed": "Could not load the directory.",
+    "empty": {
+      "title": "Nobody else yet",
+      "action": "Go to Admin"
+    },
+    "listLabel": "Everyone",
+    "message": "Message",
+    "video": "Video",
+    "call": "Call"
+  },
+  "files": {
+    "title": "Files",
+    "filterLabel": "Filter files",
+    "filterAll": "All",
+    "filterSent": "Sent",
+    "filterReceived": "Received",
+    "loading": "Loading files",
+    "photos": "Photos",
+    "documents": "Documents",
+    "to": "To {name}",
+    "from": "From {name}",
+    "openPhoto": "{direction, select, sent {Photo to {name}} other {Photo from {name}}}, {date}",
+    "download": "Download {name}",
+    "showInChat": "Show in chat with {name}",
+    "empty": "No files yet",
+    "emptySent": "You have not sent any files",
+    "emptyReceived": "Nobody has sent you any files",
+    "loadMore": "Load earlier files",
+    "loadingMore": "Loading…",
+    "loadFailed": "Could not load your files.",
+    "loadMoreFailed": "Could not load earlier files.",
+    "fromInGroup": "From {name} in {group}",
+    "openPhotoGroup": "{direction, select, sent {Photo to {group}} other {Photo from {name} in {group}}}, {date}"
+  },
+  "settings": {
+    "notifications": {
+      "title": "Notifications",
+      "checking": "Checking notifications",
+      "insecure": "Notifications need HTTPS.",
+      "needsInstallTitle": "Add it to your Home Screen first",
+      "needsInstall": "In Safari: Share → Add to Home Screen, then open it from there.",
+      "unsupported": "This browser cannot show notifications.",
+      "denied": "Notifications are blocked in this browser.",
+      "on": "On for this device",
+      "off": "Off for this device",
+      "sendTest": "Send a test",
+      "testSent": "Sent.",
+      "turnOff": "Turn off",
+      "turnOn": "Turn on",
+      "turningOn": "Turning on…",
+      "errors": {
+        "timedOut": "The browser didn’t respond. Try again.",
+        "enableFailed": "Couldn’t turn on notifications.",
+        "disableFailed": "Could not turn notifications off.",
+        "testFailed": "The test notification could not be sent."
+      }
+    },
+    "sounds": {
+      "title": "Sounds",
+      "ringtone": "Ringtone",
+      "messages": "Messages",
+      "play": "Play",
+      "styles": {
+        "chime": "Chime",
+        "marimba": "Marimba",
+        "classic": "Classic",
+        "pop": "Pop",
+        "off": "None"
+      }
+    }
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "todayAt": "Today, {time}",
+    "yesterdayAt": "Yesterday, {time}",
+    "seconds": "{seconds} sec",
+    "minutes": "{minutes} min",
+    "minutesSeconds": "{minutes} min {seconds} sec"
+  },
+  "validation": {
+    "groupNameRequired": "Give the group a name.",
+    "groupNameTooLong": "A group name can be at most {max} characters."
+  },
+  "errors": {
+    "conversationNotFound": "That conversation no longer exists",
+    "notInConversation": "You’re not in that conversation",
+    "cannotTalkToYourself": "You can’t start a chat with yourself",
+    "messageNotFound": "That message no longer exists",
+    "notYourMessage": "Only whoever sent a message can delete it for everyone",
+    "callNotFound": "That call is no longer in your log",
+    "groupNotFound": "That group no longer exists",
+    "notGroupOwner": "Only the group’s owner can do that",
+    "groupNameRequired": "Give the group a name",
+    "groupNameTooLong": "That name is too long for a group",
+    "groupNeedsPeople": "Add at least one person",
+    "groupFull": "A group can have at most 100 people",
+    "useLeaveGroup": "To leave the group, use Leave group",
+    "notInGroup": "They’re not in this group",
+    "alreadyLeftGroup": "You’ve already left this group",
+    "leaveGroupFirst": "Leave the group before deleting it from your list",
+    "emptyAttachment": "That file is empty",
+    "attachmentNotFound": "That file is no longer there",
+    "previewSizeMissing": "The picture didn’t say how big it is",
+    "previewNotPicture": "That preview isn’t a picture",
+    "pushServiceNotAllowed": "This server doesn’t send notifications to that service",
+    "pushKeysInvalid": "The browser sent keys that can’t be used",
+    "pushNotOn": "Notifications aren’t on for this device",
+    "pushDeviceGone": "This device’s push service has forgotten it. Turn notifications off and on again.",
+    "pushRefused": "The push service didn’t take the notification. Try again in a moment."
+  }
+}

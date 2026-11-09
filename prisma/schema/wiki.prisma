@@ -1,0 +1,130 @@
+// Wiki: one wiki everyone who uses it shares, of folders and pages with drafts,
+// revisions and who may read them.
+
+enum WikiNodeKind {
+  FOLDER
+  PAGE
+}
+
+enum WikiVisibility {
+  INHERIT
+  PUBLIC
+  PRIVATE
+  PASSWORD
+}
+
+/// An account that may write in the wiki. Admins always may; everyone else who uses it reads.
+model WikiEditor {
+  user_id    Int      @id
+  created_at DateTime @default(now())
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("wiki_editors")
+}
+
+/// A folder or a page. Pages keep their published text in revisions and their unpublished changes here.
+model WikiNode {
+  id                    Int             @id @default(autoincrement())
+  kind                  WikiNodeKind
+  parent_id             Int?
+  position              Int             @default(0)
+  /// The published title; a page never published has its draft title here.
+  title                 String          @db.VarChar(200)
+  slug                  String          @db.VarChar(100)
+  visibility            WikiVisibility  @default(INHERIT)
+  password_hash         String?
+  published_revision_id Int?            @unique
+  draft_title           String?         @db.VarChar(200)
+  draft_content         String?
+  /// Raised on every draft save, so two people editing at once notice.
+  draft_version         Int             @default(0)
+  draft_updated_by_id   Int?
+  draft_updated_at      DateTime?
+  deleted_at            DateTime?
+  /// What was deleted along with everything under it: restoring that restores them all.
+  trash_root_id         Int?
+  created_at            DateTime        @default(now())
+  updated_at            DateTime        @updatedAt
+  parent                WikiNode?       @relation("WikiChildren", fields: [parent_id], references: [id], onDelete: Cascade)
+  children              WikiNode[]      @relation("WikiChildren")
+  published             WikiRevision?   @relation("WikiPublished", fields: [published_revision_id], references: [id], onDelete: SetNull)
+  revisions             WikiRevision[]  @relation("WikiPageRevisions")
+  draft_updated_by      User?           @relation("WikiDraftAuthor", fields: [draft_updated_by_id], references: [id], onDelete: SetNull)
+  redirects             WikiRedirect[]
+  images                WikiPageImage[]
+
+  @@index([parent_id, position])
+  @@index([deleted_at])
+  @@index([trash_root_id])
+  @@map("wiki_nodes")
+}
+
+model WikiRevision {
+  id         Int       @id @default(autoincrement())
+  page_id    Int
+  number     Int
+  title      String    @db.VarChar(200)
+  content    String
+  message    String?   @db.VarChar(300)
+  author_id  Int?
+  created_at DateTime  @default(now())
+  page       WikiNode  @relation("WikiPageRevisions", fields: [page_id], references: [id], onDelete: Cascade)
+  author     User?     @relation("WikiRevisionAuthor", fields: [author_id], references: [id], onDelete: SetNull)
+  published  WikiNode? @relation("WikiPublished")
+
+  @@unique([page_id, number])
+  @@map("wiki_revisions")
+}
+
+/// An address a page or folder had before it was renamed or moved, so old links keep working.
+model WikiRedirect {
+  id         Int      @id @default(autoincrement())
+  path       String   @unique @db.VarChar(1000)
+  node_id    Int
+  created_at DateTime @default(now())
+  node       WikiNode @relation(fields: [node_id], references: [id], onDelete: Cascade)
+
+  @@index([node_id])
+  @@map("wiki_redirects")
+}
+
+model WikiImage {
+  id             Int             @id @default(autoincrement())
+  key            String          @unique
+  mime           String          @db.VarChar(100)
+  size           Int
+  width          Int
+  height         Int
+  uploaded_by_id Int?
+  created_at     DateTime        @default(now())
+  uploaded_by    User?           @relation("WikiImageUploader", fields: [uploaded_by_id], references: [id], onDelete: SetNull)
+  pages          WikiPageImage[]
+
+  @@map("wiki_images")
+}
+
+/// The images a page's published text shows: who may see an image follows from these pages.
+model WikiPageImage {
+  page_id  Int
+  image_id Int
+  page     WikiNode  @relation(fields: [page_id], references: [id], onDelete: Cascade)
+  image    WikiImage @relation(fields: [image_id], references: [id], onDelete: Cascade)
+
+  @@id([page_id, image_id])
+  @@index([image_id])
+  @@map("wiki_page_images")
+}
+
+/// The wiki's own settings: one row.
+model WikiSettings {
+  id                 Int            @id @default(1)
+  wiki_name          String         @default("Wiki") @db.VarChar(60)
+  home_page_id       Int?
+  /// What a page set to Inherit gets when nothing above it says otherwise. Never INHERIT.
+  root_visibility    WikiVisibility @default(PRIVATE)
+  root_password_hash String?
+  allow_indexing     Boolean        @default(false)
+  updated_at         DateTime       @updatedAt
+
+  @@map("wiki_settings")
+}

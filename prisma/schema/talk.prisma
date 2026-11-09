@@ -1,0 +1,205 @@
+// Talk: conversations between two people or in groups, their messages and
+// calls, the files shared in them, and the devices that get notifications.
+//
+// Talk writes these tables with its own SQL (src/modules/talk/backend), so the
+// columns keep the shape and the names they had: timestamps with time zone to
+// the microsecond, which the paging cursors rely on. The check constraints and
+// partial indexes of the original schema can't be written here; they wait for
+// the first migration.
+
+/// A 1:1 conversation or a group. A group has a name and an owner; a 1:1
+/// conversation has neither, and its pair of people as `direct_key`.
+model TalkConversation {
+  id          Int              @id @default(autoincrement())
+  is_direct   Boolean          @default(true)
+  /// "<lower id>:<higher id>" for a 1:1 conversation, null for a group. Unique, so a pair has one.
+  direct_key  String?          @unique
+  /// A group's name. Null for a 1:1 conversation.
+  name        String?
+  /// Who may rename the group, add and remove people, and delete it. Passed on when they leave.
+  owner_id    Int?
+  /// A group's photo: its file under data/talk/group-photos, and its type.
+  photo_id    String?
+  photo_type  String?
+  created_at  DateTime         @default(now()) @db.Timestamptz(6)
+  owner       User?            @relation("TalkGroupOwner", fields: [owner_id], references: [id], onDelete: SetNull)
+  members     TalkMember[]
+  messages    TalkMessage[]
+  calls       TalkCall[]
+  attachments TalkAttachment[]
+
+  @@map("talk_conversations")
+}
+
+/// Someone in a conversation, and their own view of it: what they have read,
+/// cleared and deleted, and in a group the window between joining and leaving.
+model TalkMember {
+  conversation_id           Int
+  user_id                   Int
+  /// 0 means nothing read yet; message ids start at 1.
+  last_read_message_id      Int              @default(0)
+  /// Clearing the chat: everything at or below these is out of their view.
+  cleared_before_message_id Int              @default(0)
+  cleared_before_call_id    Int              @default(0)
+  /// Deleted from their list, until something new is said in it.
+  removed_at                DateTime?        @db.Timestamptz(6)
+  joined_at                 DateTime         @default(now()) @db.Timestamptz(6)
+  /// The newest message when they joined a group: they read what comes after it.
+  joined_after_message_id   Int              @default(0)
+  left_at                   DateTime?        @db.Timestamptz(6)
+  /// The last message they may read once they have left: the notice that they left.
+  left_after_message_id     Int?
+  conversation              TalkConversation @relation(fields: [conversation_id], references: [id], onDelete: Cascade)
+  user                      User             @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@id([conversation_id, user_id])
+  @@index([user_id])
+  @@map("talk_members")
+}
+
+/// Something said, a file sent, or a notice in a group's timeline ("Ada added
+/// Grace"), whose sender is who did it.
+model TalkMessage {
+  id              Int               @id @default(autoincrement())
+  conversation_id Int
+  sender_id       Int
+  /// Empty once withdrawn for everyone, and for a notice or a file sent on its own.
+  body            String
+  created_at      DateTime          @default(now()) @db.Timestamptz(6)
+  deleted_at      DateTime?         @db.Timestamptz(6)
+  deleted_by      Int?
+  /// created, added, removed, left, renamed, owner or photo.
+  event           String?
+  event_user_id   Int?
+  event_text      String?
+  conversation    TalkConversation  @relation(fields: [conversation_id], references: [id], onDelete: Cascade)
+  sender          User              @relation("TalkMessageSender", fields: [sender_id], references: [id], onDelete: Cascade)
+  deleter         User?             @relation("TalkMessageDeleter", fields: [deleted_by], references: [id], onDelete: SetNull)
+  event_user      User?             @relation("TalkMessageEventUser", fields: [event_user_id], references: [id], onDelete: SetNull)
+  hides           TalkMessageHide[]
+  attachment      TalkAttachment?
+
+  @@index([conversation_id, created_at(sort: Desc), id(sort: Desc)])
+  @@map("talk_messages")
+}
+
+/// A call between two people, from the moment it rings to how it ended.
+model TalkCall {
+  id              Int              @id @default(autoincrement())
+  conversation_id Int
+  caller_id       Int
+  callee_id       Int
+  /// audio or video, fixed when the call is placed.
+  media           String           @default("audio")
+  started_at      DateTime         @default(now()) @db.Timestamptz(6)
+  answered_at     DateTime?        @db.Timestamptz(6)
+  ended_at        DateTime?        @db.Timestamptz(6)
+  /// answered, no_answer, declined, cancelled, busy or failed. Null while it rings or goes on.
+  outcome         String?
+  /// When the callee saw a missed call, so its badge clears.
+  callee_seen_at  DateTime?        @db.Timestamptz(6)
+  conversation    TalkConversation @relation(fields: [conversation_id], references: [id], onDelete: Cascade)
+  caller          User             @relation("TalkCaller", fields: [caller_id], references: [id], onDelete: Cascade)
+  callee          User             @relation("TalkCallee", fields: [callee_id], references: [id], onDelete: Cascade)
+  hides           TalkCallHide[]
+
+  @@index([conversation_id, started_at(sort: Desc), id(sort: Desc)])
+  @@index([caller_id, started_at(sort: Desc), id(sort: Desc)])
+  @@index([callee_id, started_at(sort: Desc), id(sort: Desc)])
+  @@map("talk_calls")
+}
+
+/// A message taken out of one person's copy. The other people keep theirs.
+model TalkMessageHide {
+  message_id Int
+  user_id    Int
+  message    TalkMessage @relation(fields: [message_id], references: [id], onDelete: Cascade)
+  user       User        @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@id([message_id, user_id])
+  @@index([user_id])
+  @@map("talk_message_hides")
+}
+
+/// A call taken out of one person's log.
+model TalkCallHide {
+  call_id Int
+  user_id Int
+  call    TalkCall @relation(fields: [call_id], references: [id], onDelete: Cascade)
+  user    User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@id([call_id, user_id])
+  @@index([user_id])
+  @@map("talk_call_hides")
+}
+
+/// What Talk keeps for each account on its own: where the call log was last cleared.
+model TalkUser {
+  user_id                Int  @id
+  cleared_before_call_id Int  @default(0)
+  user                   User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("talk_users")
+}
+
+/// The server's one key pair for Web Push (VAPID). Browsers bind their
+/// subscriptions to the public key, so it is made once and kept.
+model TalkPushKeys {
+  id          Int      @id @default(1)
+  /// An uncompressed P-256 point, base64url: what browsers are given.
+  public_key  String
+  /// PKCS#8 DER, base64url.
+  private_key String
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+
+  @@map("talk_push_keys")
+}
+
+/// A device that gets notifications: where to send them and the keys to
+/// encrypt them to. It stops with the sign-ins of its time: a new password
+/// raises the account's session version past it.
+model TalkPushSubscription {
+  endpoint        String   @id
+  user_id         Int
+  /// The account's session version when the device subscribed.
+  session_version Int      @default(0)
+  /// The device's P-256 public key and its shared secret, base64url.
+  p256dh          String
+  auth            String
+  created_at      DateTime @default(now()) @db.Timestamptz(6)
+  user            User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("talk_push_subscriptions")
+}
+
+/// A file shared in a conversation. The bytes are under data/talk/files,
+/// named by `id`. It gets its message when it is sent; one never sent is
+/// removed with its file after a day.
+model TalkAttachment {
+  /// 128 random bits, base64url: unguessable, and the file's name on disk.
+  id              String           @id
+  uploader_id     Int
+  /// Fixed at upload, so the file can only be sent where it was meant for.
+  conversation_id Int
+  message_id      Int?             @unique
+  file_name       String
+  /// Checked from the bytes for a picture; the browser's word otherwise.
+  content_type    String
+  size_bytes      BigInt
+  /// A PNG, JPEG, WebP or GIF, by its bytes: the only files shown in the page.
+  is_image        Boolean          @default(false)
+  /// The small version the sender's browser made, next to the file.
+  preview_type    String?
+  width           Int?
+  height          Int?
+  created_at      DateTime         @default(now()) @db.Timestamptz(6)
+  uploader        User             @relation(fields: [uploader_id], references: [id], onDelete: Cascade)
+  conversation    TalkConversation @relation(fields: [conversation_id], references: [id], onDelete: Cascade)
+  message         TalkMessage?     @relation(fields: [message_id], references: [id], onDelete: Cascade)
+
+  @@index([conversation_id, created_at(sort: Desc), id(sort: Desc)])
+  @@index([created_at])
+  @@index([uploader_id])
+  @@map("talk_attachments")
+}

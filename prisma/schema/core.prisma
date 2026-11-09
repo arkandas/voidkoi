@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+/// An account. Each app keeps its own data in its own tables, tied to this one.
+model User {
+  id              Int       @id @default(autoincrement())
+  username        String    @unique
+  email           String    @unique
+  /// The name others see, as in Talk. The username when empty.
+  name            String?
+  password        String?
+  oidc_sub        String?   @unique
+  role            UserRole  @default(USER)
+  avatar_key      String?
+  /// The apps this account uses, like "files", and the parts of them it leaves out, like "-tasks.stickies".
+  apps            String[]  @default([])
+  /// When the account chose its apps, which it does at its first sign-in.
+  apps_chosen_at  DateTime?
+  /// The language last picked, for what the server sends on its own, like notifications.
+  locale          String?
+  /// Storage limit for what the account keeps in its apps: the default, unlimited, or its own.
+  quota_custom    Boolean   @default(false)
+  quota_bytes     BigInt?
+  session_version Int       @default(0)
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @updatedAt
+
+  // Files
+  shares_seen_at  DateTime?
+  items           Item[]
+  uploads         Upload[]
+  links           ShareLink[]
+  upload_links    UploadLink[]
+  favorites       Favorite[]
+  shares_given    Share[]      @relation("ShareOwner")
+  shares_received Share[]      @relation("ShareRecipient")
+
+  // Notes
+  notes         Note[]
+  note_folders  NoteFolder[]
+  note_images   NoteImage[]
+  note_settings NoteSettings?
+
+  // Tasks
+  boards       Board[]
+  sticky_notes StickyNote[]
+  todos        TodoItem[]
+
+  // Habits
+  weights            WeightEntry[]
+  calories           CalorieEntry[]
+  exercises          ExerciseEntry[]
+  meal_templates     MealTemplate[]
+  exercise_templates ExerciseTemplate[]
+  goal               Goal?
+
+  // Talk
+  talk_groups_owned       TalkConversation[]     @relation("TalkGroupOwner")
+  talk_memberships        TalkMember[]
+  talk_messages           TalkMessage[]          @relation("TalkMessageSender")
+  talk_messages_deleted   TalkMessage[]          @relation("TalkMessageDeleter")
+  talk_message_events     TalkMessage[]          @relation("TalkMessageEventUser")
+  talk_calls_made         TalkCall[]             @relation("TalkCaller")
+  talk_calls_received     TalkCall[]             @relation("TalkCallee")
+  talk_message_hides      TalkMessageHide[]
+  talk_call_hides         TalkCallHide[]
+  talk_state              TalkUser?
+  talk_push_subscriptions TalkPushSubscription[]
+  talk_attachments        TalkAttachment[]
+
+  // Wiki
+  wiki_editor    WikiEditor?
+  wiki_drafts    WikiNode[]     @relation("WikiDraftAuthor")
+  wiki_revisions WikiRevision[] @relation("WikiRevisionAuthor")
+  wiki_images    WikiImage[]    @relation("WikiImageUploader")
+
+  @@map("users")
+}

@@ -1,0 +1,8 @@
+/** The VOIDKOI wordmark from the brand kit, in the text colour. */
+export function Wordmark({ height = 18, className }: { height?: number; className?: string }) {
+  return (
+    <svg viewBox="-4 -4 688.6 111" height={height} fill="currentColor" role="img" aria-label="voidkoi" className={className}>
+      <path d="M0 0L48 102.24L96 0L82.74 0L48 74L13.26 0ZM117 50A51.4 51.4 0 1 1 219.8 50A51.4 51.4 0 1 1 117 50ZM132.59 45.63A40.18 40.18 0 1 0 212.95 45.63A40.18 40.18 0 1 0 132.59 45.63ZM253.8 0H265.8V100H253.8ZM304.8 0H342.8A50 50 0 0 1 342.8 100H304.8ZM316.8 12V88H342.8A38 38 0 0 0 342.8 12ZM438.8 0L426.8 0L426.8 100L438.8 100L438.8 57.52L441.64 60.64L453.23 50.09L492.56 100L506.8 100L506.8 98.68L462.55 42.53L455.01 48.47L506.8 1.34L506.8 0L490.45 0L438.8 47ZM531.8 50A51.4 51.4 0 1 1 634.6 50A51.4 51.4 0 1 1 531.8 50ZM543.8 50A39.4 39.4 0 1 0 622.6 50A39.4 39.4 0 1 0 543.8 50ZM668.6 0H680.6V100H668.6Z" />
+    </svg>
+  );
+}
